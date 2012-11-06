@@ -67,11 +67,13 @@
 			<div id="scoreBar" class="container_12 score-container">
 				<div class="grid_9">
 					<h4>STRUCTURE</h4>
-					<span>YOUR SCORE: </span><span data-bind="text: score">0</span>
+					<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
 				</div>
 				<div class="grid_3">
-					<span><span data-bind="text: answerCount">1</span>/ <span data-bind="text: questionCount">10</span></span>
-					<span>CORRECT</span>
+					<span class="score-counter-container">
+						<span class="score-nav-counter"><span class="ans-count" data-bind="text: answerCount">1</span>/ <span class="question-count" data-bind="text: questionCount">10</span></span>
+						<span class="correct">CORRECT</span>
+					</span>
 				</div>
 			</div>
 
@@ -115,14 +117,16 @@
 
 		<div data-role="content">
 			<!-- Top Score Navigation Container -->
-			<div id="scoreBar" class="container_12">
+			<div id="scoreBar" class="container_12 score-container">
 				<div class="grid_9">
 					<h4>STRUCTURE</h4>
-					<span>YOUR SCORE: </span><span data-bind="text: score">0</span>
+					<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
 				</div>
 				<div class="grid_3">
-					<span><span data-bind="text: answerCount">1</span>/ <span data-bind="text: questionCount">10</span></span>
-					<span>CORRECT</span>
+					<span class="score-counter-container">
+						<span class="score-nav-counter"><span class="ans-count" data-bind="text: answerCount">1</span>/ <span class="question-count" data-bind="text: questionCount">10</span></span>
+						<span class="correct">CORRECT</span>
+					</span>
 				</div>
 			</div>
 			<div data-bind="with: cq">
@@ -161,7 +165,6 @@
 			<div class="info-wrapper">
 				<h2 class="content-title" data-bind="text: AnsDescHead">TELL ME MORE</h2>
 				<div class="example-wrapper info-wrapper-content" data-iscroll data-bind="text: AnsDesc">
-					<p>od tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleif</p>
 					<p>od tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleif</p>
 				</div>
 				<a href="#" data-role="button" data-rel="back" data-inline="true">TAKE ME BACK</a>

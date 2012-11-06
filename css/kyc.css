@@ -86,9 +86,19 @@ left:48%;
 .landing-alert img{ width:90%; max-width: 100%; padding:15px; margin-top:-10px; }
 
 /* Question Content Styling */
-#structureQuizPage .ui-content{ padding:0 0 1em 0; overflow: hidden; }
-.question-title{ background:#f6f6e9; color: #656363; text-shadow: 0 1px 1px rgba(175,234,201,0.4); text-align: center; padding:1em 0; }
-h4.question-title{ font-size: 1.2em; }
+#structureQuizPage .ui-content, #correctPage .ui-content{ padding:0 0 1em 0; overflow: hidden; }
+.score-container{ background: #5f7231; }
+.score-container h4{ color: #f6f6e9; text-shadow:none; font-size: 1.3em; font-weight: 400; margin:0; padding: 0.3em 0.5em; }
+.score-container span.score-text{ color: #bcbb47; text-shadow:none; padding:0.2em 0.5em 0.4em 0.7em; }
+.score-container span.score{ color:#f6f6e9; text-shadow:none; }
+.score-counter-container{ display: block; border-left:1px solid #bcbb47; text-align: center; }
+.score-nav-counter{ display: block; color:#bcbb47; font-size: 1.5em; margin-bottom: 0.2em }
+.ans-count{ color:#f6f6e9;  }
+.question-count{ color:#bcbb47; }
+.correct{ color: #f6f6e9; }
+
+.question-title{ background:#f6f6e9; color: #656363; text-shadow: 0 1px 1px rgba(175,234,201,0.4); text-align: center; padding:1em 0; box-shadow: 0 1px 1px rgba(111,111,111,0.3); }
+h4.question-title{ font-size: 1.2em; margin-top:0; }
 form.question-form{ margin-bottom: 1em; }
 
 #qContent.question-container{  }
