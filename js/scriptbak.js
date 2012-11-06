@@ -14,13 +14,13 @@ function getQuestions(qno)
 								
 							],
 				"res": 1,
-				"RightAnswer": "True",
-				"explanationHead" : "rrrr You don't need coverage for damage to the structure of rentals, condominiums or co-ops.",
-				"explanation" : "rrr  rYou&lsquo;re ready to move to the next question. For an explanation of the kinds of homes that need structure coverage, tap the \"Tell Me More\" button below.",
-				"expForWrongHead" :"www You don't need coverage for damage to the structure of rental apartments, condominiums and co-ops.",
-				"expForWrong" :"www For an explanation of the kinds of homes that need structure coverage, tap the “Tell Me More” button below.",
-				"AnsDescHead" :  "Know when structure coverage is necessary",
-				"AnsDesc" :  "If you own a house, you will need insurance for the structure. You don’t need coverage for damage to the structure of rental apartments, condominiums and co-ops. In the case of condominiums and co-ops, be sure to consult your ownership papers and/or co-op agreement to understand exactly which structural parts of the apartment are covered by your monthly dues, and other membership or commons fees.",
+				"RightAnswer": "1",
+				"explanationHead" :"1" ,
+				"explanation" : "1",
+				"expForWrongHead" :"1",
+				"expForWrong" :"1",
+				"AnsDescHead" :  "1",
+				"AnsDesc" :  "1",
 				
 			}
 
@@ -30,47 +30,23 @@ function getQuestions(qno)
 		"Cat" : "1",
 		"qus" : {
 				"index": "3",
-				"text" : "Your 3rd Question",
+				"text" : "Your 2rd Question",
 				"answers" : 	[
-								{ "text": "Answer 31", "isAns" : -1 },
+								{ "text": "Answer 21", "isAns" : -1 },
 								{ "text": "Answer 32", "isAns" : 1 },
 								{ "text": "Answer 313", "isAns" : -1 },
 								{ "text": "Answer 34", "isAns" : -1 },
 							],
 				"res": 1,
-				"RightAnswer": "Answer 3",
-				"explanationHead" :"3q",
-				"explanation" : " q3qExplanation explanation explanation",
+				"RightAnswer": "Answer 2",
+				"explanationHead" :"2",
+				"explanation" : " 2",
 				
-				"expForWrongHead" : "3",
-				"expForWrong" : "3",
-
-				"AnsDescHead" : "",
-				"AnsDesc" : "Answer33 3 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3"
-			}
-	},
-	{
-		
-		"Cat" : "1",
-		"qus" : {
-				"index": "3",
-				"text" : "Your 3rd Question",
-				"answers" : 	[
-								{ "text": "Answer 31", "isAns" : -1 },
-								{ "text": "Answer 32", "isAns" : 1 },
-								{ "text": "Answer 313", "isAns" : -1 },
-								{ "text": "Answer 34", "isAns" : -1 },
-							],
-				"res": 1,
-				"RightAnswer": "Answer 3",
-				"explanationHead" :"2q",
-				"explanation" : "2q Explanation explanation explanation",
-				
-				"expForWrongHead" : "2w",
-				"expForWrong" : "2w",
+				"expForWrongHead" : "2",
+				"expForWrong" : "2",
 
 				"AnsDescHead" : "2",
-				"AnsDesc" : "Answer 23 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3"
+				"AnsDesc" : "222 Answer33 3 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3"
 			}
 	},
 	{
@@ -87,13 +63,37 @@ function getQuestions(qno)
 							],
 				"res": 1,
 				"RightAnswer": "Answer 3",
-				"explanationHead" :"1r",
-				"explanation" : "1r",
+				"explanationHead" :"3",
+				"explanation" : "3",
 				
-				"expForWrongHead" : "1w",
-				"expForWrong" : "1w",
+				"expForWrongHead" : "3w",
+				"expForWrong" : "3w",
 
-				"AnsDescHead" : "1",
+				"AnsDescHead" : "3",
+				"AnsDesc" : "Answer 33 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3"
+			}
+	},
+	{
+		
+		"Cat" : "1",
+		"qus" : {
+				"index": "3",
+				"text" : "Your 4rd Question",
+				"answers" : 	[
+								{ "text": "Answer 31", "isAns" : -1 },
+								{ "text": "Answer 32", "isAns" : 1 },
+								{ "text": "Answer 313", "isAns" : -1 },
+								{ "text": "Answer 34", "isAns" : -1 },
+							],
+				"res": 1,
+				"RightAnswer": "Answer 4",
+				"explanationHead" :"4r",
+				"explanation" : "4r",
+				
+				"expForWrongHead" : "4w",
+				"expForWrong" : "4w",
+
+				"AnsDescHead" : "4",
 				"AnsDesc" : "Answer 13 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3 Answer 3"
 			}
 	},

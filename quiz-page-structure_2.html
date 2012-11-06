@@ -77,20 +77,13 @@
 
 			<div id="qContent" class="question-container" data-bind="with: cq">
 				<h4 class="content-title" data-bind="text:text">quis nostrud exerci tation ullamcorper suscipit lobortis</h4>
-				<form class="question-form">
-					<div  data-bind=" foreach: answers ">
-						<div class="container_12">
-							<div class="grid_1">
-								<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" data-role="none" />
-							</div>
-							<div class="grid_11">
-								<label for="test"  data-bind="attr:{for: $root.getAnsID($index)}"><div data-bind="text:text"></div></label>
-							</div>
-						</div>
-						<div class="clear"></div>
+				<form>
+					<div data-bind=" foreach: answers ">
+							   	<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" data-role="none" />
+							   <label for="test"  data-bind="attr:{for: $root.getAnsID($index)}"><div data-bind="text:text"></div></label>
 					</div>
 				</form>
-				<a class="kyc-btn" href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit">SUBMIT</a>
+				<a href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit">SUBMIT</a>
 			</div>
 		</div>
 
@@ -135,6 +128,8 @@
 				</div>
 				<a href="#tellMeMore" data-transition="pop">TELL ME MORE</a>
 				<a href="#" data-bind="click: $root.next" data-rel="back" data-transition="slidefade">CONTINUE <img src="img/menu-icon/smico-down-arrow.png"></a>
+				<a href="#"  data-bind="click: $root.next">tttt</a>
+
 			</div>
 		</div>
 

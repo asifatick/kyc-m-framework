@@ -24,13 +24,18 @@ a.kyc-btn{ border: 1px solid #E65B4D;
 background: white;
 font-weight: bold;
 color: #D95649;
+font-size: 16px;
+    min-width: 0.75em;
+    overflow: hidden;
+    padding: 0.6em 20px;
 text-shadow: 0 1px 0 white;
 background-image: -webkit-gradient(linear,left top,left bottom,from( white ),to( #F4F4F4 ));
 background-image: -webkit-linear-gradient( white,#F4F4F4 );
 background-image: -moz-linear-gradient( white,#F4F4F4 );
 background-image: -ms-linear-gradient( white,#F4F4F4 );
 background-image: -o-linear-gradient( white,#F4F4F4 );
-background-image: linear-gradient( white,#F4F4F4 ); }
+background-image: linear-gradient( white,#F4F4F4 );
+ }
 a.kyc-btn:hover{  }
 
 /* Header & Logo Title */
