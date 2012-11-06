@@ -77,13 +77,19 @@
 
 			<div id="qContent" class="question-container" data-bind="with: cq">
 				<h4 class="content-title" data-bind="text:text">quis nostrud exerci tation ullamcorper suscipit lobortis</h4>
-				<form>
-					<div data-bind=" foreach: answers ">
-							   	<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" data-role="none" />
-							   <label for="test"  data-bind="attr:{for: $root.getAnsID($index)}"><div data-bind="text:text"></div></label>
+				<form class="question-form">
+					<div  data-bind=" foreach: answers ">
+						<div class="container_12">
+							<div class="grid_1">
+								<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" data-role="none" />
+							</div>
+							<div class="grid_11">
+								<label for="test"  data-bind="attr:{for: $root.getAnsID($index)}"><div data-bind="text:text"></div></label>
+							</div>
+						</div>
 					</div>
 				</form>
-				<a href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit">SUBMIT</a>
+				<a class="kyc-btn" href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit">SUBMIT</a>
 			</div>
 		</div>
 
