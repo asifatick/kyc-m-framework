@@ -78,18 +78,12 @@
 			<div id="qContent" class="question-container" data-bind="with: cq">
 				<h4 class="content-title" data-bind="text:text">quis nostrud exerci tation ullamcorper suscipit lobortis</h4>
 				<form>
-					<div data-role="fieldcontain" class="ui-hide-label" >
-					    <fieldset data-role="controlgroup" data-bind=" foreach: answers ">
-
-							   	<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" />
+					<div data-bind=" foreach: answers ">
+							   	<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" data-role="none" />
 							   <label for="test"  data-bind="attr:{for: $root.getAnsID($index)}"><div data-bind="text:text"></div></label>
-
-					
-						  
-					    </fieldset>
 					</div>
 				</form>
-				<a href="#" data-role="button" data-transition="pop" data-rel="pop" data-bind="click: $root.submit">SUBMIT</a>
+				<a href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit">SUBMIT</a>
 			</div>
 		</div>
 
@@ -132,8 +126,8 @@
 					<div data-bind="text: $root.ansHead">Explanation</div>
 					<div data-bind="text: $root.ansBody">Explanation</div>
 				</div>
-				<a  href="#tellMeMore" data-role="button" data-transition="pop" data-inline="true">TELL ME MORE</a>
-				<a   href="#" data-rel="back" data-role="button" data-transition="slidefade" data-inline="true" >CONTINUE <img src="img/menu-icon/smico-down-arrow.png"></a>
+				<a href="#tellMeMore" data-transition="pop">TELL ME MORE</a>
+				<a href="#" data-rel="back" data-transition="slidefade">CONTINUE <img src="img/menu-icon/smico-down-arrow.png"></a>
 				<a href="#"  data-bind="click: $root.next">tttt</a>
 
 			</div>
