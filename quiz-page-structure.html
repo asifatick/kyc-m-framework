@@ -64,7 +64,7 @@
 
 		<div data-role="content">
 			<!-- Top Score Navigation Container -->
-			<div id="scoreBar" class="container_12">
+			<div id="scoreBar" class="container_12 score-container">
 				<div class="grid_9">
 					<h4>STRUCTURE</h4>
 					<span>YOUR SCORE: </span><span data-bind="text: score">0</span>
@@ -76,10 +76,10 @@
 			</div>
 
 			<div id="qContent" class="question-container" data-bind="with: cq">
-				<h4 class="content-title" data-bind="text:text">quis nostrud exerci tation ullamcorper suscipit lobortis</h4>
+				<h4 class="content-title question-title" data-bind="text:text">quis nostrud exerci tation ullamcorper suscipit lobortis</h4>
 				<form class="question-form">
 					<div  data-bind=" foreach: answers ">
-						<div class="container_12">
+						<div class="container_12 form-row">
 							<div class="grid_1">
 								<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" data-role="none" />
 							</div>
@@ -87,10 +87,11 @@
 								<label for="test"  data-bind="attr:{for: $root.getAnsID($index)}"><div data-bind="text:text"></div></label>
 							</div>
 						</div>
-						<div class="clear"></div>
+
 					</div>
 				</form>
-				<a class="kyc-btn" href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit">SUBMIT</a>
+
+				<a class="kyc-btn" href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit" data-role="none">SUBMIT</a>
 			</div>
 		</div>
 
@@ -133,8 +134,8 @@
 					<div data-bind="text: $root.ansHead">Explanation</div>
 					<div data-bind="text: $root.ansBody">Explanation</div>
 				</div>
-				<a href="#tellMeMore" data-transition="pop">TELL ME MORE</a>
-				<a href="#" data-bind="click: $root.next" data-rel="back" data-transition="slidefade">CONTINUE <img src="img/menu-icon/smico-down-arrow.png"></a>
+				<a class="kyc-btn" href="#tellMeMore" data-transition="pop" data-role="none">TELL ME MORE</a>
+				<a class="kyc-btn" href="#" data-bind="click: $root.next" data-rel="back" data-transition="slidefade" data-role="none">CONTINUE <img src="img/menu-icon/smico-down-arrow.png"></a>
 			</div>
 		</div>
 

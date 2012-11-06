@@ -29,14 +29,20 @@ font-size: 16px;
     overflow: hidden;
     padding: 0.6em 20px;
 text-shadow: 0 1px 0 white;
+text-decoration: none;
 background-image: -webkit-gradient(linear,left top,left bottom,from( white ),to( #F4F4F4 ));
 background-image: -webkit-linear-gradient( white,#F4F4F4 );
 background-image: -moz-linear-gradient( white,#F4F4F4 );
 background-image: -ms-linear-gradient( white,#F4F4F4 );
 background-image: -o-linear-gradient( white,#F4F4F4 );
 background-image: linear-gradient( white,#F4F4F4 );
+
+-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
  }
-a.kyc-btn:hover{  }
+a.kyc-btn:hover, a.kyc-btn:focus, a.kyc-btn:active { text-decoration: none;	 border:1px solid #e65b4d ;background:#5f7231 ;font-weight:bold;color:#eeeeee ;text-shadow:0  1px  0  #000000 ;background-image:-webkit-gradient(linear,left top,left bottom,from( #5f7231 ),to( #5f7231 )); background-image:-webkit-linear-gradient( #5f7231,#5f7231 ); background-image:   -moz-linear-gradient( #5f7231,#5f7231 ); background-image:    -ms-linear-gradient( #5f7231,#5f7231 ); background-image:     -o-linear-gradient( #5f7231,#5f7231 ); background-image:        linear-gradient( #5f7231,#5f7231 ); }
 
 /* Header & Logo Title */
 h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-size: 60%; text-align: center; text-indent: -9999px; }
@@ -79,4 +85,12 @@ left:48%;
 .landing-welcome img{ max-width: 100%; }
 .landing-alert img{ width:90%; max-width: 100%; padding:15px; margin-top:-10px; }
 
-/* */
+/* Question Content Styling */
+#structureQuizPage .ui-content{ padding:0 0 1em 0; overflow: hidden; }
+.question-title{ background:#f6f6e9; color: #656363; text-shadow: 0 1px 1px rgba(175,234,201,0.4); text-align: center; padding:1em 0; }
+h4.question-title{ font-size: 1.2em; }
+form.question-form{ margin-bottom: 1em; }
+
+#qContent.question-container{  }
+.question-container .form-row{ padding:0.5em 0; border-bottom: 1px solid #ceceaa; box-shadow: 0px 1px 0px #FFF; }
+.question-container .form-row:last-child{ border-bottom: none; box-shadow: none; }
