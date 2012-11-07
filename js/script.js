@@ -2,7 +2,7 @@
 			var quetionIndex =0;
 			var koquestion;
 			var koquestion1;
-			$(window).load(function() {
+			$(document).on( 'pageinit', '#structureQuizPage' ,function() {
 				window.jsel = JSONSelect;
 				getQuostionsByCat('1')
 				//alert(curquestionList);
