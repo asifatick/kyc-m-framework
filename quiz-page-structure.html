@@ -130,16 +130,26 @@
 				</div>
 			</div>
 			<div data-bind="with: cq">
-				<div id="qCAContent" class="question-container">
+				<div class="qa-content-wrapper" data-bind="css: $root.classname">
+					<div id="qCAContent" class="question-container">
 									
-				<h4 class="content-title qa-notification-title"><span data-bind="text:$root.ansTitle"></span></h4>
-				
-					<div class="qa" data-bind="text: RightAnswer">correctans</div>
-					<div class="qa-next-line" data-bind="text: $root.ansHead">Explanation</div>
-					<div class="qa-third-line" data-bind="text: $root.ansBody">Explanation</div>
+						<h4 class="content-title qa-notification-title"><span data-bind="text:$root.ansTitle"></span></h4>
+						<span class="qa-icon"></span>
+						<div class="qa" data-bind="text: RightAnswer">correctans</div>
+						<div class="qa-next-line" data-bind="text: $root.ansHead">Explanation</div>
+						<div class="qa-third-line" data-bind="text: $root.ansBody">Explanation</div>
+					</div>
+
+					<div class="container_12 button-row">
+						<div class="grid_6">
+							<a class="kyc-btn tell-more-btn" href="#tellMeMore" data-transition="pop" data-role="none">TELL ME MORE</a>
+						</div>
+						<div class="grid_6">
+							<a class="kyc-btn continue-btn" href="#" data-bind="click: $root.next" data-transition="slidefade" data-role="none">CONTINUE <img src="img/continue-arrow.png"></a>
+						</div>
+					</div>
+
 				</div>
-				<a class="kyc-btn tell-more-btn" href="#tellMeMore" data-transition="pop" data-role="none">TELL ME MORE</a>
-				<a class="kyc-btn" href="#" data-bind="click: $root.next" data-transition="slidefade" data-role="none">CONTINUE <img src="img/menu-icon/smico-down-arrow.png"></a>
 			</div>
 		</div>
 

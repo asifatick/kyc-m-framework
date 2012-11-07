@@ -23,6 +23,7 @@ body,.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-b
 a.kyc-btn{ border: 1px solid #E65B4D;
 background: white;
 font-weight: bold;
+display: inline-block;
 color: #D95649;
 font-size: 16px;
     min-width: 0.75em;
@@ -101,7 +102,15 @@ left:48%;
 h4.question-title{ font-size: 1.2em; margin-top:0; }
 form.question-form{ margin-bottom: 1em; }
 
+.ans-1{ border:1px solid red;}
+.ans1{ border: 1px solid green; }
+
+.ans-1 .qa-icon, .ans1 .qa-icon{ display: block; width:40px; height: 40px; margin:1em 44%; }
+.ans-1 .qa-icon{ background: url('../img/answer-icons/ans-wrong.png') no-repeat right top; background-size: 90%; }
+.ans1 .qa-icon{ background: url('../img/answer-icons/ans-correct.png') no-repeat right top; background-size: 90%; }
+
 #qContent.question-container{  }
+
 .question-container .form-row{ padding:0.5em 0; border-bottom: 1px solid #ceceaa; box-shadow: 0px 1px 0px #FFF; }
 .question-container .form-row:last-child{ border-bottom: none; box-shadow: none; }
 .question-container .form-row input[type="radio"]{ float: right; }
@@ -111,6 +120,9 @@ form.question-form{ margin-bottom: 1em; }
 .qa-notification-title{ color: #5f7231; text-align: center; border-bottom: 1px solid #5f7231; }
 h4.qa-notification-title{ font-size: 1.6em; }
 
-.qa, .qa-next-line, .qa-third-line{ color:#5f7231; text-align: center; padding:0.2em 0; }
+.qa, .qa-next-line, .qa-third-line{ color:#5f7231; text-align: center; padding:0.2em 0; text-transform: uppercase; }
 #correctPage a.tell-more-btn{ margin:0 5%; }
+.button-row{ overflow: hidden; margin:1em 0; }
 #qCAContent{ margin-bottom: 1em; }
+.qa-content-wrapper{ overflow: hidden; }
+.continue-btn img{ width:10px; }
