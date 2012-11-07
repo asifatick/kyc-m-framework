@@ -2,7 +2,6 @@
 			var quetionIndex =0;
 			var koquestion;
 			var koquestion1;
-
 			$(window).load(function() {
 				window.jsel = JSONSelect;
 				getQuostionsByCat('1')
@@ -27,6 +26,16 @@
 				self.ansHead = ko.observable("");
      			self.ansBody = ko.observable("");
      			self.ansTitle = ko.observable("");
+
+     			self.markerArray = ko.observableArray();
+
+     			self.markerClass = ko.observable("a");
+
+     			for (var  i = 0; i < curquestionList.length ; i++) {
+     				self.markerArray.push( ko.observable("a"));
+     			};
+     			
+     			self.markerArray()[quetionIndex] =ko.observable("b");
 				//self.visibleExplanation =  ko.observable(false);
 				//self.visibleTellMore =  ko.observable(false);
 				self.cq = ko.observable(getQuostion(quetionIndex));
@@ -41,12 +50,23 @@
          			if (quetionIndex == curquestionList.length-1) {
          				localStorage.setItem("score", self.score());
          				alert(localStorage.getItem("score"));
+         				$.mobile.changePage( $("#badgesPage"), {
+						transition: "pop",
+						allowSamePageTransition  : true,
+						
+					});
          			}
          			else
          			{
 					quetionIndex++;
              		self.cq(  getQuostion(quetionIndex));
              		self.cqq = getQuostion(quetionIndex);
+             		self.markerArray()[quetionIndex] =ko.observable("b");
+             		$.mobile.changePage( "", {
+						transition: "pop",
+						allowSamePageTransition  : true,
+						
+					});
              		//self.visibleTellMore(false);
          			//self.visibleExplanation(false);
          			};

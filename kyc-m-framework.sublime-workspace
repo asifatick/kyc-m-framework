@@ -4,8 +4,28 @@
 		"selected_items":
 		[
 			[
+				"form",
+				"form-row"
+			],
+			[
+				"ques",
+				"question-container"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
 				"text-",
-				"text-transform"
+				"text-align"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"border",
+				"border"
 			],
 			[
 				"tra",
@@ -70,10 +90,6 @@
 			[
 				"wf-",
 				"wf-active"
-			],
-			[
-				"border",
-				"border-radius"
 			],
 			[
 				"margi",
@@ -498,27 +514,59 @@
 			[
 				"arti",
 				"articleList"
-			],
-			[
-				"inl",
-				"inline-block"
-			],
-			[
-				"displ",
-				"display	display: block"
-			],
-			[
-				"art",
-				"articleList"
-			],
-			[
-				"line",
-				"line-height"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "quiz-page-structure.html",
+			"settings":
+			{
+				"buffer_size": 10686,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/script.js",
+			"settings":
+			{
+				"buffer_size": 4218,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "structure-quiz-page.html",
+			"settings":
+			{
+				"buffer_size": 3813,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "quiz-select.html",
+			"settings":
+			{
+				"buffer_size": 2906,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "quiz-page-structure_2.html",
+			"settings":
+			{
+				"buffer_size": 9182,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/kyc.css",
+			"settings":
+			{
+				"buffer_size": 10321,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -572,6 +620,8 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/themes/kyc-theme.min.css",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/structure-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc/know-your-coverage.sublime-project",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc/js/jquery.min.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc/info-screen.html",
@@ -697,9 +747,7 @@
 		"/Applications/MAMP/htdocs/WalkInMyShoes/wp-content/themes/walkinmyshoes/loop-page.php",
 		"/Applications/MAMP/htdocs/WalkInMyShoes/wp-content/themes/walkinmyshoes/category.php",
 		"/Users/evanshajed/ProjectResources/Typography resources/wfs/index.html",
-		"/Applications/MAMP/htdocs/John/SendMode/HTML5/SendMode-Web-Template/index.html",
-		"/Applications/MAMP/htdocs/John/SendMode/HTML5/SendMode-Web-Template/css/style.css",
-		"/Applications/MAMP/htdocs/John/SendMode/HTML5/SendMode-Web-Template/mobile/price.html"
+		"/Applications/MAMP/htdocs/John/SendMode/HTML5/SendMode-Web-Template/index.html"
 	],
 	"find":
 	{
@@ -717,6 +765,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ui-btn-hov",
 			"50%",
 			"top",
 			"icon",
@@ -843,8 +892,7 @@
 			"<img",
 			"<img>",
 			"#topContainer",
-			"[class^=\"icon-\"]",
-			"twitterWidget"
+			"[class^=\"icon-\"]"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -884,13 +932,175 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "quiz-page-structure.html",
+					"settings":
+					{
+						"buffer_size": 10686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2814,
+								2814
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 693.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/script.js",
+					"settings":
+					{
+						"buffer_size": 4218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "structure-quiz-page.html",
+					"settings":
+					{
+						"buffer_size": 3813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3136,
+								3136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 837.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "quiz-select.html",
+					"settings":
+					{
+						"buffer_size": 2906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1689,
+								1689
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 482.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 4,
+					"file": "quiz-page-structure_2.html",
+					"settings":
+					{
+						"buffer_size": 9182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6122,
+								5977
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 706.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/kyc.css",
+					"settings":
+					{
+						"buffer_size": 10321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10286,
+								10286
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1062.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -922,7 +1132,7 @@
 		"cols":
 		[
 			0.0,
-			0.550743022481,
+			0.598784945025,
 			1.0
 		],
 		"rows":
@@ -977,6 +1187,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 178.0,
+	"side_bar_width": 282.0,
 	"status_bar_visible": true
 }
