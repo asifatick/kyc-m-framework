@@ -51,7 +51,7 @@
 			<li><a href="liability-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
 			<li class="jump-bar"><span class="down-triangle-icon"></span> JUMP TO</li>
 			<li><a href="result-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
-			<li><a href="#" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-reload.png">RETAKE A QUIZ</a></li>
+			<li><a href="retake-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-reload.png">RETAKE A QUIZ</a></li>
 		</ul>
 	</div>
 
@@ -199,12 +199,33 @@
 		</div>
 
 		<div data-role="content">
-			<div class="info-wrapper">
-				<h2 class="content-title"><span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span></h2>
-				<div class="example-wrapper info-wrapper-content">
-					<p>Badges text and scores will come here with badges pictures</p>
+			<!-- Top Score Navigation Container -->
+			<div id="scoreBar" class="container_12 score-container">
+				<div class="grid_12">
+					<h4>CONGRATULATION! YOU HAVE COMPLETED <span>THE <span>STRUCTURE</span> SECTION</span></h4>
 				</div>
-				<a href="#" data-role="button" data-inline="true">MY RESULT</a>
+			</div>
+
+			<div class="container_12">
+				<div class="grid_12">
+					<h4>You missed a few.</h4>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto</p>
+				</div>
+				<div class="grid_12">
+					<div class="badge-score">
+						YOUR SCORE <span class="badge-number">20</span>
+					</div>
+					<div class="badge-image-container">
+						<span class="badge-image"></span>
+					</div>
+					<div class="badge-result">
+						<span class="badge-number">5</span> OF <span class="badge-number">20</span>
+						<span class="badge-correct">CORRECT</span>
+					</div>
+				</div>
+				<div class="grid_12">
+					<a href="#" data-role="button" data-inline="true">MY RESULT</a>
+				</div>
 			</div>
 		</div>
 
