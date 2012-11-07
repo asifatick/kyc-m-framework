@@ -35,7 +35,7 @@
      				self.markerArray.push( ko.observable("a"));
      			};
      			
-     			self.markerArray()[quetionIndex] =ko.observable("b");
+     			self.markerArray()[quetionIndex]("b");
 				//self.visibleExplanation =  ko.observable(false);
 				//self.visibleTellMore =  ko.observable(false);
 				self.cq = ko.observable(getQuostion(quetionIndex));
@@ -61,7 +61,7 @@
 					quetionIndex++;
              		self.cq(  getQuostion(quetionIndex));
              		self.cqq = getQuostion(quetionIndex);
-             		self.markerArray()[quetionIndex] =ko.observable("b");
+             		self.markerArray()[quetionIndex] ("b");
              		$.mobile.changePage( "", {
 						transition: "pop",
 						allowSamePageTransition  : true,

@@ -93,6 +93,12 @@
 					</div>
 				</form>
 
+				<div class="indicator-dots">
+					<div class="dots-container" data-bind="foreach:$root.markerArray">
+						<div data-bind="css:$data">a</div>
+					</div>
+				</div>
+
 				<a class="kyc-btn" href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit" data-role="none">SUBMIT</a>
 			</div>
 		</div>

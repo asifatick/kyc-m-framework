@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<title>Know Your Coverage</title>
+
+	<!--Include JQM and JQ-->
+	<link rel="stylesheet" href="css/themes/kyc-theme.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
+	<link rel="stylesheet" href="css/jqm-icon-pack-2.1.2-fa.css" />
+	<link rel="stylesheet" href="css/font/font.css" />
+	<link rel="stylesheet" href="css/kyc.css">
+	<link rel="stylesheet" href="css/jquery.mobile.iscrollview.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.animate-enhanced.min.js"></script>
+	
+	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
+	<script src="js/jqm.globals.js"></script>
+	
+	<script src="js/jquery.mobile.min.js"></script>
+
+	<!--JQM SlideMenu-->
+	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
+	<script src="js/jqm.slidemenu.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/jquery.mobile.iscrollview-closure-min.js"></script>
+
+	<script type="text/javascript" src="js/jsonselect.min.js"></script>
+	<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
+
+	<script type="text/javascript" src="js/scriptbak.js"  ></script>
+	<script type="text/javascript" src="js/script.js"  ></script>
+</head>
+<body>
+
+	<div id="slidemenu">
+		<h3>MENU</h3>
+		<ul>
+			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
+			<li><a href="structure-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
+			<li><a href="rental-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+			<li><a href="belongings-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
+			<li><a href="liability-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+			<li class="jump-bar"><span class="down-triangle-icon"></span> JUMP TO</li>
+			<li><a href="result-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
+			<li><a href="retake-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-reload.png">RETAKE A QUIZ</a></li>
+		</ul>
+	</div>
+
+	<div data-role="page" id="structureQuizPage" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false">MENU</a>
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</div>
+
+		<div data-role="content">
+			<!-- Top Score Navigation Container -->
+			<div id="scoreBar" class="container_12 score-container">
+				<div class="grid_9">
+					<h4>STRUCTURE</h4>
+					<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
+				</div>
+				<div class="grid_3">
+					<span class="score-counter-container">
+						<span class="score-nav-counter"><span class="ans-count" data-bind="text: answerCount">1</span>/ <span class="question-count" data-bind="text: questionCount">10</span></span>
+						<span class="correct">CORRECT</span>
+					</span>
+				</div>
+			</div>
+
+			<div id="qContent" class="question-container" data-bind="with: cq">
+				<h4 class="content-title question-title" data-bind="text:text">quis nostrud exerci tation ullamcorper suscipit lobortis</h4>
+				<form class="question-form">
+					<div  data-bind=" foreach: answers ">
+						<div class="container_12 form-row">
+							<div class="grid_1">
+								<input type="radio" id="test"  name="answers"  data-bind="value: isAns,checked: $root.usrans,attr:{id:$root.getAnsID($index)}" data-role="none" />
+							</div>
+							<div class="grid_11">
+								<label for="test"  data-bind="attr:{for: $root.getAnsID($index)}"><div data-bind="text:text"></div></label>
+							</div>
+						</div>
+
+					</div>
+				</form>
+
+				<div data-bind="foreach:$root.markerArray">
+					<div data-bind="css:$data">a</div>
+				</div>
+
+				<a class="kyc-btn" href="#" data-transition="pop" data-rel="pop" data-bind="click: $root.submit" data-role="none">SUBMIT</a>
+			</div>
+		</div>
+
+		<div data-role="footer" data-id="fool" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="landing-page.html" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Take The Quiz</a></li>
+					<li><a href="help-page.html" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
+					<li><a href="info-page.html" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page" id="correctPage" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false">MENU</a>
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</div>
+
+		<div data-role="content">
+			<!-- Top Score Navigation Container -->
+			<div id="scoreBar" class="container_12 score-container">
+				<div class="grid_9">
+					<h4>STRUCTURE</h4>
+					<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
+				</div>
+				<div class="grid_3">
+					<span class="score-counter-container">
+						<span class="score-nav-counter"><span class="ans-count" data-bind="text: answerCount">1</span>/ <span class="question-count" data-bind="text: questionCount">10</span></span>
+						<span class="correct">CORRECT</span>
+					</span>
+				</div>
+			</div>
+			<div data-bind="with: cq">
+				<div class="qa-content-wrapper" data-bind="css: $root.classname">
+					<div id="qCAContent" class="question-container">
+									
+						<h4 class="content-title qa-notification-title"><span data-bind="text:$root.ansTitle"></span></h4>
+						<span class="qa-icon"></span>
+						<div class="qa" data-bind="text: RightAnswer">correctans</div>
+						<div class="qa-next-line" data-bind="text: $root.ansHead">Explanation</div>
+						<div class="qa-third-line" data-bind="text: $root.ansBody">Explanation</div>
+					</div>
+
+					<div class="container_12 button-row">
+						<div class="grid_6">
+							<a class="kyc-btn tell-more-btn" href="#tellMeMore" data-transition="pop" data-role="none">TELL ME MORE</a>
+						</div>
+						<div class="grid_6">
+							<a class="kyc-btn continue-btn" href="#" data-bind="click: $root.next" data-transition="slidefade" data-role="none">CONTINUE <img src="img/continue-arrow.png"></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-id="fool" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="landing-page.html" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Take The Quiz</a></li>
+					<li><a href="help-page.html" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
+					<li><a href="info-page.html" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page" id="tellMeMore" data-theme="a" data-bind="with: cq">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false">MENU</a>
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</div>
+
+		<div data-role="content">
+			<div class="info-wrapper">
+				<h2 class="content-title" data-bind="text: AnsDescHead">TELL ME MORE</h2>
+				<div class="example-wrapper info-wrapper-content" data-iscroll>
+					<p data-bind="text: AnsDesc">od tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleif</p>
+				</div>
+				<a href="#" data-role="button" data-rel="back" data-inline="true">TAKE ME BACK</a>
+			</div>
+		</div>
+
+		<div data-role="footer" data-id="fool" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="landing-page.html" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Take The Quiz</a></li>
+					<li><a href="help-page.html" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
+					<li><a href="info-page.html" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="badgesPage" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false">MENU</a>
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</div>
+
+		<div data-role="content">
+			<!-- Top Score Navigation Container -->
+			<div id="scoreBar" class="container_12 score-container">
+				<div class="grid_12">
+					<h4>CONGRATULATION! YOU HAVE COMPLETED <span>THE <span>STRUCTURE</span> SECTION</span></h4>
+				</div>
+			</div>
+
+			<div class="container_12">
+				<div class="grid_12">
+					<h4>You missed a few.</h4>
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto</p>
+				</div>
+				<div class="grid_12">
+					<div class="badge-score">
+						YOUR SCORE <span class="badge-number">20</span>
+					</div>
+					<div class="badge-image-container">
+						<span class="badge-image"></span>
+					</div>
+					<div class="badge-result">
+						<span class="badge-number">5</span> OF <span class="badge-number">20</span>
+						<span class="badge-correct">CORRECT</span>
+					</div>
+				</div>
+				<div class="grid_12">
+					<a href="#" data-role="button" data-inline="true">MY RESULT</a>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-id="fool" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="landing-page.html" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Take The Quiz</a></li>
+					<li><a href="help-page.html" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
+					<li><a href="info-page.html" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

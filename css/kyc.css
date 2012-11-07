@@ -81,10 +81,70 @@ left:48%;
 -webkit-box-shadow:0;
 -moz-box-shadow:0;}
 
+/* info Wrapper */
+
+.info-wrapper{ 
+	width:98%;
+	background: #fffff6;
+	border:1px solid #e65b4d;
+	-webkit-box-shadow: 2px 2px 2px 3px rgba(111,111,111,0.3);
+	        box-shadow: 2px 2px 2px 3px rgba(111,111,111,0.3);
+	    }
+
+.info-wrapper-title{ 
+	font-size: 1.2em;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #E65B4D;
+	line-height: 1em;
+	margin:5px 0 10px 0;
+	padding:0.2em 0.4em;
+ }
+
+ .info-wrapper-content{
+ 	max-height: 250px;
+ 	margin-bottom: 1em;
+ 	font-family: Helvetica,Arial,sans-serif;
+ }
+
+ .info-wrapper-content p{ padding:1em 0.5em; color: #5d5d5d; }
+ .info-wrapper-content h3{ padding:0.5em 0.5em; margin:0.3em 0; }
+ .info-wrapper .kyc-btn{ margin:0 40%; }
+
 /* Landing Page Content */
 #landingPage .ui-content{ padding:0; }
 .landing-welcome img{ max-width: 100%; }
 .landing-alert img{ width:90%; max-width: 100%; padding:15px; margin-top:-10px; }
+
+/* Help Container */
+#helpPage .ui-content, #about .ui-content, #terms .ui-content { padding:0 0 1em 0; overflow: hidden; }
+.help-container{  }
+.help-container h3{ margin: 0.3em 0; }
+.help-container h4{ margin: 0.3em 0; }
+.off-white-background{ background:#f6f6e9; padding:1em; }
+.help-container img{ width: 32px; height: 32px; max-width: 100%; }
+.help-content-title{ text-align: center; margin: 0.3em 0; }
+.help-container .container_12{ background:#e8e8dc url("../img/help-container-background.png"); }
+.help-container .container_12{ outline: 1px solid #5f7131; margin-bottom:2em; }
+.help-container .grid_4, .help-container .grid_8 {  1px solid #5f7131;  }
+.help-container .grid_4 img{ vertical-align: middle; margin:30% 20%;  }
+.help-container .grid_8 p{ margin:0.3em 0; }
+
+/* Quiz Select Styles */
+.quiz-select-content-title{ margin:0.3em 0; text-align: center; font-weight: 400; font-family: 'dincond-regularregular', serif; }
+.quiz-select-container li{ border-bottom:1px solid #f4ccb8; padding:0.5em 0; overflow: hidden; }
+.quiz-select-container li:last-child{ border-bottom:none; }
+.quiz-select-container ul{ outline: 1px solid #e65b4d; list-style: none; padding:0; }
+.quiz-select-container li img{ width: 32px; height: 32px; margin:0 0.3em -0.3em 1em; display: block; float:left; }
+.quiz-select-container li a{ color: #E65B4D; font-size: 1.5em; display: block; text-decoration: none; font-family: 'dincond-boldbold', serif; font-weight: 700; }
+.quiz-select-container li a > span{  display: block;
+    float: right;
+    overflow: hidden;
+    text-align: left;
+    width: 75%; }
+
+/* Quiz Info Page Style */
+#structureQuizPage .kyc-btn{ margin:0 30%; }
 
 /* Question Content Styling */
 #structureQuizPage .ui-content, #correctPage .ui-content{ padding:0 0 1em 0; overflow: hidden; }
@@ -117,12 +177,30 @@ form.question-form{ margin-bottom: 1em; }
 .question-container .form-row label{ }
 .question-container a.kyc-btn{ margin: 0 35%; }
 
-.qa-notification-title{ color: #5f7231; text-align: center; border-bottom: 1px solid #5f7231; }
-h4.qa-notification-title{ font-size: 1.6em; }
+.indicator-dots{ display: block; margin:0 auto; }
+.dots-container{ margin:0 25%; }
+.dots-container .b, .dots-container .a{ -webkit-border-radius: 5em;
+	border-radius: 5em; width: 0.5em; height: 0.5em; display: inline-block; border:1px solid #5f7231; text-indent: -999px; }
 
-.qa, .qa-next-line, .qa-third-line{ color:#5f7231; text-align: center; padding:0.2em 0; text-transform: uppercase; }
+.dots-container .b{ background:#5f7231; }
+.dots-container .a{ background: #fffff6; }
+
+.qa-notification-title{ text-align: center; border-bottom: 1px solid #5f7231; }
+h4.qa-notification-title{ font-size: 1.6em; }
+.ans-1 .qa-notification-title{ color: #E65B4D; }
+.ans1 .qa-notification-title{ color:#5f7131; }
+
+.qa, .qa-next-line, .qa-third-line{ text-align: center; padding:0.2em 0; text-transform: uppercase; }
+.qa, .qa-third-line { font-weight: bold; font-family: helvetica, arial, serif; }
+.ans1 .qa, .ans1 .qa-next-line,.ans1 .qa-third-line{ color:#5f7231; }
+.ans-1 .qa, .ans-1 .qa-next-line,.ans-1 .qa-third-line{ color: #e65b4d } 
+
 #correctPage a.tell-more-btn{ margin:0 5%; }
 .button-row{ overflow: hidden; margin:1em 0; }
 #qCAContent{ margin-bottom: 1em; }
 .qa-content-wrapper{ overflow: hidden; }
 .continue-btn img{ width:10px; }
+
+/* Badges Page Style */
+
+
