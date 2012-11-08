@@ -36,8 +36,8 @@
 	<script type="text/javascript" src="js/jsonselect.min.js"></script>
 	<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
 
-	<script type="text/javascript" src="js/scriptbak.js"  ></script>
-	<script type="text/javascript" src="js/script.js"  ></script>
+	
+	<script type="text/javascript" src="js/resultscript.js"  ></script>
 </head>
 <body>
 
@@ -73,71 +73,109 @@
 			<div id="resultContent" class="result-container">
 
 				<!-- Structure Result -->
-				<div id="structureResult" class="container_12">
+				<div id="structureResult" class="container_12" data-bind="visible :structureCss()">
 					<div class="grid_5">
 						<h4>STRUCTURE</h4>
-						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
+						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: structureScore">0</span>
 					</div>
 
 					<div class="grid_4">
-						<span class="badge-image">badge</span>
+						<span class="badge-image"  data-bind="css:getclass(structureAnswerCount,sQCount)">badge</span>
 					</div>
 
 					<div class="grid_3">
-						<span class="result-number white-text">5</span> OF <span class="result-number white-text">20</span>
+						<span class="result-number white-text" data-bind="text: structureAnswerCount">5</span> OF <span class="result-number white-text" data-bind="text:sQCount">11</span>
 						<span class="result-correct white-text">CORRECT</span>
 					</div>
 				</div>
 
+				<div id="rentalResult" class="container_12" data-bind="visible :!structureCss()">
+					<div class="grid_12">
+						<h4>STRUCTURE</h4>
+						<span class="score-text">TAKE THE QUIZ </span><span class="score" ></span>
+					</div>
+				</div>
 				<!-- Rental Result -->
-				<div id="rentalResult" class="container_12">
+				<div id="belongingsResult" class="container_12" data-bind="visible :RenterCss()">
+					<div class="grid_5">
+						<h4>RENTAL, CONDOS & CO-OPS</h4>
+						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: RenterScore">0</span>
+					</div>
+
+					<div class="grid_4">
+						<span class="badge-image" data-bind="css:getclass(RenterAnswerCount,rQCount)" >badge</span>
+					</div>
+
+					<div class="grid_3">
+						<span class="result-number white-text" data-bind="text: RenterAnswerCount">5</span> OF <span class="result-number white-text" data-bind="text:rQCount">8</span>
+						<span class="result-correct white-text">CORRECT</span>
+					</div>
+				</div>
+
+				<div id="liabilityResult" class="container_12" data-bind="visible :!RenterCss()">
 					<div class="grid_12">
 						<h4>RENTAL, CONDOS & CO-OPS</h4>
-						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
+						<span class="score-text">TAKE THE QUIZ</span><span class="score" ></span>
 					</div>
 				</div>
 
 				<!--Belongings Result -->
-				<div id="belongingsResult" class="container_12">
+				<div id="belongingsResult" class="container_12" data-bind="visible :belongingCss()">
 					<div class="grid_5">
 						<h4>BELONGINGS</h4>
-						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
+						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: belongingScore">0</span>
 					</div>
 
 					<div class="grid_4">
-						<span class="badge-image">badge</span>
+						<span class="badge-image" data-bind="css:getclass(belongingAnswerCount,bQCount)">badge</span>
 					</div>
 
 					<div class="grid_3">
-						<span class="result-number white-text">5</span> OF <span class="result-number white-text">20</span>
+						<span class="result-number white-text" data-bind="text: belongingAnswerCount">5</span> OF <span class="result-number white-text" data-bind="text:bQCount">6</span>
 						<span class="result-correct white-text">CORRECT</span>
 					</div>
 				</div>
 
+
+				<div id="belongingsResult" class="container_12" data-bind="visible :!belongingCss()">
+					<div class="grid_12">
+						<h4>BELONGINGS</h4>
+						<span class="score-text">TAKE THE QUIZ</span><span class="score" ></span>
+					</div>
+				</div>
+
 				<!-- Liability Result -->
-				<div id="liabilityResult" class="container_12">
+				<div id="liabilityResult" class="container_12" data-bind="visible :liabilityCss()">
 					<div class="grid_5">
-						<h4>Liability</h4>
-						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
+						<h4>LIABILITY</h4>
+						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: liabilityScore">0</span>
 					</div>
 
 					<div class="grid_4">
-						<span class="badge-image">badge</span>
+						<span class="badge-image" data-bind="css:getclass(liabilityAnswerCount,lQCount)">badge</span>
 					</div>
 
 					<div class="grid_3">
-						<span class="result-number white-text">5</span> OF <span class="result-number white-text">20</span>
+						<span class="result-number white-text" data-bind="text: liabilityAnswerCount">5</span> OF <span class="result-number white-text" data-bind="text:lQCount">6</span>
 						<span class="result-correct white-text">CORRECT</span>
+					</div>
+				</div>
+
+
+				<div id="liabilityResult" class="container_12" data-bind="visible :!liabilityCss()">
+					<div class="grid_12">
+						<h4>LIABILITY</h4>
+						<span class="score-text">TAKE THE QUIZ </span><span class="score" ></span>
 					</div>
 				</div>
 
 				<!-- Total Results Container -->
 				<div id="totalResults" class="container_12">
 					<div class="grid_6 light-green-text">
-						TOTAL SCORE: <span class="dark-green-text">220</span>
+						TOTAL SCORE: <span class="dark-green-text" data-bind="text:totalScore">220</span>
 					</div>
 					<div class="class_6 dark-green-text">
-						22/50 <span class="light-green-text">CORRECT</span>
+						<span data-bind="text:totalAnswerCount"></span >/<span data-bind="text:totalQCount"></span> <span class="light-green-text">CORRECT</span>
 					</div>
 				</div>
 
@@ -148,7 +186,7 @@
 				<ul>
 					<li><a href="landing-page.html" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Take The Quiz</a></li>
 					<li><a href="help-page.html" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="info-page.html" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="info-page.html" data-ajax="false" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>

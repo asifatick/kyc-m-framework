@@ -17,10 +17,13 @@ body,.ui-body-a, .ui-overlay-a{ background:#dfdfd3 url('../img/default-backgroun
 
 body,.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-body-a button,.ui-bar-a, .ui-bar-a input, .ui-bar-a select, .ui-bar-a textarea, .ui-bar-a button,.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a, .ui-btn-text{ font-family: 'dincond-mediumregular', serif;}
 
+.white-text{ color:#f6f6e9; }
+.
 
 /* Button Styles */
 .ui-btn-text{ text-transform: capitalize; font-weight: 400;}
 a.kyc-btn{ border: 1px solid #E65B4D;
+	margin-bottom:0.6em;
 background: white;
 font-weight: bold;
 display: inline-block;
@@ -54,6 +57,8 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
 .ui-header > .ui-btn, .ui-footer > .ui-btn{ border:none; background:none; box-shadow: none; top:15px; border-right:1px solid #CCC; }
 .ui-header .ui-btn-icon-left > .ui-btn-inner > .ui-icon, .ui-btn-icon-right > .ui-btn-inner > .ui-icon{ top:-1px; }
 .ui-header > .ui-btn, .ui-footer > .ui-btn .ut-btn-text{ font-size: 1.3em; }
+
+
 /* Footer Buttons and Icons  */
 .ui-btn-active{ text-shadow:0 1px 1px rgba(111,111,111,0.8); }
 .ui-footer .ui-navbar .ui-btn-inner .ui-icon-footer-return-icon{ background:url('themes/images/footer-return-icon.png') no-repeat;}
@@ -99,22 +104,34 @@ left:48%;
 	line-height: 1em;
 	margin:5px 0 10px 0;
 	padding:0.2em 0.4em;
+	color: #E65B4D;
  }
 
+ .info-wrapper-sub-title{ 
+ 	font-size: 1em;
+ 	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #E65B4D;
+	line-height: 1em;
+	margin: -0.2em 0.3em;
+padding: 0.3em 1em 0.2em 1em;
+  }
+
  .info-wrapper-content{
- 	max-height: 250px;
- 	margin-bottom: 1em;
+ 	height: 200px;
+ 	max-height: 200px;
+ 	margin: 0.5em 0;
  	font-family: Helvetica,Arial,sans-serif;
  }
 
- .info-wrapper-content p{ padding:1em 0.5em; color: #5d5d5d; }
- .info-wrapper-content h3{ padding:0.5em 0.5em; margin:0.3em 0; }
- .info-wrapper .kyc-btn{ margin:0 40%; }
+ .info-wrapper-content p{ padding:0.3em 0.5em; font-size: 0.8em; color: #5d5d5d; }
+ .info-wrapper-content h4{ padding:0.5em 0.5em; font-size: 0.8em; margin:0; color: #E65B4D }
+ .info-wrapper .kyc-btn{ margin:4% 40%; }
 
 /* Landing Page Content */
 #landingPage .ui-content{ padding:0; }
 .landing-welcome img{ max-width: 100%; }
-.landing-alert img{ width:90%; max-width: 100%; padding:15px; margin-top:-10px; }
+.landing-alert img{ width:90%; max-width: 100%; padding:5px 15px 0 15px; margin-top:-10px; }
 
 /* Help Container */
 #helpPage .ui-content, #about .ui-content, #terms .ui-content { padding:0 0 1em 0; overflow: hidden; }
@@ -144,7 +161,7 @@ left:48%;
     width: 75%; }
 
 /* Quiz Info Page Style */
-#structureQuizPage .kyc-btn{ margin:0 30%; }
+#structureInfoPage .kyc-btn, #belongingsInfoPage .kyc-btn, #liabilityInfoPage .kyc-btn, #rentalInfoPage .kyc-btn, #tellMeMore .kyc-btn { margin:2% 25%; }
 
 /* Question Content Styling */
 #structureQuizPage .ui-content, #correctPage .ui-content{ padding:0 0 1em 0; overflow: hidden; }
@@ -157,10 +174,11 @@ left:48%;
 .ans-count{ color:#f6f6e9;  }
 .question-count{ color:#bcbb47; }
 .correct{ color: #f6f6e9; }
+.ans-count, .question-count, .correct{ text-shadow: none; }
 
-.question-title{ background:#f6f6e9; color: #656363; text-shadow: 0 1px 1px rgba(175,234,201,0.4); text-align: center; padding:0.5em 0; box-shadow: 0 1px 1px rgba(111,111,111,0.3); }
+.question-title{ background:#f6f6e9; color: #656363; text-shadow: 0 1px 1px rgba(175,234,201,0.4); text-align: center; padding:0.5em 1em; box-shadow: 0 1px 1px rgba(111,111,111,0.3); }
 h4.question-title{ font-size: 1.2em; margin-top:0; }
-form.question-form{ margin-bottom: 1em; }
+form.question-form{ margin-bottom: 1em; text-align:left; }
 
 .ans-1{ border:1px solid red;}
 .ans1{ border: 1px solid green; }
@@ -169,18 +187,51 @@ form.question-form{ margin-bottom: 1em; }
 .ans-1 .qa-icon{ background: url('../img/answer-icons/ans-wrong.png') no-repeat right top; background-size: 90%; }
 .ans1 .qa-icon{ background: url('../img/answer-icons/ans-correct.png') no-repeat right top; background-size: 90%; }
 
-#qContent.question-container{  }
+#qContent.question-container{ text-align: center; }
 
 .question-container .form-row{ padding:0.5em 0; border-bottom: 1px solid #ceceaa; box-shadow: 0px 1px 0px #FFF; }
 .question-container .form-row:last-child{ border-bottom: none; box-shadow: none; }
 .question-container .form-row input[type="radio"]{ float: right; }
 .question-container .form-row label{ }
-.question-container a.kyc-btn{ margin: 0 35%; }
+.question-container a.kyc-btn{ margin: 0 auto; }
+
+.question-container .kyc-radio{ background-color: #f6f6f6;
+	width:18px;
+	height: 18px;
+	border: 1px solid #e35041;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 0px;
+	clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+	display: inline-block;
+	position: relative; }
+.question-container .kyc-radio:checked:after{ content: ' ';
+	width: 18px;
+	height: 18px;
+	border-radius: 0px;
+	
+	position: absolute;
+	background: #99a1a7;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px; }
+.question-container .kyc-radio:checked{background-color: #e9ecee;
+	color: #99a1a7;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+.question-container .kyc-radio:active, .question-container .kyc-radio:checked:active{ 
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
 
 .indicator-dots{ display: block; margin:0 auto; }
-.dots-container{ margin:0 25%; }
+.dots-container{ margin:0 auto; vertical-align: middle; text-align: center; }
 .dots-container .b, .dots-container .a{ -webkit-border-radius: 5em;
-	border-radius: 5em; width: 0.5em; height: 0.5em; display: inline-block; border:1px solid #5f7231; text-indent: -999px; }
+	border-radius: 5em; width: 0.5em; height: 0.5em; display: inline-block; border:1px solid #5f7231; text-indent: -999px;
+	vertical-align: 
+	 }
 
 .dots-container .b{ background:#5f7231; }
 .dots-container .a{ background: #fffff6; }
@@ -203,4 +254,76 @@ h4.qa-notification-title{ font-size: 1.6em; }
 
 /* Badges Page Style */
 
+.badges-container{  }
+.badges-container .badge-content-holder{ margin-bottom: 1.5em; }
+.badges-container .score-container .grid_12 h4{ font-family: 'dincond-mediumregular', serif; font-size: 1em; color: #bcbb47; }
+.badges-container .score-container .grid_12 h4 span{ font-size: 1.2em; color: #f6f6e9; display: block; }
+.badges-container .ui-content{ padding:0 0 1em 0; overflow: hidden; }
+.badges-container .grid_12 h4{ text-align: center; font-family: helvetica, arial, serif; margin:0.3em 0; font-size:1.2em;  }
+.badges-container .grid_12 p{ text-align: center; font-family: helvetica, arial, serif; margin:0; padding: 0.4em 1em; font-size: 0.8em; }
+.badges-container .badge-score{ color: #BCBB47;
+font-size: 1.4em;
+text-align: center;
+left: 40px;
+margin-right: -70%; }
+.badges-container .badge-score span.badge-number{ color:#d55447; font-size: 1.4em; display: block; font-weight: 500; }
+.badges-container .badge-image-container{  }
+.badges-container .badge-image-container span.a-level{ background:url('../img/badges-icons/level-a-icon.png') no-repeat center center; background-size: 95%;
+display: block;
+width: 100%;
+height: 160px;
+text-indent: -9999px; }
+.badges-container .badge-image-container span.b-level{ background:url('../img/badges-icons/level-b-icon.png') no-repeat center center; background-size: 95%;
+display: block;
+width: 100%;
+height: 160px;
+text-indent: -9999px; }
+.badges-container .badge-image-container span.c-level{ background:url('../img/badges-icons/level-c-icon.png') no-repeat center center; background-size: 95%;
+display: block;
+width: 100%;
+height: 160px;
+text-indent: -9999px; }
+.badges-container .badge-result{ color: #5F7131;
+font-size: 1.4em;
+text-align: center;
+margin-left: -30%; }
+.badges-container .badge-result span.badge-number{ color: #d55447; font-size:1.6em; }
+.badges-container .badge-result span.badge-correct{ display: block; }
 
+.badge-reslut-button{ margin:auto 35%; }
+
+/* Result Page */
+#resultPage .ui-content{ padding:0 0 1em 0; overflow: hidden; }
+.result-header h4{ font-family: 'dincond-mediumregular', serif; font-size: 1.4em; font-weight: normal; text-align: center; margin:0.5em 0; }
+.result-container .grid_5{ background: #5f7231; min-height: 70px; }
+.result-container .grid_4{ background:#7d8c57; min-height: 70px; outline: 1px dotted #bcbb47; }
+.result-container .grid_3{ background: #5f7131; min-height: 70px; text-align: center; }
+#structureResult h4, #rentalResult h4, #belongingsResult h4, #liabilityResult h4{ font-size: 1.2em; color: #f6f6e9; font-weight: normal; margin:0.3em 0; padding:0 0.5em; text-shadow:none; }
+
+#structureResult .grid_12, #rentalResult .grid_12, #belongingsResult .grid_12, #liabilityResult .grid_12{ background:#bcbb47; border-top:1px solid #5f7131; border-bottom:1px solid #5f7131; }
+#structureResult .grid_12 h4, #rentalResult .grid_12 h4, #belongingsResult .grid_12 h4, #liabilityResult .grid_12 h4{ margin:0.3em 0; padding:0 0.5em; }
+#structureResult .grid_12 span.score-text, #rentalResult .grid_12 span.score-text, #belongingsResult .grid_12 span.score-text, #liabilityResult .grid_12 span.score-text{ color:#5F7231; }
+
+.result-container span.score-text{ color: #bcbb47; font-size: 1em; font-family: 'dincond-lightregular', serif; padding:0 0.5em; text-shadow:none; }
+.result-container span.score{ color: #f6f6e9; }
+.result-container span.result-number{ font-size: 1.2em; }
+.result-container span.result-correct{ text-align: center; font-size: 0.8em; display: block; text-align:center; }
+.result-container span.a-level{ background:url('../img/badges-icons/level-a-icon.png') no-repeat center center; background-size: 80%;
+display: block;
+width: 100%;
+height: 70px;
+text-indent: -9999px; }
+.result-container span.b-level{
+	 background:url('../img/badges-icons/level-b-icon.png') no-repeat center center; background-size: 80%;
+display: block;
+width: 100%;
+height: 70px;
+text-indent: -9999px;
+}
+.result-container span.c-level{ 
+	background:url('../img/badges-icons/level-c-icon.png') no-repeat center center; background-size: 80%;
+display: block;
+width: 100%;
+height: 70px;
+text-indent: -9999px;
+ }

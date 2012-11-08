@@ -42,51 +42,29 @@
 
 				self.getResultClass =  function()
 				{
-					if (self.answerCount() <= Math.round((curquestionList.length *50)/100) ) {
-						self.badge("c-level");
-	     				self.badgeText("You missed a few. Why not go back and review the questions about "+self.getCatName()+ " that you answered incorrectly. For more information, be sure to talk to your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");
+					if (self.answerCount <= (curquestionList.length *.5) ) {
+						self.badge("C-LEVEL");
+	     				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");	
 	     				self.badgeTextHead("You missed a few.");
-							return "c-level";
+							return "C-LEVEL";
 					}
-					else if (self.answerCount() <= (Math.round(curquestionList.length *.75) ))
+					else if (self.answerCount <= (curquestionList.length *.75) )
 					{
 							 	
-						self.badge("b-level");
-	     				self.badgeText("Good work, but you may want to review the questions about "+self.getCatName()+ " that you answered incorrectly. For more information, be sure to talk to your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");
+						self.badge("B-LEVEL");
+	     				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");
 	     				self.badgeTextHead("Good Work,");	
-							return "b-level";
+							return "B-LEVEL";
 					
 					}
 					else	
 					{
-						self.badge("a-level");
-	     				self.badgeText("Outstanding! For even more information, be sure to contact your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");	
+						self.badge("A-LEVEL");
+	     				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");	
 	     				self.badgeTextHead ("Outstanding!");
-						return "a-level";
+						return "A-LEVEL";
 					};
 
-				}
-
-				self.getCatName = function()
-				{
-					switch(catID())
-					{
-					case "1":
-					  return "STRUCTURE";
-					  break;
-					case "2":
-					 return "BELONGINGS";
-					  break;
-					  case "3":
-					  return "LIABILITY";
-					  break;
-					  case "4":
-					  return "RENTALS, CONDOS & CO-OPS";
-					  break;
-					default:
-					 return "RENTALS, CONDOS & CO-OPS";
-					  
-					}
 				}
 				self.next = function(place) {
 				 	
@@ -139,7 +117,7 @@
      					self.tempscore += 0;
      					self.ansHead (self.cqq.expForWrongHead);
      					self.ansBody (self.cqq.expForWrong);
-     					self.ansTitle (self.getansTitleForWrong());
+     					self.ansTitle ("SORRY, THE CORRECT ANSWER IS");
      				}
      				self.score(self.tempscore * 5);
      				self.answerCount(self.tempscore);
@@ -157,13 +135,6 @@
 
 			 	//self.next();
 
-     			}
-     			self.getansTitleForWrong =function()
-     			{
-     				if (self.cq().answers.length > 2) {
-     					return "SORRY, THAT'S NOT THE BEST ANSWER";
-     				};
-     				return "SORRY, EXPLANATION";
      			}
          			self.tellMore = function(){
          				//self.visibleTellMore(true);
@@ -211,7 +182,7 @@
 
 	$(document).on( 'pageinit', '#structureQuizPage' ,function() {
 	window.jsel = JSONSelect;
-	getQuostionsByCat(catID());
+	getQuostionsByCat('1');
 	//alert(curquestionList);
 	//koquestion =createKoObject(getQuostion(quetionIndex));
 	//koquestion1 = ko.observable(koquestion);

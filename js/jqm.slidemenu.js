@@ -10,12 +10,6 @@ $(document).on("pageinit", function(e){
 		}
 	});
 
-	$(document).on("swipeleft swiperight",".ui-page-active", function(e){
-		console.log('b');
-		e.stopImmediatePropagation();
-		e.preventDefault();
-		slidemenu(sm, sm.data('slideopen'));
-	});
 
 	$(document).on("click", ".ui-page-active :jqmData(slidemenu)", function(e) {
 		slidemenu(sm, sm.data('slideopen'));
