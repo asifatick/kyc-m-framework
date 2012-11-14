@@ -45,7 +45,8 @@
 	//	return "structure.score";
 	// }
 	</script>
-	<script src="js/script.js"  ></script>
+	<script src="js/script.js"></script>
+	<script src="js/kyc-script.js"></script>
 
 </head>
 <body>
@@ -132,7 +133,7 @@
 					<div class="info-wrapper">
 						<h2>SELECT WHICH QUIZ YOU WANT TO RETAKE?</h2>
 						<h3>You will loose your previous points if you retake a quiz</h3>
-						<form class="question-container">
+						<form class="question-form">
 							<ul data-role="none">
 								<li data-role="none">
 									<input id="structure" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="structure-quiz-page" data-role="none"/>
@@ -149,7 +150,7 @@
 								<a href="#" data-rel="back" data-role="button" data-inline="true">CANCEL</a>
 							</div>
 							<div class="grid_6">
-								<a href="#" data-bind="click:getURL" data-role="button" data-inline="button">RETAKE</a>
+								<a href="#" data-bind="click:getURL" data-role="button" data-inline="true">RETAKE</a>
 							</div>
 						</div>
 					</div>
@@ -205,10 +206,10 @@
 
 					<div class="container_12 button-row">
 						<div class="grid_6">
-							<a class="kyc-btn1 tell-more-btn" href="#tellMeMorePop" data-rel="popup" data-position-to="window" data-transition="pop" data-role="none">TELL ME MORE</a>
+							<a href="#tellMeMorePop" data-rel="popup" data-position-to="window" data-transition="pop" data-role="button" data-inline="inline">TELL ME MORE</a>
 						</div>
 						<div class="grid_6">
-							<a class="kyc-btn1 continue-btn" href="#" data-bind="click: $root.next" data-transition="slidefade" data-role="none" data-prefetch>CONTINUE <img src="img/continue-arrow.png"></a>
+							<a href="#" data-bind="click: $root.next" data-transition="slidefade" data-role="button" data-inline="inline" data-prefetch>CONTINUE <img src="img/continue-arrow.png"></a>
 						</div>
 					</div>
 
@@ -352,7 +353,7 @@
 			<!--#Retake Popup -->
 		</div>
 
-		<div data-role="footer" data-id="fool" data-position="fixed" data-fullscreen="true">
+		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="quiz-page-structure.html" data-ajax="false" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
@@ -367,7 +368,7 @@
 
 	<div data-role="page" id="helpPage" data-theme="a">
 
-		<div data-role="header" id="data-id" data-position="fixed" data-update-page-padding="false">
+		<div data-role="header" id="data-id" data-position="fixed">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
@@ -443,9 +444,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" data-bind="click: $root.next" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
+					<li><a href="#" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
 					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-ajax="false" data-ajax="false" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -455,7 +456,7 @@
 	<!-- Info Page -->
 	<div data-role="page" id="infoPage" data-theme="a">
 
-		<div data-role="header" data-id="hnav" data-position="fixed" data-update-page-padding="false">
+		<div data-role="header" data-id="hnav" data-position="fixed">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
@@ -464,7 +465,7 @@
 			<h2 class="help-content-title">INFO</h2>
 			<div class="tabbed-container">
 
-				<div class="info-tabs-container">
+				<div data-id="infoNavTab" class="info-tabs-container">
 						<div data-role="navbar">
 							<ul>
 								<li><a href="#info-nav" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
@@ -492,7 +493,7 @@
 				<ul>
 					<li><a href="#" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
 					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#infoPage" class="ui-btn-active uiu-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -510,7 +511,7 @@
 			<h2 class="help-content-title">INFO</h2>
 			<div class="tabbed-container">
 
-				<div class="info-tabs-container">
+				<div data-id="infoNavTab" class="info-tabs-container">
 						<div data-role="navbar">
 							<ul>
 								<li><a href="#infoPage" data-role="none">ABOUT I.I.I</a></li>
@@ -540,7 +541,7 @@
 				<ul>
 					<li><a href="#" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" data-prefetch>Return To Quiz</a></li>
 					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
