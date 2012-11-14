@@ -19,12 +19,31 @@
      			self.badge= ko.observable("");
      			self.badgeTextHead =ko.observable("");
      			self.badgeText =ko.observable("");
-
+     			self.ancEXP =ko.observable("");
      			self.markerArray = ko.observableArray();
+     			self.onQuestionPage =ko.observable(1);
+     			self.retNAme = ko.computed(function(){
+							return  "#quizSelectPage" + self.onQuestionPage();
+					});
 
      			self.markerClass = ko.observable("a");
 
 
+
+     			self.getURL = function()
+				{
+						$.mobile.changePage( self.usrans1 +".html", {
+						transition: "slidefade",
+						allowSamePageTransition  : true,
+						
+					});
+				}
+				self.getRetakeValue = function()
+				{
+					self.retNAme ( "#quizSelectPage" + self.onQuestionPage);
+				}
+
+				self.usrans1;
 
      			for (var  i = 0; i < curquestionList.length ; i++) {
      				self.markerArray.push( ko.observable("a"));
@@ -35,6 +54,7 @@
 				//self.visibleTellMore =  ko.observable(false);
 				self.cq = ko.observable(getQuostion(quetionIndex));
 				self.cqq = getQuostion(quetionIndex);
+				
 				self.getAnsID = function(ind)
 				{
 					return "answer" + ind();
@@ -91,33 +111,47 @@
 				self.next = function(place) {
 				 	
 				 	
-         			if (quetionIndex == curquestionList.length-1) {
+         			if (quetionIndex >= curquestionList.length-1) {
          				localStorage.setItem(getScoreID(), self.score());
          				localStorage.setItem(getAnsCountID(), self.answerCount());
+
          				//alert(localStorage.getItem("score"));
          				self.getResultClass();
+         				self.onQuestionPage(3);
+         				
          				$.mobile.changePage( $("#badgesPage"), {
-						transition: "pop",
+						transition: "slidefade",
 						allowSamePageTransition  : true,
 						
 					});
          			}
          			else
-         			{
-					quetionIndex++;
-             		self.cq(  getQuostion(quetionIndex));
-             		self.cqq = getQuostion(quetionIndex);
-             		self.markerArray()[quetionIndex] ("b");
-             		$.mobile.changePage( "", {
-						transition: "pop",
-						allowSamePageTransition  : true,
-						
-					});
-             		//self.visibleTellMore(false);
-         			//self.visibleExplanation(false);
-         			};
-
-         		}
+	         			{
+	         				if (self.onQuestionPage() == 0) {
+							quetionIndex++;
+							$.mobile.changePage( "", {
+								transition: "slidefade",
+								allowSamePageTransition  : true,
+								
+							});
+		             		//self.visibleTellMore(false);
+		         			//self.visibleExplanation(false);
+		         			setTimeout(function(){self.cq(  getQuostion(quetionIndex));self.cqq = getQuostion(quetionIndex);},200);
+		         
+		             		self.markerArray()[quetionIndex] ("b");
+		             		self.onQuestionPage (1);
+		             		
+		         			}
+		         			else
+		         			{
+		         				$.mobile.changePage( "", {
+								transition: "slidefade",
+								allowSamePageTransition  : true,
+								
+							});
+		         			};
+	         			};
+	         		}
      			self.submit = function(){
 
      				if(isNaN(self.usrans))
@@ -132,20 +166,25 @@
      					self.tempscore += 1;
      					self.ansHead (self.cqq.explanationHead);
      					self.ansBody (self.cqq.explanation);
+     					self.ancEXP ("");
      					self.ansTitle ("CORRECT! 5 POINTS");
      				}
      				else{
+     					if(parseInt(self.usrans) ==0)
+     					{self.usrans ="-1";}
      					//self.ansTrue = false;
      					self.tempscore += 0;
      					self.ansHead (self.cqq.expForWrongHead);
      					self.ansBody (self.cqq.expForWrong);
      					self.ansTitle (self.getansTitleForWrong());
      				}
+     				self.onQuestionPage (0);
+     				
      				self.score(self.tempscore * 5);
      				self.answerCount(self.tempscore);
      				self.classname("ans"+self.usrans);
      				$.mobile.changePage( $("#correctPage"), {
-						transition: "pop",
+						transition: "slidefade",
 						allowSamePageTransition  : true,
 						
 					});
@@ -161,9 +200,12 @@
      			self.getansTitleForWrong =function()
      			{
      				if (self.cq().answers.length > 2) {
-     					return "SORRY, THAT'S NOT THE BEST ANSWER";
+     					self.ancEXP ("EXPLANATION");
+     					return "SORRY, THE CORRECT ANSWER IS";
+
      				};
-     				return "SORRY, EXPLANATION";
+     				self.ancEXP ("EXPLANATION");
+     				return "SORRY, THE CORRECT ANSWER IS";
      			}
          			self.tellMore = function(){
          				//self.visibleTellMore(true);
@@ -218,6 +260,4 @@
 	ko.applyBindings(new viewModel());
 		//localStorage.setItem(getScoreID(), 12);
 		//alert(localStorage.getItem(getScoreID()));
-
-        
     });
