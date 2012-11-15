@@ -414,14 +414,14 @@ font-weight: normal;
 .button-row .grid_6{ text-align: center; }
 
 .qa-content-wrapper{ overflow:auto; -webkit-overflow-scrolling:touch; padding-top:56px; margin: 0; }
-#qCAContent{ height:260px; max-height: 300px; }
+#qCAContent{ height:200px; max-height: 200px; }
 
 .continue-btn img{ width:10px; }
 
 /* Badges Page Style */
 
 .badges-container{  }
-.badge-dynamic-holder{ height: 340px; max-height: 340px; }
+.badge-dynamic-holder{ height: 200px; max-height: 200px; }
 .badges-container .badge-content-holder{ margin-bottom: 0; }
 .badges-container .score-container .grid_12 h4{ font-family: 'dincond-mediumregular', serif; font-size: 1em; color: #bcbb47; }
 .badges-container .score-container .grid_12 h4 > span{ font-size: 1.2em; color: #f6f6e9; display: block; text-align:center; }

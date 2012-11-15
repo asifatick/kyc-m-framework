@@ -26,13 +26,14 @@
 	<script src="js/jqm.globals.js"></script>
 	<script src="js/jquery.mobile.min.js"></script>
 	<script src="js/jquery.mobile.fixedToolBar.polyfill.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/jquery.mobile.iscrollview-closure-min.js"></script>
+
 	<script src="js/jq-plugins.js"></script>
 
 	<!--JQM SlideMenu-->
 	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
 	<script src="js/jqm.slidemenu.js"></script>
-	<script src="js/iscroll.js"></script>
-	<script src="js/jquery.mobile.iscrollview-closure-min.js"></script>
 
 	<script type="text/javascript" src="js/jsonselect.min.js"></script>
 	<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
@@ -54,12 +55,12 @@
 		<h3>MENU</h3>
 		<ul>
 			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
-			<li><a href="structure-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
-			<li><a href="rental-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
-			<li><a href="belongings-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
-			<li><a href="liability-quiz-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+			<li><a href="structure-quiz-page.html" data-transition="slide" data-prefetch><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
+			<li><a href="rental-quiz-page.html" data-transition="slide" data-prefetch><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+			<li><a href="belongings-quiz-page.html" data-transition="slide" data-prefetch><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
+			<li><a href="liability-quiz-page.html" data-transition="slide" data-prefetch><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
 			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
-			<li><a data-ajax="false" href="result-page.html" data-transition="slidefade" data-prefetch><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
+			<li><a data-ajax="false" href="result-page.html" data-transition="slide" data-prefetch><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
 			<li><a data-bind="attr: {href:$root.retNAme}" href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE THIS QUIZ</a></li>
 		</ul>
 	</div>
@@ -117,7 +118,7 @@
 					</div>
 				</form>
 
-				<a href="#" data-bind="click: $root.submit" data-transition="slidefade" data-role="button" data-inline="true">SUBMIT</a>
+				<a href="#" data-bind="click: $root.submit" data-transition="slide" data-role="button" data-inline="true">SUBMIT</a>
 
 				<div class="indicator-dots">
 					<div class="dots-container" data-bind="foreach:$root.markerArray">
@@ -161,9 +162,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" class="ui-state-persist" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#" class="ui-state-persist" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -206,10 +207,10 @@
 
 					<div class="container_12 button-row">
 						<div class="grid_6">
-							<a href="#tellMeMorePop" data-rel="popup" data-position-to="window" data-transition="pop" data-role="button" data-inline="inline">TELL ME MORE</a>
+							<a href="#tellMeMorePop" data-rel="popup" data-position-to="window" data-transition="pop" class="kyc-btn1 tell-more-btn" data-role="none">TELL ME MORE</a>
 						</div>
 						<div class="grid_6">
-							<a href="#" data-bind="click: $root.next" data-transition="slidefade" data-role="button" data-inline="inline" data-prefetch>CONTINUE <img src="img/continue-arrow.png"></a>
+							<a href="#" data-bind="click: $root.next" data-transition="slide" data-role="none" class="kyc-btn1 continue-btn">CONTINUE <img src="img/continue-arrow.png"></a>
 						</div>
 					</div>
 
@@ -264,9 +265,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" data-bind="click: $root.next" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#" data-bind="click: $root.next" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -356,9 +357,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="quiz-page-structure.html" data-ajax="false" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="quiz-page-structure.html" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -444,9 +445,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
-					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide" data-prefetch>Return To Quiz</a></li>
+					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -469,7 +470,7 @@
 						<div data-role="navbar">
 							<ul>
 								<li><a href="#info-nav" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
-								<li><a href="#termsPage" data-role="none">TERMS & CONDITIONS</a></li>
+								<li><a href="#termsPage" data-role="none" data-transition="none">TERMS & CONDITIONS</a></li>
 							</ul>
 						</div><!-- /navbar tabs -->
 					</div>
@@ -488,12 +489,12 @@
 		</div>
 
 
-		<div data-role="footer" data-id="fool" data-position="fixed">
+		<div data-id="fool" data-position="fixed" data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active uiu-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#structureQuizPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" data-prefetch>Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" data-prefetch>Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -514,8 +515,8 @@
 				<div data-id="infoNavTab" class="info-tabs-container">
 						<div data-role="navbar">
 							<ul>
-								<li><a href="#infoPage" data-role="none">ABOUT I.I.I</a></li>
-								<li><a href="#termsPage" class="ui-btn-active ui-state-persist" data-role="none">TERMS & CONDITIONS</a></li>
+								<li><a href="#infoPage">ABOUT I.I.I</a></li>
+								<li><a href="#termsPage" class="ui-btn-active ui-state-persist">TERMS & CONDITIONS</a></li>
 							</ul>
 						</div><!-- /navbar tabs -->
 					</div>
@@ -539,13 +540,12 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" data-rel="back" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" data-prefetch>Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#structureQuizPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" data-prefetch>Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" data-prefetch>Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" data-prefetch>Info</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

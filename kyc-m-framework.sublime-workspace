@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"question",
+				"question-form"
+			],
+			[
 				"border",
 				"border-bottom"
 			],
@@ -510,36 +514,104 @@
 			[
 				"FF",
 				"FFF200"
-			],
-			[
-				"conte",
-				"content_section"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "quiz-page-structure.html",
+			"settings":
+			{
+				"buffer_size": 25569,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/jquery.mobile.iscrollview-closure-min.js",
+			"settings":
+			{
+				"buffer_size": 80342,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "structure-quiz-page.html",
 			"settings":
 			{
-				"buffer_size": 10694,
+				"buffer_size": 10406,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "landing-page.html",
+			"settings":
+			{
+				"buffer_size": 9636,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "info-screen.html",
+			"settings":
+			{
+				"buffer_size": 3427,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "quiz-page-rental.html",
+			"settings":
+			{
+				"buffer_size": 19699,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/kyc.css",
 			"settings":
 			{
-				"buffer_size": 24521,
+				"buffer_size": 25608,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "quiz-page-structure.html",
+			"file": "js/kyc-script.js",
 			"settings":
 			{
-				"buffer_size": 19825,
+				"buffer_size": 132,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/font/font.css",
+			"settings":
+			{
+				"buffer_size": 1989,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/jquery.mobile.iscrollview.css",
+			"settings":
+			{
+				"buffer_size": 7969,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/jqm.globals.js",
+			"settings":
+			{
+				"buffer_size": 780,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/jqm.slidemenu.css",
+			"settings":
+			{
+				"buffer_size": 2509,
 				"line_ending": "Windows"
 			}
 		}
@@ -596,11 +668,13 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/knockout-2.2.0.js",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/retake-quiz-page.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/structure-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/landing-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/belongings-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/liability-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/rental-quiz-page.html",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/retake-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-structure.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.slidemenu.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/jqm.slidemenu.css",
@@ -613,7 +687,6 @@
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/retakescript.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/info-screen.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-select.html",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/structure-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/result-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.globals.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jq-plugins.js",
@@ -722,8 +795,7 @@
 		"/Applications/MAMP/htdocs/mynewsbuzz/wp-content/themes/MyNewsBuzz_bootstrap/style.css",
 		"/Applications/MAMP/htdocs/mynewsbuzz/wp-content/themes/MyNewsBuzz_bootstrap/index.html",
 		"/Applications/MAMP/htdocs/mynewsbuzz/wp-content/themes/MyNewsBuzz_bootstrap/function.php",
-		"/Applications/MAMP/htdocs/bookfusion/Launch/index.html",
-		"/Applications/MAMP/htdocs/bookfusion/Launch/css/screen.css"
+		"/Applications/MAMP/htdocs/bookfusion/Launch/index.html"
 	],
 	"find":
 	{
@@ -741,6 +813,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"slidefade",
+			"data-inline",
 			"#termsPage",
 			"input type=\"radio\"",
 			"-webkit-animation-fill-mode: both;\n-webkit-animation-timing-function: ease-out;\n-webkit-animation-duration: 350ms;",
@@ -866,9 +940,7 @@
 			"{}",
 			"sidebar-title",
 			"site-title",
-			"header",
-			"nav-footer",
-			"access"
+			"header"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -876,6 +948,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"slide",
 			"input type=\"radio\" class=\"kyc-radio\"",
 			"",
 			"<a href=\"#\" data-slidemenu=\"#slidemenu\" data-slideopen=\"false\" data-icon=\"smico\" data-corners=\"false\" data-iconshadow=\"false\" data-shadow=\"false\">MENU</a>",
@@ -916,23 +989,22 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "structure-quiz-page.html",
+					"file": "quiz-page-structure.html",
 					"settings":
 					{
-						"buffer_size": 10694,
+						"buffer_size": 25569,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3908,
-								3908
+								10317,
+								10317
 							]
 						],
 						"settings":
@@ -941,49 +1013,99 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 874.0,
+						"translation.y": 11041.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 1,
-					"file": "css/kyc.css",
+					"file": "js/jquery.mobile.iscrollview-closure-min.js",
 					"settings":
 					{
-						"buffer_size": 24521,
+						"buffer_size": 80342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10518,
-								10518
+								80342,
+								80342
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 27177.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "quiz-page-structure.html",
+					"file": "structure-quiz-page.html",
 					"settings":
 					{
-						"buffer_size": 19825,
+						"buffer_size": 10406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8978,
+								8978
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3954.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "landing-page.html",
+					"settings":
+					{
+						"buffer_size": 9636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6172,
+								6172
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 263.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "info-screen.html",
+					"settings":
+					{
+						"buffer_size": 3427,
 						"regions":
 						{
 						},
@@ -997,6 +1119,202 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 714.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "quiz-page-rental.html",
+					"settings":
+					{
+						"buffer_size": 19699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8205,
+								8176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "css/kyc.css",
+					"settings":
+					{
+						"buffer_size": 25608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19895,
+								19895
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5893.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/kyc-script.js",
+					"settings":
+					{
+						"buffer_size": 132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "css/font/font.css",
+					"settings":
+					{
+						"buffer_size": 1989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 4.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "css/jquery.mobile.iscrollview.css",
+					"settings":
+					{
+						"buffer_size": 7969,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6493,
+								6493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 937.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/jqm.globals.js",
+					"settings":
+					{
+						"buffer_size": 780,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "css/jqm.slidemenu.css",
+					"settings":
+					{
+						"buffer_size": 2509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1036,7 +1354,7 @@
 		"cols":
 		[
 			0.0,
-			0.573850099702,
+			0.344413281683,
 			1.0
 		],
 		"rows":
@@ -1091,6 +1409,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 322.0,
+	"side_bar_width": 340.0,
 	"status_bar_visible": true
 }

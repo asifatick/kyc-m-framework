@@ -1,72 +1,202 @@
-/* The widget adds some styling that needs to be computed at run-time (min-height of scroller
- * content so that pull-up will be hidden, and scroller margin transferred from wrapper padding.)
- * All styles that are added staticly are added through this stylesheet, for maximum flexibility
- *
- * The widget adds these styles to page elements when it is constructed, and removes them when
- * it is destroyed. The styling itself is added by this style sheet. So, any styles added here
- * will be removed when the widget is destroyed. (For example, if you call "destroy" on the widget.)
- */
+body {
 
-/* The iscroll-page style is added to the page when the first iscrollview widget is created
- * on the page, and removed when the last iscrollview widget on the page is destroyed.
- */
-.iscroll-page {
-  /* Add any styles that you want on pages that use iScroll */
-}
-
-/* The wrapper is the element that contains the scroller. In the most typical usage, this
- * is .ui-content, but could be any element. */
-.iscroll-wrapper {
-    min-height:    0;  /* Override any min-height, for example, in case a background image is
-                          used on ui-content div used as wrapper. */
-    
-    /* The wrapper needs to be positioned relative or absolute for proper positioning of the 
-       scrollbar with iscroll4 default styling of the scrollbar. Either relative or absolute on the 
-       wrapper will cause the absolute positioning  of the scrollbar in iScroll to be relative to 
-       the wrapper. */ 
-    position: relative;   
+  /* Disable Safari scrollbars, because jQuery Mobile annoyingly insists on setting the
+     min-height of the page to 320px. It does this (unsuccessfully, in 1.0.1, but successfully
+     in 1.1) in order to keep the Mobile Safari location bar from appearing during page
+     transitions. But this causes a problem in desktop Safari if the height is <320px.
+     If you resize to <320 in a desktop browser, you will see a scrollbar if you don't
+     use this style.       
+        
+     I haven't put this in jquery.mobile.iscrollview.css, because it has to be applied
+     to <body>, and so it will affect the entire site/app. It is an appropriate
+     setting for any site/app meant to use a page size fixed at the browser window size. 
+     If your site/app mixes fixed-height pages with scrolling pages, you will need to
+     work out another solution. */
+  overflow:hidden;
   
-    /* iScroll examples all show the z-index of the wrapper raised to 1 (default is 0). There may
-       be an issue related to touch/click that this solves on specific platforms or depending on 
-       the ordering of elements in the HTML source if elements are fixed positioned. 
-       This would make sure that the wrapper sees click before underlying content. '
-       
-       Howver, raising the wrapper Z-index creates a serious problem on page transitions on
-       iPhone, so I don't use it here. */ 
-                    
+  /* optimizeSpeed is the default. Using optimizeLegibility here will typically DOUBLE
+     rendering time! So, think twice about using optimizeLegibility */
+  text-rendering: optimizeSpeed;
+  
+  /* subpixel-antialiased is the default, but you might like to use antialiased for a thinner look
+     in Safari. There is no speed penalty for this, nor a speed advantage for "none", which looks
+     absolutely terrible... */
+  -webkit-font-smoothing: subpixel-antialiased;
+  
+  /* Shut off long touch on links for info. If this is set to "default", then a long touch
+     on a link will display the URL in a popup. This is pretty darn annoying. */  
+  -webkit-touch-callout: none;
+  
+  /* Shut off content selection, because it's really annoying when dragging 
+     You might like to do this only for scroller content, though, or enable it for certain
+     text you want the user to be able to cut-and-paste */      
+  -webkit-user-select: none;   
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  }
+  
+/* Style header bar and footer bar with a 1px red border at top and bottom. This facilitates
+   a quick visual indication of correct sizing of the page. You should not see any white
+   space above the header or below the footer. (Note that Retina devices will show a 2px border,
+   rather than 1px.) Use your OS's accessibility features to magnify and inspect. On mobile
+   devices, there is usually a way to capture the screen contents to an image file that you can
+   later examine. (iPhone: Home+On/Off)
+*/
+
+.ui-header.ui-bar-a,
+.ui-footer.ui-bar-a {
+    border-top: 1px solid #EFEFE3;
+    border-bottom: 1px solid #EFEFE3;
+} 
+
+/* Style iScroll wrapper with a 1px green border at top and bottom. You should see no gap
+   or different color between the top of the wrapper and the bottom of the header, or between
+   the bottom of the wrapper and the top of the footer.
+*/
+.iscroll-wrapper {
+  border-top: 1px solid #EFEFE3;
+  border-bottom: 1px solid #EFEFE3;
+} 
+
+
+/* Demonstrate how to make headers/footer a different height for different orientations
+   or screen sizes. This also demonstrates that the widget now (once again) measures the 
+   headers/footers on every resize. 
+   
+   Unfortunately, the state of detecting mobile orientation on mobile devices is a mess.
+   Mobile Safari doesn't support orientation media query, while iPad doesn't. There are 
+   various hacks involving max-width, max-height, max-device-width, etc. Fortunately, for
+   this demo, we can use something simple. We want the header and footer to be smaller
+   in landscape because they make the scrollable area too small. So, just test max-height.
+   This will of course also make the header/footer smaller on a desktop browser with 
+   very short height - which makes it easy to demonstrate. :) */
+ 
+
+   
+.ui-navbar a {
+  /* For demo, make portrait navbar the same height as iPhone tabbar, because using the
+     standard navbar height for portrait and a shorter navbar for landscape would make
+     the navbar unusably short. */
+     height: 47px;    /* + 2px margins = 49px */
 }
 
-/* The scroller is the element that contains the elements that are scrolled. The height of this
- * element is typically longer than the wrapper. (It's the stuff that we scroll.) The widget
- * creates this element for you. It wraps all of the children of the wrapper.
- */
-.iscroll-scroller {
-  /* Add any styles that you want to add to scrollers */
+.ui-navbar .ui-btn-inner {
+  font-size: 14px;
+}
+   
+@media only screen and (max-height: 280px){
+  .ui-header { 
+    height: 30px;
+  }
+  
+  .ui-header .ui-title {
+    font-size: 14px;
+  }
+  
+  /* Make the buttons in the header just disappear - they're too big for a tiny header */
+  .ui-header .ui-btn {
+    display: none;
+  }
+  
+  .ui-navbar a {    
+    height: 37px;    /* + 2px border = 39px */
+  }
+  
+  .ui-navbar .ui-btn-inner {
+    font-size: 13px;
+  }
 }
 
-/* The "fixed" elements are the elements that are outside of the wrapper. The widget will
- * set headers and footers to this style, as well as any element that has a data-iscroll-fixed
- * attribute. The widget adds-up the height of these elements when it sizes the wrapper.
- */
-.iscroll-fixed {
-  /* One often sees headers/footers/etc. raised to a z-index of 1000 in iScroll examples. This
-     is probably because the scroll bar has been mis-placed, and raising the z-index of the
-     header/footer masks the problem. I don't do it here. */
-     
-  /* Add any styles that you want to add to fixed elements */
+/* Force list items to be cached on WebKit 
+   See: cubiq.org/you-shall-not-flicker 
+   
+   If this is NOT used, then scrolling long lists might exhibit a "flicker" when scrolling
+   toward the bottom of the list, as well as exhibit slow and jerky until the first
+   time the user has reached the bottom of the list.
+   
+   If this IS used, then the browser may be forced to cache the content in advance, resulting
+   in smoother scrolling, but with the side-effect of increasing initial rendering time.
+   
+   This can more than DOUBLE initial rendering time if you are not careful with the selector. The
+   recommended CSS at the above link is NOT optimal.
+      
+   You need to apply this judiciously. For example, if you know your scroller content consists
+   of list items, use "li" not "*' to select. * as the right-most component of a select is
+   horribly expensive. A small additional performance gain can be made by selecting 
+   iscroll-content instead of iscroll-scroller. You might get a 
+   glitch on a pull-up if you have one, but it's a small price to pay for doubling speed.
+   
+   It is important NOT to apply this to .iscroll-scroller itself. This will result in a huge
+   performance loss. The second rule below gives performance on iOS devices very close to not 
+   using this at all.
+   
+   I use an @media tag to disable, because it is a safe way of disabling CSS that might contain
+   comments. As well, you might like to enable this only for certain devices, which often
+   can be detected using media queries.
+   
+*/
+
+/* This one will always work to eliminate the flicker, regardless of scroller content but 
+   is very slow at initial rendering. The scroller may not be initially responsive after 
+   a page is first rendered */
+@media DISABLED { 
+  .iscroll-scroller, 
+  .iscroll-scroller * {
+    
+  }
 }
 
-/* iscroll-content is the content that is scrolled - NOT including any pull-down and pull-up
- * element, and also not including a special placeholder element used when there is a pull-up.
- */
-.iscroll-content {
-  /* Add any styles that you want to add to iscroll content */
+/* So, for the demo, I'm using this one, which doesn't target the scroller itself, and
+   targets specific top-level elements inside the scroller. */
+@media all { 
+  .iscroll-content li  {
+
+  }
 }
 
+/* Remove the background gradients from buttons in the scroller. It's very costly to scroll these
+   around, because they are really just generated bitmaps, after all. You can use these same
+   rules to style the up/down/hover appearance of listview buttons in the scroller. If you
+   do want to use gradients - particularly if building a native or webapp, consider using gradient 
+   images rather than CSS-generated gradients,  because they have been proven faster than CSS 
+   gradients. If you are developing a website, using image gradients will increase the download
+   time, both due to the size of the images (but generally small) and the additional round-trip(s).
+   
+   I eliminate text shadows as well, as these reportedly degrade performance on Android
+   browsers.
+*/
 
-/* Note on scrollbar styles: iscroll4 adds inline CSS to the scrollbar when it creates it.
-   It sets the z-index to 100 and positions it relative to the wrapper, at the right edge of
-   the wrapper. If you want to override this behaviour, set the scrollBarClass option, and then
-   style that class as you please */
+.iscroll-content .ui-listview li.ui-btn-up-c
+  {
+  background-image: none; 
+  text-shadow: none;
+  }
+   
+.iscroll-content .ui-listview li.ui-btn-hover-c
+  {
+  background-image: none;
+  text-shadow: none;
+  }
+  
+.iscroll-content .ui-listview li.ui-btn-down-c 
+  {
+  background-image: none;
+  text-shadow: none;
+  } 
 
-/* See jquery.mobile.iscroll-pulldown.css for styling of pull-down and pull-up elements */
+/* If you want to change the text color or other text properties of listview buttons in the scroller, 
+   you have to do it here, not above.
+*/
+.iscroll-content .ui-listview *.ui-btn-up-c a.ui-link-inherit
+  {  
+  }
+  
+.iscroll-content. .ui-listview *.ui-btn-hover-c a.ui-link-inherit
+  { 
+  }
+  
+.iscroll-content .ui-listview *.ui-btn-down-c a.ui-link-inherit
+  {  
+  }
