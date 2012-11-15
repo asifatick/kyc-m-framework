@@ -12,7 +12,6 @@ body {
      setting for any site/app meant to use a page size fixed at the browser window size. 
      If your site/app mixes fixed-height pages with scrolling pages, you will need to
      work out another solution. */
-  overflow:hidden;
   
   /* optimizeSpeed is the default. Using optimizeLegibility here will typically DOUBLE
      rendering time! So, think twice about using optimizeLegibility */
@@ -56,8 +55,8 @@ body {
    the bottom of the wrapper and the top of the footer.
 */
 .iscroll-wrapper {
-  border-top: 1px solid #EFEFE3;
-  border-bottom: 1px solid #EFEFE3;
+  border-top: 0px;
+  border-bottom: 0px;
 } 
 
 

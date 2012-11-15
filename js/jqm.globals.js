@@ -5,8 +5,8 @@ $(document).bind('mobileinit', function () {
     $.mobile.zoom.enabled = false;
     $.mobile.buttonMarkup.hoverDelay = 20; //defaults 200
     $.mobile.defaultDialogTransition = 'none';
-    $.mobile.defaultPageTransition = 'slidefade';
-    $.support.touchOverflow = false;
+    $.mobile.defaultPageTransition = 'slide';
+    $.support.touchOverflow = true;
   	$.mobile.touchOverflowEnabled = false;
   	$.mobile.updatePagePadding= false;
   	$.mobile.loader.prototype.options.text = "loading";

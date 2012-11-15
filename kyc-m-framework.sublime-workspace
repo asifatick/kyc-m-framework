@@ -989,6 +989,7 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1013,7 +1014,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 11041.0,
+						"translation.y": 3096.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1354,7 +1355,7 @@
 		"cols":
 		[
 			0.0,
-			0.344413281683,
+			0.768475781683,
 			1.0
 		],
 		"rows":
