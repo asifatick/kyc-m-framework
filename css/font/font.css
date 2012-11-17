@@ -4,11 +4,8 @@
 
 @font-face {
     font-family: 'dincond-boldbold';
-    src: url('ff_din_condensed_bold-webfont.eot');
-    src: url('ff_din_condensed_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ff_din_condensed_bold-webfont.woff') format('woff'),
-         url('ff_din_condensed_bold-webfont.ttf') format('truetype'),
-         url('ff_din_condensed_bold-webfont.svg#dincond-boldbold') format('svg');
+    src: url('ff_din_condensed_bold-webfont.ttf') format('truetype');
+
     font-weight: normal;
     font-style: normal;
 
@@ -19,11 +16,7 @@
 
 @font-face {
     font-family: 'dincond-lightregular';
-    src: url('ff_din_condensed_light-webfont.eot');
-    src: url('ff_din_condensed_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ff_din_condensed_light-webfont.woff') format('woff'),
-         url('ff_din_condensed_light-webfont.ttf') format('truetype'),
-         url('ff_din_condensed_light-webfont.svg#dincond-lightregular') format('svg');
+    src: url('ff_din_condensed_light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -34,11 +27,7 @@
 
 @font-face {
     font-family: 'dincond-mediumregular';
-    src: url('ff_din_condensed_medium-webfont.eot');
-    src: url('ff_din_condensed_medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ff_din_condensed_medium-webfont.woff') format('woff'),
-         url('ff_din_condensed_medium-webfont.ttf') format('truetype'),
-         url('ff_din_condensed_medium-webfont.svg#dincond-mediumregular') format('svg');
+    src: url('ff_din_condensed_medium-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -49,11 +38,7 @@
 
 @font-face {
     font-family: 'dincond-regularregular';
-    src: url('ff_din_condensed_regular-webfont.eot');
-    src: url('ff_din_condensed_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ff_din_condensed_regular-webfont.woff') format('woff'),
-         url('ff_din_condensed_regular-webfont.ttf') format('truetype'),
-         url('ff_din_condensed_regular-webfont.svg#dincond-regularregular') format('svg');
+    src: url('ff_din_condensed_regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 

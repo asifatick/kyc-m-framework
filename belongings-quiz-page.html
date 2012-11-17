@@ -7,38 +7,43 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta http-equiv="cleartype" content="on">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
 	<title>Know Your Coverage</title>
 
 	<!--Include JQM and JQ-->
 	<link rel="stylesheet" href="css/themes/kyc-theme.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
-	<link rel="stylesheet" href="css/jqm-icon-pack-2.1.2-fa.css" />
 	<link rel="stylesheet" href="css/font/font.css" />
+	<!--JQM SlideMenu-->
+	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
 	<link rel="stylesheet" href="css/kyc.css">
-	<link rel="stylesheet" href="css/jquery.mobile.iscrollview.css">
+
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.animate-enhanced.min.js"></script>
-	
+
 	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
 	<script src="js/jqm.globals.js"></script>
-	
-	<script src="js/jquery.mobile.min.js"></script>
-
-	<!--JQM SlideMenu-->
-	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
+	<script src="js/jqm-f-debug.js"></script>
 	<script src="js/jqm.slidemenu.js"></script>
-	<script src="js/iscroll.js"></script>
-	<script src="js/jquery.mobile.iscrollview-closure-min.js"></script>
+	<script src-"js/jq-plugins.js"></script>
 
 	<script type="text/javascript" src="js/jsonselect.min.js"></script>
 	<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
 
 	<script type="text/javascript" src="js/scriptbak.js"  ></script>
-	<script type="text/javascript" src="js/script.js"  ></script>
 
+	<script type="text/javascript">
+	//function getScoreID()
+	// {
+	//	return "structure.score";
+	// }
+	</script>
+	<script src="js/script.js"></script>
+
+	<!-- KYC UI custom scripts -->
+	<script src="js/kyc-script.js"></script>
 
 </head>
 <body>
@@ -53,12 +58,12 @@
 		<div data-role="content">
 			<div class="info-wrapper">
 				<h2 class="info-wrapper-title">Your Personal Possessions: What Matters Most Is Inside</h2>
-				<div class="info-wrapper-content" data-iscroll='{"hScroll":false,"vScroll":true,"hideScrollbar":false,"resizeEvents":"orientationchange"}'>
+				<div class="info-wrapper-content">
 					<h4>Are you prepared to replace possessions that are lost or damaged, or stolen? </h4>
 					<p>You can rebuild a house after a catastrophe. You can upgrade home security systems after a burglary. But what about replacing the things that make a home unique and special? Do you know what it will take to restore the lifestyle and comfort you worked so hard to build?</p>
 					<p>Your homeowners policy can take care of this by covering the cost of replacing lost possessions, from furnishings and appliances to clothing, jewelry and other cherished items. This quiz is designed help you build and test your knowledge about getting the right coverage for the contents of your home in the event of a loss.</p>
 				</div>
-				<a href="quiz-page-belongings.html" class="kyc-btn continue-btn" data-transition="slidefade" rel="external" data-role="none">TAKE QUIZ <img src="img/continue-arrow.png"></a>
+				<a href="quiz-page-belongings.html" class="kyc-btn continue-btn" data-transition="slidefade" data-ajax="false" data-role="none">TAKE QUIZ <img src="img/continue-arrow.png"></a>
 			</div>
 		</div>
 
@@ -74,16 +79,12 @@
 		</div>
 
 	</div>
-
-	<!-- Help Container -->
-
-	<div data-role="page" id="helpPage" data-theme="a" data-update-page-padding="false">
-
-		<div data-role="header" data-position="fixed" data-update-page-padding="false">
+	<!-- Help Section -->
+	<section id="helpPage" data-role="page" data-theme="a">
+		<header data-role="header" id="hnav" data-position="fixed">
 			<h1 class="logo-title">Know Your Coverage</h1>
-		</div>
-
-		<div data-role="content" class="help-container">
+		</header><!-- /header -->
+		<article data-role="content" class="help-container">
 			<h2 class="help-content-title">HELP</h2>
 			<div class="off-white-background">
 				<h3>Begin Quiz</h3>
@@ -150,24 +151,23 @@
 					
 				</div>
 			</div>
-		</div>
-
-		<div data-role="footer" data-id="fool" data-position="fixed" data-update-page-padding="false">
+		</article><!-- /content -->
+		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="quiz-page-belongings.html" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slidefade" data-prefetch>TAKE A QUIZ</a></li>
-					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#belongingsInfoPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide">Return To Quiz</a></li>
+					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Info</a></li>
 				</ul>
 			</div>
 		</div>
+	</section><!-- /page -->
 
-	</div>
-
+	
 	<!-- Info Page -->
-	<div data-role="page" id="infoPage" data-theme="a" data-update-page-padding="false">
+	<div data-role="page" id="infoPage" data-theme="a">
 
-		<div data-role="header" data-position="fixed" data-update-page-padding="false">
+		<div data-role="header" data-id="hnav" data-position="fixed">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
@@ -176,11 +176,11 @@
 			<h2 class="help-content-title">INFO</h2>
 			<div class="tabbed-container">
 
-				<div class="info-tabs-container">
+				<div data-id="infoNavTab" class="info-tabs-container">
 						<div data-role="navbar">
 							<ul>
 								<li><a href="#info-nav" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
-								<li><a href="#termsPage" data-role="none">TERMS & CONDITIONS</a></li>
+								<li><a href="#termsPage" data-role="none" data-transition="none">TERMS & CONDITIONS</a></li>
 							</ul>
 						</div><!-- /navbar tabs -->
 					</div>
@@ -199,21 +199,21 @@
 		</div>
 
 
-		<div data-role="footer" data-id="fool" data-position="fixed" data-update-page-padding="false">
+		<div data-id="fool" data-position="fixed" data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#belongingsInfoPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>TAKE A QUIZ</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-ajax="false" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#belongingsInfoPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" >Info</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
 	<!-- Terms Page -->
-	<div data-role="page" id="termsPage" data-theme="a" data-update-page-padding="false">
+	<div data-role="page" id="termsPage" data-theme="a" data-position="fixed">
 
-		<div data-role="header" data-position="fixed" data-update-page-padding="false">
+		<div data-role="header" data-id="hnav" data-position="fixed" data-update-page-padding="false">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
@@ -222,11 +222,11 @@
 			<h2 class="help-content-title">INFO</h2>
 			<div class="tabbed-container">
 
-				<div class="info-tabs-container">
+				<div data-id="infoNavTab" class="info-tabs-container">
 						<div data-role="navbar">
 							<ul>
-								<li><a href="#infoPage" data-role="none">ABOUT I.I.I</a></li>
-								<li><a href="#termsPage" class="ui-btn-active ui-state-persist" data-role="none">TERMS & CONDITIONS</a></li>
+								<li><a href="#infoPage" data-transition="none">ABOUT I.I.I</a></li>
+								<li><a href="#termsPage" class="ui-btn-active ui-state-persist">TERMS & CONDITIONS</a></li>
 							</ul>
 						</div><!-- /navbar tabs -->
 					</div>
@@ -247,15 +247,16 @@
 		</div>
 
 
-		<div data-role="footer" data-id="fool" data-position="fixed" data-update-page-padding="false">
+		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#belongingsInfoPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>TAKE THE QUIZ</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Help</a></li>
-					<li><a href="#infoPage" data-ajax="false" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" data-prefetch>Info</a></li>
+					<li><a href="#belongingsInfoPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" >Info</a></li>
 				</ul>
 			</div>
 		</div>
-	</div>	
+	</div>
+	
 </body>
 </html>

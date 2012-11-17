@@ -47,7 +47,6 @@
 
 </head>
 <body>
-
 	<div id="slidemenu">
 		<h3>MENU</h3>
 		<ul>
@@ -62,26 +61,24 @@
 		</ul>
 	</div>
 
-	
 	<section id="structureQuizPage" data-role="page" data-theme="a">
 		<script type="text/javascript">
 				this.getScoreID = function ()
 				{
-					return "kyc.liability.score";
+					return "kyc.structure.score";
 				}
 
 				this.getAnsCountID = function ()
 				{
-					return "kyc.liability.AC";
+					return "kyc.structure.AC";
 				}
-						this.catID = function ()
+				this.catID = function ()
 				{
-					return "3";
+					return "1";
 				}
-
 			</script>
 		<header data-role="header" data-id="hnav" data-position="fixed">
-			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-iconshadow="false" data-shadow="false" data-corners="false">MENU</a>
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconshadow="false" data-shadow="false">MENU</a>
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</header><!-- /header -->
 
@@ -91,7 +88,7 @@
 			<header id="scoreBar" data-role="navbar" data-position-fixed="fixed" class="score-container">
 				<div class="container_12">
 					<div class="grid_9">
-						<h4>LIABILITY</h4>
+						<h4>STRUCTURE</h4>
 						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
 					</div>
 					<div class="grid_3">
@@ -148,10 +145,10 @@
 						</form>
 						<div class="container_12 button-row">
 							<div class="grid_6">
-								<a href="#" data-rel="back" class="kyc-btn" data-role="none">CANCEL</a>
+								<a href="#" data-rel="back" data-role="button" data-inline="true">CANCEL</a>
 							</div>
 							<div class="grid_6">
-								<a href="#" data-bind="click:getURL" class="kyc-btn" data-role="none">RETAKE</a>
+								<a href="#" data-bind="click:getURL" data-role="button" data-inline="true">RETAKE</a>
 							</div>
 						</div>
 					</div>
@@ -183,7 +180,7 @@
 			<header id="scoreBar" data-role="navbar" data-position="fixed"  class="score-container">
 				<div class="container_12">
 					<div class="grid_9">
-						<h4>LIABILITY</h4>
+						<h4>STRUCTURE</h4>
 						<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: score">0</span>
 					</div>
 					<div class="grid_3">
@@ -253,10 +250,10 @@
 						</form>
 						<div class="container_12 button-row">
 							<div class="grid_6">
-								<a href="#" data-rel="back" class="kyc-btn" data-role="none">CANCEL</a>
+								<a href="#" data-rel="back" data-role="button" data-inline="true">CANCEL</a>
 							</div>
 							<div class="grid_6">
-								<a href="#" data-bind="click:getURL" class="kyc-btn" data-role="none">RETAKE</a>
+								<a href="#" data-bind="click:getURL" data-role="none" data-inline="true">RETAKE</a>
 							</div>
 						</div>
 					</div>
@@ -290,7 +287,7 @@
 			<div id="badgeBar" data-role="header" data-position="fixed" class="score-container">
 				<div class="container_12">
 					<div class="grid_12">
-						<h4>CONGRATULATION! YOU HAVE COMPLETED <span>THE <span>LIABILITY</span> SECTION</span></h4>
+						<h4>CONGRATULATION! YOU HAVE COMPLETED <span>THE <span>STRUCTURE</span> SECTION</span></h4>
 					</div>
 				</div>
 			</div>
@@ -347,10 +344,10 @@
 						</form>
 						<div class="container_12 button-row">
 							<div class="grid_6">
-								<a href="#" data-rel="back" class="kyc-btn" data-role="none">CANCEL</a>
+								<a href="#" data-rel="back" data-role="button" data-inline="true">CANCEL</a>
 							</div>
 							<div class="grid_6">
-								<a href="#" data-bind="click:getURL" class="kyc-btn" data-role="none">RETAKE</a>
+								<a href="#" data-bind="click:getURL" data-role="button" data-inline="true">RETAKE</a>
 							</div>
 						</div>
 					</div>
@@ -446,7 +443,7 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide">Return To Quiz</a></li>
+					<li><a href="#structureQuizPage" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
 					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Help</a></li>
 					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Info</a></li>
 				</ul>
@@ -493,9 +490,9 @@
 		<div data-id="fool" data-position="fixed" data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" >Info</a></li>
+					<li><a href="#structureQuizPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" >Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -516,7 +513,7 @@
 				<div data-id="infoNavTab" class="info-tabs-container">
 						<div data-role="navbar">
 							<ul>
-								<li><a href="#infoPage" data-transition="none">ABOUT I.I.I</a></li>
+								<li><a href="#infoPage">ABOUT I.I.I</a></li>
 								<li><a href="#termsPage" class="ui-btn-active ui-state-persist">TERMS & CONDITIONS</a></li>
 							</ul>
 						</div><!-- /navbar tabs -->
@@ -541,13 +538,12 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" >Info</a></li>
+					<li><a href="#structureQuizPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" >Info</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
 </body>
-</html>

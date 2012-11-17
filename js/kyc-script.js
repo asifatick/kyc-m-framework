@@ -1,3 +1,4 @@
-$(document).on('pageinit', '#structureQuizPage', function(){
-  
+$(document).on('pageinit', function(){
+
+   document.addEventListener("touchstart", function(){ });
  });

@@ -6,6 +6,8 @@ Crafted By: Shajed Evan;
 ==============
 */
 
+
+
 /*!
  jQuery Mobile fixedtoolbar polyfill for blacklisted browsers that don't natively support position:fixed
  Author @scottjehl
@@ -56,10 +58,143 @@ a{ -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none; }
 	bottom: 0 !important;
 }
 
+body {
+
+  /* Disable Safari scrollbars, because jQuery Mobile annoyingly insists on setting the
+     min-height of the page to 320px. It does this (unsuccessfully, in 1.0.1, but successfully
+     in 1.1) in order to keep the Mobile Safari location bar from appearing during page
+     transitions. But this causes a problem in desktop Safari if the height is <320px.
+     If you resize to <320 in a desktop browser, you will see a scrollbar if you don't
+     use this style.       
+        
+     I haven't put this in jquery.mobile.iscrollview.css, because it has to be applied
+     to <body>, and so it will affect the entire site/app. It is an appropriate
+     setting for any site/app meant to use a page size fixed at the browser window size. 
+     If your site/app mixes fixed-height pages with scrolling pages, you will need to
+     work out another solution. */
+  
+  /* optimizeSpeed is the default. Using optimizeLegibility here will typically DOUBLE
+     rendering time! So, think twice about using optimizeLegibility */
+  text-rendering: optimizeSpeed;
+  
+  /* subpixel-antialiased is the default, but you might like to use antialiased for a thinner look
+     in Safari. There is no speed penalty for this, nor a speed advantage for "none", which looks
+     absolutely terrible... */
+  -webkit-font-smoothing: subpixel-antialiased;
+  
+  /* Shut off long touch on links for info. If this is set to "default", then a long touch
+     on a link will display the URL in a popup. This is pretty darn annoying. */  
+  -webkit-touch-callout: none;
+  
+  /* Shut off content selection, because it's really annoying when dragging 
+     You might like to do this only for scroller content, though, or enable it for certain
+     text you want the user to be able to cut-and-paste */      
+  -webkit-user-select: none;   
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  }
+  
+/* Style header bar and footer bar with a 1px red border at top and bottom. This facilitates
+   a quick visual indication of correct sizing of the page. You should not see any white
+   space above the header or below the footer. (Note that Retina devices will show a 2px border,
+   rather than 1px.) Use your OS's accessibility features to magnify and inspect. On mobile
+   devices, there is usually a way to capture the screen contents to an image file that you can
+   later examine. (iPhone: Home+On/Off)
+*/
+
+.ui-header.ui-bar-a{
+    border-top:0;
+    border-bottom: 1px solid #EFEFE3;
+} 
+
+.ui-footer.ui-bar-a{
+  border-top:1px solid #EFEFE3;
+  border-bottom: 0;
+}
+
+
+
+/* Demonstrate how to make headers/footer a different height for different orientations
+   or screen sizes. This also demonstrates that the widget now (once again) measures the 
+   headers/footers on every resize. 
+   
+   Unfortunately, the state of detecting mobile orientation on mobile devices is a mess.
+   Mobile Safari doesn't support orientation media query, while iPad doesn't. There are 
+   various hacks involving max-width, max-height, max-device-width, etc. Fortunately, for
+   this demo, we can use something simple. We want the header and footer to be smaller
+   in landscape because they make the scrollable area too small. So, just test max-height.
+   This will of course also make the header/footer smaller on a desktop browser with 
+   very short height - which makes it easy to demonstrate. :) */
+
+.ui-navbar a {
+  /* For demo, make portrait navbar the same height as iPhone tabbar, because using the
+     standard navbar height for portrait and a shorter navbar for landscape would make
+     the navbar unusably short. */
+     height: 47px;    /* + 2px margins = 49px */
+}
+
+.ui-navbar .ui-btn-inner {
+  font-size: 14px;
+}
+   
+@media only screen and (max-height: 280px){
+  .ui-header { 
+    height: 30px;
+  }
+  
+  .ui-header .ui-title {
+    font-size: 14px;
+  }
+  
+  /* Make the buttons in the header just disappear - they're too big for a tiny header */
+  .ui-header .ui-btn {
+    display: none;
+  }
+  
+  .ui-navbar a {    
+    height: 37px;    /* + 2px border = 39px */
+  }
+  
+  .ui-navbar .ui-btn-inner {
+    font-size: 13px;
+  }
+}
+
+/* Force list items to be cached on WebKit 
+   See: cubiq.org/you-shall-not-flicker 
+   
+   If this is NOT used, then scrolling long lists might exhibit a "flicker" when scrolling
+   toward the bottom of the list, as well as exhibit slow and jerky until the first
+   time the user has reached the bottom of the list.
+   
+   If this IS used, then the browser may be forced to cache the content in advance, resulting
+   in smoother scrolling, but with the side-effect of increasing initial rendering time.
+   
+   This can more than DOUBLE initial rendering time if you are not careful with the selector. The
+   recommended CSS at the above link is NOT optimal.
+      
+   You need to apply this judiciously. For example, if you know your scroller content consists
+   of list items, use "li" not "*' to select. * as the right-most component of a select is
+   horribly expensive. A small additional performance gain can be made by selecting 
+   iscroll-content instead of iscroll-scroller. You might get a 
+   glitch on a pull-up if you have one, but it's a small price to pay for doubling speed.
+   
+   It is important NOT to apply this to .iscroll-scroller itself. This will result in a huge
+   performance loss. The second rule below gives performance on iOS devices very close to not 
+   using this at all.
+   
+   I use an @media tag to disable, because it is a safe way of disabling CSS that might contain
+   comments. As well, you might like to enable this only for certain devices, which often
+   can be detected using media queries.
+   
+*/
+
 body{ -webkit-overflow-scrolling:touch; margin:0; }
 
-body,.ui-body-a, .ui-overlay-a{ background:#dfdfd3 url('../img/default-background.jpg'); }
-
+body,.ui-body-a, .ui-overlay-a{ background:#f7f7ea url('../img/default-background.jpg') no-repeat; }
+.ui-content{ }
 body,.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-body-a button,.ui-bar-a, .ui-bar-a input, .ui-bar-a select, .ui-bar-a textarea, .ui-bar-a button,.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a, .ui-btn-text{ font-family: 'dincond-mediumregular', serif;}
 
 .white-text{ color:#f6f6e9; }
@@ -74,11 +209,18 @@ body,.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-b
    */
 }
 
+section{ 
+	overflow: auto;
+	-webkit-overflow-scrolling:touch;
+}
+
 /* Button Styles */
 .ui-btn-text{ text-transform: capitalize; font-weight:normal; font-family: 'dincond-boldbold', serif;}
-a.kyc-btn{ border: 1px solid #E65B4D;
+a.kyc-btn,a.kyc-btn:hover,a.kyc-btn:link,a.kyc-btn:active,a.kyc-btn:focus{ 
+	text-transform: capitalize; font-weight:normal; font-family: 'dincond-boldbold', serif;
+	border: 1px solid #E65B4D;
 	margin-bottom:0.6em;
-background: white;
+	background: white;
 font-weight: bold;
 display: inline-block;
 color: #D95649;
@@ -175,7 +317,7 @@ height: 24px;
 left:48%;
 }
 
-.ui-footer .ui-navbar li .ui-btn-up-a{ border-color: transparent; }
+.ui-footer .ui-navbar li .ui-btn-up-a, .ui-footer .ui-navbar li .ui-btn-hover-a{ border-color: transparent; border:0; }
 
 .ui-footer .ui-navbar li .ui-btn-icon-top .ui-btn-inner{ padding-top:25px; }
 .ui-footer .ui-navbar li .ui-btn-inner .ui-btn-text{ top:5px; }
@@ -230,6 +372,8 @@ padding: 0.3em 1em 0.2em 1em;
  	margin: 0.5em 0;
  	font-family: Helvetica,Arial,sans-serif;
  	text-align: left;
+  overflow: scroll;
+    -webkit-overflow-scrolling: touch;
  }
 
  .info-inner-wrapper-content{ overflow: auto; }
@@ -309,11 +453,12 @@ padding-bottom: 51px;
 #structureQuizPage .ui-content, #correctPage .ui-content{ padding:51px 0 0 0; overflow: auto;
 	-webkit-overflow-scrolling: touch;}
 .score-container{ background: #5f7231; top: 52px;
-z-index: 999;
+z-index: 1;
 border: none;
 padding: 0;
 position:fixed;
 width:100%;
+height:56px;
 box-shadow: none; }
 
 
@@ -340,7 +485,8 @@ form.question-form{ margin-bottom: 1em; }
 .ans-1 .qa-icon{ background: url('../img/answer-icons/ans-wrong.png') no-repeat right top; background-size: 90%; }
 .ans1 .qa-icon{ background: url('../img/answer-icons/ans-correct.png') no-repeat right top; background-size: 90%; }
 
-.question-container{ text-align: center;}
+.question-container{ text-align: center; overflow: auto;
+    -webkit-overflow-scrolling: touch;}
 
 .question-container .form-row{ padding:0.5em 0; border-bottom: 1px solid #ceceaa; box-shadow: 0px 1px 0px #FFF; }
 .question-container .form-row:last-child{ border-bottom: none; box-shadow: none; }
@@ -414,14 +560,14 @@ font-weight: normal;
 .button-row .grid_6{ text-align: center; }
 
 .qa-content-wrapper{ overflow:auto; -webkit-overflow-scrolling:touch; padding-top:56px; margin: 0; }
-#qCAContent{ height:200px; max-height: 200px; }
+#qCAContent{ }
 
 .continue-btn img{ width:10px; }
 
 /* Badges Page Style */
 
 .badges-container{  }
-.badge-dynamic-holder{ height: 200px; max-height: 200px; }
+.badge-dynamic-holder{ overflow:scroll; -webkit-overflow-scrolling:touch; }
 .badges-container .badge-content-holder{ margin-bottom: 0; }
 .badges-container .score-container .grid_12 h4{ font-family: 'dincond-mediumregular', serif; font-size: 1em; color: #bcbb47; }
 .badges-container .score-container .grid_12 h4 > span{ font-size: 1.2em; color: #f6f6e9; display: block; text-align:center; }
@@ -514,8 +660,10 @@ text-indent: -9999px;
 
  /* Retake Quiz */
  .quiz-select-container .info-wrapper h2{ color: #D95649; margin:0.3em 0.5em; font-size: 1.2em; text-align: center; border-bottom: 1px solid #d55447; }
-  .quiz-select-container .info-wrapper h3{ font-size: 1em; margin:0.3em 0.7em; font-weight: normal; border-bottom: 1px solid #d55447; padding-bottom:0.5em; }
+  .quiz-select-container .info-wrapper h3{ font-size: 1em; margin:0em 0.7em; font-weight: normal; border-bottom: 1px solid #d55447; padding-bottom:0.5em; }
   .quiz-select-container .info-wrapper ul{ outline: none; padding:0 0.5em; box-shadow: none; }
+  .quiz-select-container .info-wrapper ul{ margin:0; }
+  .quiz-select-container .info-wrapper form{ margin:0; }
   .quiz-select-container .info-wrapper .container_12 .grid_6{ text-align: center; } 
   .quiz-select-container .info-wrapper ul li{ font-size: 1.5em; }
     .quiz-select-container .info-wrapper form.question-form ul li .kyc-radio{ float:none; margin-right:-15%; }
