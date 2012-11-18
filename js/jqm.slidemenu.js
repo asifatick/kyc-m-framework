@@ -17,8 +17,8 @@ $(document).on("pageinit", function(e){
 		
 	});
 
-	$('[data-role=footer]').fixedtoolbar({updatePagePadding:false});
-    $('[data-role=header]').fixedtoolbar({ updatePagePadding: false });
+	$('[data-role=footer]').fixedtoolbar({updatePagePadding: true});
+    $('[data-role=header]').fixedtoolbar({ updatePagePadding: true });
 
 });
 

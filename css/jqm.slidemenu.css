@@ -3,12 +3,11 @@
 	top: 0px;
 	left: 0px;
 	width: 0px;
-	height: 300px;
-	max-height: 300px;
+	height: 100%;
 	background-color: #fefff1;
 	-webkit-box-shadow: 3px 0px 5px -2px #32394A;
 	box-shadow: 3px 0px 5px -2px #32394A;
-	z-index: 111;
+	z-index: 1111;
 	display: none;
 	margin-top:51px;
 	overflow: scroll;

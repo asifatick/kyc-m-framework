@@ -37,10 +37,11 @@ a{ -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none; }
 *{
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-.ui-body-a, .ui-overlay-a{ border:0; overflow: auto; }
+.ui-body-a, .ui-overlay-a{ border:0; overflow: auto; -webkit-overflow-scrolling:touch; }
 
-.ui-page-header-fixed{ padding-bottom: 51px; } 
-.ui-page-footer-fixed{ padding-top: 51px; }
+.ui-page{ }
+.ui-page-header-fixed{ padding-bottom: 51px; margin-top:0; padding-top:0; } 
+.ui-page-footer-fixed{ padding-top: 51px; margin-bottom:0; padding-bottom:0 }
 /*!
  jQuery Mobile fixedtoolbar polyfill for blacklisted browsers that don't natively support position:fixed
  Author @scottjehl
@@ -132,7 +133,7 @@ body {
   /* For demo, make portrait navbar the same height as iPhone tabbar, because using the
      standard navbar height for portrait and a shorter navbar for landscape would make
      the navbar unusably short. */
-     height: 47px;    /* + 2px margins = 49px */
+     height: 49px;    /* + 2px margins = 49px */
 }
 
 .ui-navbar .ui-btn-inner {
@@ -202,11 +203,7 @@ body,.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-b
  .dark-green-text{ color: #5f7131; }
 
  .ui-page-active{
- 	/*
-	-webkit-animation-fill-mode: both;
-   -webkit-animation-timing-function: ease-out;
-   -webkit-animation-duration: 350ms;
-   */
+ 	
 }
 
 section{ 
@@ -215,7 +212,7 @@ section{
 }
 
 /* Button Styles */
-.ui-btn-text{ text-transform: capitalize; font-weight:normal; font-family: 'dincond-boldbold', serif;}
+.ui-btn-text{ text-transform: uppercase; font-weight:normal; font-family: 'dincond-boldbold', serif;}
 a.kyc-btn,a.kyc-btn:hover,a.kyc-btn:link,a.kyc-btn:active,a.kyc-btn:focus{ 
 	text-transform: capitalize; font-weight:normal; font-family: 'dincond-boldbold', serif;
 	border: 1px solid #E65B4D;
@@ -300,6 +297,9 @@ z-index: 999999;
 
 
 /* Footer Buttons and Icons  */
+
+.ui-header-fixed .ui-btn, .ui-footer-fixed .ui-btn{ z-index: 99999; }
+
 .ui-btn-active{ text-shadow:0 1px 1px rgba(111,111,111,0.8); }
 .ui-footer .ui-navbar .ui-btn-inner .ui-icon-footer-return-icon{ background:url('themes/images/footer-return-icon.png') no-repeat;}
 .ui-footer .ui-navbar .ui-btn-active .ui-btn-inner .ui-icon-footer-return-icon{ background:url('themes/images/footer-return-icon-active.png') no-repeat;}
@@ -317,7 +317,7 @@ height: 24px;
 left:48%;
 }
 
-.ui-footer .ui-navbar li .ui-btn-up-a, .ui-footer .ui-navbar li .ui-btn-hover-a{ border-color: transparent; border:0; }
+.ui-footer .ui-navbar li .ui-btn-up-a, .ui-footer .ui-navbar li .ui-btn-hover-a{ border-color: transparent; border:0; font-family: 'dincond-regularregular', serif; }
 
 .ui-footer .ui-navbar li .ui-btn-icon-top .ui-btn-inner{ padding-top:25px; }
 .ui-footer .ui-navbar li .ui-btn-inner .ui-btn-text{ top:5px; }
@@ -373,8 +373,19 @@ padding: 0.3em 1em 0.2em 1em;
  	font-family: Helvetica,Arial,sans-serif;
  	text-align: left;
   overflow: scroll;
-    -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
  }
+
+ .info-wrapper-content::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+.info-wrapper-content::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}​
 
  .info-inner-wrapper-content{ overflow: auto; }
 
@@ -384,17 +395,6 @@ padding: 0.3em 1em 0.2em 1em;
 
 
 
-.info-wrapper .iscroll-wrapper > div:last-child{
-    border:1px solid #e65b4d;
-     -webkit-border-radius:0px;
-}
-
-::-webkit-scrollbar-thumb{
-	border-radius: 0px;
-}
- .info-wrapper .iscroll-wrapper > div{ 
-  
-  }
 
 /* Landing Page Content */
 #landingPage .ui-content{ padding:0; }
@@ -523,12 +523,12 @@ form.question-form{ margin-bottom: 1em; }
 	box-shadow: inset 0px 0px 1px rgba(0,0,0,0.3);
 	text-shadow: 0px;
 	font-size: 18px; }
-.question-container .kyc-radio:checked{
+.question-container .kyc-radio:checked, .question-form .kyc-radio:checked{
 	background: #fffff6 url('../img/qselect-icon.png') no-repeat left top;
 	color: #E35041;
 	border: 1px solid #E35041;
 }
-.question-container .kyc-radio:active, .question-container .kyc-radio:checked:active{ 
+.question-container .kyc-radio:active, .question-container .kyc-radio:checked:active, .question-form .kyc-radio:active, .question-form .kyc-radio:checked:active{ 
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
 }
 
@@ -608,7 +608,7 @@ width: 100%;
 text-align: center; }
 
 /* Result Page */
-#resultPage .ui-content{ padding:53px 0 0 0; }
+#resultPage .ui-content{ padding:0 0 0 0; }
 .result-header h4{ font-family: 'dincond-mediumregular', serif; font-size: 1.4em; font-weight: normal; text-align: center; margin:0.2em 0; }
 .result-container .grid_5{ background: #5f7231; }
 .result-container .grid_4{ background:#7d8c57; }

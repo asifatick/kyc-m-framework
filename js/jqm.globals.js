@@ -8,7 +8,7 @@ $(document).bind('mobileinit', function () {
     $.mobile.defaultDialogTransition = 'none';
     $.mobile.defaultPageTransition = 'slide';
     $.support.touchOverflow = true;
-  	$.mobile.touchOverflowEnabled = false;
+  	$.mobile.touchOverflowEnabled = true;
   	$.mobile.loader.prototype.options.text = "loading";
   	$.mobile.loader.prototype.options.textVisible = false;
   	$.mobile.loader.prototype.options.theme = "a";
