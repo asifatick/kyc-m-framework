@@ -1,6 +1,18 @@
 function resultModel()
 {
 	var self = this;
+
+self.getURL = function()
+				{
+						$.mobile.changePage( self.usrans1 +".html", {
+						transition: "slidefade",
+						allowSamePageTransition  : true,
+						
+					});
+				}
+
+				self.usrans1;
+
 	self.structureScore =ko.observable(localStorage.getItem("kyc.structure.score"));
 	self.structureAnswerCount= ko.observable(localStorage.getItem("kyc.structure.AC"));
 	

@@ -1,6 +1,8 @@
 function retakeModel()
 {
-	var self = this;
+	
+
+	
 	self.structureScore =ko.observable(localStorage.getItem("kyc.structure.score"));
 	self.structureAnswerCount= ko.observable(localStorage.getItem("kyc.structure.AC"));
 	
@@ -43,17 +45,8 @@ function retakeModel()
 		else
 			return true;
 	});
-self.getURL = function()
-				{
-						$.mobile.changePage( self.usrans +".html", {
-						transition: "pop",
-						allowSamePageTransition  : true,
-						
-					});
-				}
-
-	self.usrans;
-}
+		
+		}
 
 $(document).on( 'pageinit', '#quizSelectPage' ,function() {
 	

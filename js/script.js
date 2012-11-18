@@ -1,4 +1,4 @@
-			var curquestionList ;
+		var curquestionList ;
 			var quetionIndex =0;
 			var koquestion;
 			var koquestion1;
@@ -35,7 +35,7 @@
 						$.mobile.changePage( self.usrans1 +".html", {
 						transition: "slidefade",
 						allowSamePageTransition  : true,
-						
+
 					});
 				}
 				self.getRetakeValue = function()
@@ -54,7 +54,7 @@
 				//self.visibleTellMore =  ko.observable(false);
 				self.cq = ko.observable(getQuostion(quetionIndex));
 				self.cqq = getQuostion(quetionIndex);
-				
+
 				self.getAnsID = function(ind)
 				{
 					return "answer" + ind();
@@ -70,12 +70,12 @@
 					}
 					else if (self.answerCount() <= (Math.round(curquestionList.length *.75) ))
 					{
-							 	
+
 						self.badge("b-level");
 	     				self.badgeText("Good work, but you may want to review the questions about "+self.getCatName()+ " that you answered incorrectly. For more information, be sure to talk to your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");
 	     				self.badgeTextHead("Good Work,");	
 							return "b-level";
-					
+
 					}
 					else	
 					{
@@ -105,12 +105,12 @@
 					  break;
 					default:
 					 return "RENTALS, CONDOS & CO-OPS";
-					  
+
 					}
 				}
 				self.next = function(place) {
-				 	
-				 	
+
+
          			if (quetionIndex >= curquestionList.length-1) {
          				localStorage.setItem(getScoreID(), self.score());
          				localStorage.setItem(getAnsCountID(), self.answerCount());
@@ -122,7 +122,7 @@
          				$.mobile.changePage( $("#badgesPage"), {
 						transition: "slidefade",
 						allowSamePageTransition  : true,
-						
+
 					});
          			}
          			else
@@ -132,22 +132,22 @@
 							$.mobile.changePage( "", {
 								transition: "slidefade",
 								allowSamePageTransition  : true,
-								
+
 							});
 		             		//self.visibleTellMore(false);
 		         			//self.visibleExplanation(false);
 		         			setTimeout(function(){self.cq(  getQuostion(quetionIndex));self.cqq = getQuostion(quetionIndex);},200);
-		         
+
 		             		self.markerArray()[quetionIndex] ("b");
 		             		self.onQuestionPage (1);
-		             		
+
 		         			}
 		         			else
 		         			{
 		         				$.mobile.changePage( "", {
 								transition: "slidefade",
 								allowSamePageTransition  : true,
-								
+
 							});
 		         			};
 	         			};
@@ -186,7 +186,7 @@
      				$.mobile.changePage( $("#correctPage"), {
 						transition: "slidefade",
 						allowSamePageTransition  : true,
-						
+
 					});
 
 
@@ -248,7 +248,7 @@
 		koquestion = createKoObject(getQuostion(quetionIndex));
 
 		//ko.applyBindings(p);
-		
+
 	}
 
 	$(document).on( 'pageinit', '#structureQuizPage' ,function() {

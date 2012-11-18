@@ -579,7 +579,7 @@
 			"file": "result-page.html",
 			"settings":
 			{
-				"buffer_size": 17596,
+				"buffer_size": 34981,
 				"line_ending": "Unix"
 			}
 		},
@@ -603,7 +603,7 @@
 			"file": "css/kyc.css",
 			"settings":
 			{
-				"buffer_size": 31813,
+				"buffer_size": 31817,
 				"line_ending": "Windows"
 			}
 		},
@@ -612,6 +612,14 @@
 			"settings":
 			{
 				"buffer_size": 3268,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/jqm.slidemenu.css",
+			"settings":
+			{
+				"buffer_size": 2511,
 				"line_ending": "Windows"
 			}
 		}
@@ -998,7 +1006,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -1195,15 +1203,15 @@
 					"file": "result-page.html",
 					"settings":
 					{
-						"buffer_size": 17596,
+						"buffer_size": 34981,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11058,
-								11058
+								1203,
+								1203
 							]
 						],
 						"settings":
@@ -1212,7 +1220,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 36639.0,
+						"translation.y": 52.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1247,7 +1255,7 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1282,15 +1290,15 @@
 					"file": "css/kyc.css",
 					"settings":
 					{
-						"buffer_size": 31813,
+						"buffer_size": 31817,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11398,
-								11398
+								14745,
+								14745
 							]
 						],
 						"settings":
@@ -1300,7 +1308,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2666.0,
+						"translation.y": 3964.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1327,7 +1335,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 699.0,
+						"translation.y": 669.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "css/jqm.slidemenu.css",
+					"settings":
+					{
+						"buffer_size": 2511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								231
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1363,7 +1398,7 @@
 		"cols":
 		[
 			0.0,
-			0.328859498116,
+			0.557245114724,
 			1.0
 		],
 		"rows":
@@ -1418,6 +1453,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 372.0,
+	"side_bar_width": 204.0,
 	"status_bar_visible": true
 }
