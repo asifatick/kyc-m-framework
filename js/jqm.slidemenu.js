@@ -14,6 +14,7 @@ $(document).on("pageinit", function(e){
 	
 	$(document).on("click", "a:not(:jqmData(slidemenu))", function(e) {
 		slidemenu(sm, true);
+
 		
 	});
 
@@ -28,6 +29,7 @@ function slidemenu(sm, only_close) {
 		sm.show().animate({width: '240px', avoidTransforms: false, useTranslate3d: true}, 'fast');
 		$(".ui-content").css('left', '240');
 		sm.data('slideopen', true);
+			$('[data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
 			$(".smenu").text("BACK");
 		if ($(".ui-page-active :jqmData(role='header')").data('position') == 'fixed') {
 			$(".ui-content :jqmData(slidemenu)").css('margin-left', '250px');
@@ -37,7 +39,9 @@ function slidemenu(sm, only_close) {
 
 	} else {
 		sm.animate({width: '0px', avoidTransforms: false, useTranslate3d: true}, 'fast', function(){sm.hide()});
+		
 		$(".ui-page-active").css('left', '0px');
+		$('[data-role=header]').find('span.ui-icon').removeClass('ui-icon-smico-back');
 		sm.data('slideopen', false);
 		$(".ui-page-active :jqmData(slidemenu)").css('margin-left', '0px');
 		$(".smenu").text("MENU");

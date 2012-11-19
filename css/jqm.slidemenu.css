@@ -9,8 +9,9 @@
 	box-shadow: 3px 0px 5px -2px #32394A;
 	z-index: 1111;
 	display: none;
-	margin-top:51px;
-	overflow: scroll;
+	margin-top:51px; 
+	overflow-x:hidden;
+	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -65,22 +66,25 @@
 }
 
 .slidemenu ul li a:hover, .slidemenu ul li a:active {
-	background-color: #bcbb47;
+	background-color: none;
 }
 		
 .ui-icon-smico {
 	background-color:#cbca70;
 	background:rgba(0,0,0,-1) url("../img/kyc-menu-icon.png") !important;
-	width:18px;
-	height: 18px;
+	width:25px;
+	height: 28px;
 	border-radius: 0;
 	margin-top:-1px;
 	top:-1px;
+	border:0;
 }
 
 .ui-icon-smico-back{ 
 	background-color:#f6f6e9;
+	width:25px; height: 28px;
 	background:rgba(0,0,0,-1) url("../img/kyc-menu-icon-back.png") !important; border-radius: 0; top:0;
+	border:0;
  }
 
 .slidemenu_btn .ui-icon-shadow {
@@ -93,10 +97,11 @@
 	border-top: 0px;
 }
 .slidemenu_btn .ui-icon {
-	width: 18px;
+	width: 25px;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
 	border-radius: 0px;
+	border:0;
 }
 
 .slidemenu_btn .ui-icon, .ui-icon-searchfield::after {
@@ -105,23 +110,4 @@
 
 .slidemenu_btn.ui-btn-icon-notext {
 	width: 30px;
-}
-
-/* THESE ARE JUST EXAMPLE STYLES BELOW */
-
-#profile {
-	background-color:#32394A;
-	border-bottom: 1px solid #242A37;
-	overflow: hidden;
-	height: 58px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.profile_info {
-	position: relative;
-	left: 68px;
-	top:-49px;
-	font-size: 14px;
-	color: #C4CCDA;
-	text-shadow: 0 0px 0 black;
 }

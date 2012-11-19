@@ -48,20 +48,6 @@
 </head>
 <body>
 
-	<div id="slidemenu">
-		<h3>MENU</h3>
-		<ul>
-			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
-			<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
-			<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
-			<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
-			<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
-			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
-			<li><a data-ajax="false" href="result-page.html" data-transition="slide" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
-			<li><a data-bind="attr: {href:$root.retNAme}" href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE THIS QUIZ</a></li>
-		</ul>
-	</div>
-
 	
 	<section id="structureQuizPage" data-role="page" data-theme="a">
 		<script type="text/javascript">
@@ -81,9 +67,23 @@
 
 			</script>
 		<header data-role="header" data-id="hnav" data-position="fixed">
-			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-iconshadow="false" data-shadow="false" data-corners="false">MENU</a>
+			<a href="#" data-slidemenu=".slidemenus" data-slideopen="false" data-icon="smico" data-corners="false" data-iconshadow="false" data-shadow="false"><span class="smenu">MENU</span></a>
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</header><!-- /header -->
+
+		<div id="slidemenu" class="slidemenus">
+		<h3>MENU</h3>
+		<ul>
+			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
+			<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
+			<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+			<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
+			<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
+			<li><a data-ajax="false" href="result-page.html" data-transition="slide" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
+			<li><a data-bind="attr: {href:$root.retNAme}" href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE THIS QUIZ</a></li>
+		</ul>
+	</div>
 
 		<article data-role="content">
 
@@ -173,10 +173,23 @@
 
 	<section id="correctPage" data-role="page" data-theme="a">
 		<header data-role="header" data-id="hnav" data-position="fixed">
-			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false">MENU</a>
+			<a href="#" data-slidemenu=".slidemenus" data-slideopen="false" data-icon="smico" data-corners="false">MENU</a>
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</header><!-- /header -->
 
+		<div id="slidemenu" class="slidemenus">
+		<h3>MENU</h3>
+		<ul>
+			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
+			<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
+			<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+			<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
+			<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
+			<li><a data-ajax="false" href="result-page.html" data-transition="slide" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
+			<li><a data-bind="attr: {href:$root.retNAme}" href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE THIS QUIZ</a></li>
+		</ul>
+	</div>
 		<article data-role="content">
 
 			<!-- Top Score Navigation Container -->
@@ -281,10 +294,24 @@
 	<div data-role="page" id="badgesPage" data-theme="a" class="badges-container">
 
 		<div data-role="header" data-id="hnav" data-position="fixed">
-			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-iconshadow="false" data-shadow="false" data-corners="false">MENU</a>
+			<a href="#" data-slidemenu=".slidemenus" data-slideopen="false" data-icon="smico" data-corners="false" data-iconshadow="false" data-shadow="false"><span class="smenu">MENU</span></a>
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
+		<div id="slidemenu" class="slidemenus">
+		<h3>MENU</h3>
+		<ul>
+			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
+			<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
+			<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+			<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
+			<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
+			<li><a data-ajax="false" href="result-page.html" data-transition="slide" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
+			<li><a data-bind="attr: {href:$root.retNAme}" href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE THIS QUIZ</a></li>
+		</ul>
+	</div>
+	
 		<div data-role="content">
 			<!-- Top Score Navigation Container -->
 			<div id="badgeBar" data-role="header" data-position="fixed" class="score-container">
