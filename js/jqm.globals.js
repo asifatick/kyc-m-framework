@@ -17,4 +17,5 @@ $(document).bind('mobileinit', function () {
 
 $(document).on('pageinit', function(){
     $('[data-position=fixed]').fixedtoolbar({ tapToggle:false });
+    $("[data-role=header]").fixedtoolbar({ transition: "slide" });
  });

@@ -13,7 +13,7 @@
 
 	<!--Include JQM and JQ-->
 	<link rel="stylesheet" href="css/themes/kyc-theme.min.css" />
-	<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure.min.css"/>
 	<link rel="stylesheet" href="css/font/font.css" />
 	<!--JQM SlideMenu-->
 	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
@@ -48,7 +48,7 @@
 			<div id="quizSelectOptions" class="quiz-select-container">
 				<ul data-role="none">
 					<li data-role="none"><a href="structure-quiz-page.html" data-transition="slidefade"  data-role="none"><img src="img/quiz-select-icon/home-icon.png"> <span>STRUCTURE</span></a></li>
-					<li data-role="none"><a href="rental-quiz-page.html" data-transition="slidefade"  data-role="none"><img src="img/quiz-select-icon/doller-icon.png"> <span>RENTAL, CONDOS & CO-OPS</span></a></li>
+					<li data-role="none"><a href="rental-quiz-page.html" data-transition="slidefade"  data-role="none"><img class="rental" src="img/quiz-select-icon/doller-icon.png"> <span>RENTALS, CONDOS & CO-OPS</span></a></li>
 					<li data-role="none"><a href="belongings-quiz-page.html" data-transition="slidefade"  data-role="none"><img src="img/quiz-select-icon/bag-icon.png"> <span>BELONGINGS</span></a></li>
 					<li data-role="none"><a href="liability-quiz-page.html" data-transition="slidefade"  data-role="none"><img src="img/quiz-select-icon/liability-icon.png"> <span>LIABILITY</span></a></li>
 				</ul>
@@ -60,7 +60,7 @@
 		<div data-role="footer" data-id="fool">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="quiz-select.html" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Take A Quiz</a></li>
+					<li><a href="#quizSelectPage" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Take A Quiz</a></li>
 					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade">Help</a></li>
 					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade">Info</a></li>
 				</ul>
@@ -169,7 +169,7 @@
 							<div data-role="navbar">
 								<ul>
 									<li><a href="#info-nav" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
-									<li><a href="#termsPage" data-role="none">TERMS & CONDITIONS</a></li>
+									<li><a href="#termsPage" data-transition="none" data-role="none">TERMS & CONDITIONS</a></li>
 								</ul>
 							</div><!-- /navbar tabs -->
 						</div>
@@ -217,7 +217,7 @@
 	<!-- Terms Page -->
 	<div data-role="page" id="termsPage" data-theme="a">
 
-		<div data-role="header" data-id="hnav" data-position="fixed">
+		<div data-role="header" data-id="hnav" data-transition="slide" data-position="fixed">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
@@ -229,7 +229,7 @@
 					<div class="info-tabs-container">
 							<div data-role="navbar">
 								<ul>
-									<li><a href="#infoPage" data-role="none">ABOUT I.I.I</a></li>
+									<li><a href="#infoPage" data-transition="none" data-role="none">ABOUT I.I.I</a></li>
 									<li><a href="#termsPage" class="ui-btn-active ui-state-persist" data-role="none">TERMS & CONDITIONS</a></li>
 								</ul>
 							</div><!-- /navbar tabs -->

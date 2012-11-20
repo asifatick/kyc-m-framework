@@ -42,9 +42,9 @@ function slidemenu(sm, only_close) {
 		
 		$(".ui-page-active").css('left', '0px');
 		$('[data-role=header]').find('span.ui-icon').removeClass('ui-icon-smico-back');
+		$(".smenu").text("MENU");
 		sm.data('slideopen', false);
 		$(".ui-page-active :jqmData(slidemenu)").css('margin-left', '0px');
-		$(".smenu").text("MENU");
 		
 	}
 	

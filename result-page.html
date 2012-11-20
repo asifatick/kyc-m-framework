@@ -24,7 +24,11 @@
 		
 		<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
 		<script src="js/jqm.globals.js"></script>
-		
+		<script>
+		$(document).ready(function(){
+			$("#resultPage").fadeIn("50");
+			});
+		</script>
 		<script src="js/jquery.mobile.min.js"></script>
 
 		<!--JQM SlideMenu-->
@@ -205,10 +209,10 @@
 							</form>
 							<div class="container_12 button-row">
 								<div class="grid_6">
-									<a href="#" data-rel="back" data-role="button" data-inline="true">CANCEL</a>
+									<a href="#" data-rel="back" class="kyc-btn" data-role="none">CANCEL</a>
 								</div>
 								<div class="grid_6">
-									<a href="#" data-bind="click:getURL" data-role="button" data-inline="true">RETAKE</a>
+									<a href="#" data-bind="click:getURL" class="kyc-btn" data-role="none">RETAKE</a>
 								</div>
 							</div>
 						</div>
