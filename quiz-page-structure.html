@@ -28,8 +28,6 @@
 	<script src="js/jquery.mobile.min.js"></script>
 	<script src-"js/jq-plugins.js"></script>
 	<script src="js/jqm.slidemenu.js"></script>
-	<script src="js/iscroll.js"></script>
-	<script src="js/jquery.mobile.iscrollview-closure-min.js"></script>
 
 	<script type="text/javascript" src="js/jsonselect.min.js"></script>
 	<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
@@ -67,7 +65,7 @@
 					return "1";
 				}
 			</script>
-		<header data-role="header" data-id="hnav" data-position="fixed">
+		<header data-role="header" data-id="hnav"  data-position="fixed" data-transition="slide">
 			<a href="#" data-slidemenu=".slidemenus" data-slideopen="false" data-icon="smico" data-corners="false" data-iconshadow="false" data-shadow="false"><span class="smenu">MENU</span></a>
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</header><!-- /header -->
@@ -75,7 +73,7 @@
 		<article data-role="content">
 
 			<!-- Score bar Header -->
-			<header id="scoreBar" data-role="navbar" data-position-fixed="fixed" class="score-container">
+			<header id="scoreBar" data-role="navbar" data-position-fixed="fixed" data-transition="slide" class="score-container">
 				<div class="container_12">
 					<div class="grid_9">
 						<h4>STRUCTURE</h4>
@@ -97,7 +95,7 @@
 				<ul>
 					<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
 					<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
-					<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+					<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS & CO-OPS</a></li>
 					<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
 					<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
 					<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
@@ -137,7 +135,7 @@
 			<nav id="quizSelectPage1" data-role="popup" data-corner="false" data-theme="none">
 				<div class="quiz-select-container">
 					<div class="info-wrapper">
-						<h2>SELECT WHICH QUIZ YOU WANT TO RETAKE?</h2>
+						<h2>SELECT WHICH QUIZ YOU WANT TO RETAKE.</h2>
 						<h3>You will loose your previous points if you retake a quiz</h3>
 						<form class="question-form">
 							<ul data-role="none">
@@ -146,7 +144,7 @@
 									<label for="structure"><img src="img/quiz-select-icon/home-icon.png"> <span>STRUCTURE</span></label></li>
 								<li data-role="none">
 									<input id="rental-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="rental-quiz-page" data-role="none"/>
-									<label for="rental-quiz-page"><img src="img/quiz-select-icon/doller-icon.png"> <span>RENTAL, CONDOS & CO-OPS</span></label></li>
+									<label for="rental-quiz-page"><img src="img/quiz-select-icon/doller-icon.png"> <span>RENTALS, CONDOS & CO-OPS</span></label></li>
 								<li data-role="none"><input id="belongings-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="belongings-quiz-page" data-role="none"/><label for="belongings-quiz-page"><img src="img/quiz-select-icon/bag-icon.png"> <span>BELONGINGS</span></label></li>
 								<li data-role="none"><input id="liability-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="liability-quiz-page" data-role="none"/><label for="liability-quiz-page"><img src="img/quiz-select-icon/liability-icon.png"> <span>LIABILITY</span></label></li>
 							</ul>
@@ -178,7 +176,7 @@
 	</section><!-- /page -->
 
 	<section id="correctPage" data-role="page" data-theme="a">
-		<header data-role="header" data-id="hnav" data-position="fixed">
+		<header data-role="header" data-id="hnav" data-transition="slide" data-position="fixed">
 			<a href="#" data-slidemenu=".slidemenus" data-slideopen="false" data-icon="smico" data-corners="false">MENU</a>
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</header><!-- /header -->
@@ -208,7 +206,7 @@
 				<ul>
 					<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
 					<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
-					<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+					<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS & CO-OPS</a></li>
 					<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
 					<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
 					<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
@@ -259,7 +257,7 @@
 			<div id="quizSelectPage0" data-role="popup" data-corner="false" data-theme="none">
 				<div class="quiz-select-container">
 					<div class="info-wrapper">
-						<h2>SELECT WHICH QUIZ YOU WANT TO RETAKE?</h2>
+						<h2>SELECT WHICH QUIZ YOU WANT TO RETAKE.</h2>
 						<h3>You will loose your previous points if you retake a quiz</h3>
 						<form class="question-container">
 							<ul data-role="none">
@@ -268,7 +266,7 @@
 									<label for="structure"><img src="img/quiz-select-icon/home-icon.png"> <span>STRUCTURE</span></label></li>
 								<li data-role="none">
 									<input id="rental-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="rental-quiz-page" data-role="none"/>
-									<label for="rental-quiz-page"><img src="img/quiz-select-icon/doller-icon.png"> <span>RENTAL, CONDOS & CO-OPS</span></label></li>
+									<label for="rental-quiz-page"><img src="img/quiz-select-icon/doller-icon.png"> <span>RENTALS, CONDOS & CO-OPS</span></label></li>
 								<li data-role="none"><input id="belongings-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="belongings-quiz-page" data-role="none"/><label for="belongings-quiz-page"><img src="img/quiz-select-icon/bag-icon.png"> <span>BELONGINGS</span></label></li>
 								<li data-role="none"><input id="liability-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="liability-quiz-page" data-role="none"/><label for="liability-quiz-page"><img src="img/quiz-select-icon/liability-icon.png"> <span>LIABILITY</span></label></li>
 							</ul>
@@ -302,7 +300,7 @@
 	<!-- Badges Section -->
 	<div data-role="page" id="badgesPage" data-theme="a" class="badges-container">
 
-		<div data-role="header" data-id="hnav" data-position="fixed">
+		<div data-role="header" data-id="hnav" data-transition="slide" data-position="fixed">
 			<a href="#" data-slidemenu=".slidemenus" data-slideopen="false" data-icon="smico" data-corners="false" data-iconshadow="false" data-shadow="false"><span class="smenu">MENU</span></a>
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
@@ -314,7 +312,7 @@
 				<ul>
 					<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
 					<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
-					<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTAL, CONDOS & CO-OPS</a></li>
+					<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS & CO-OPS</a></li>
 					<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
 					<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
 					<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
@@ -369,7 +367,7 @@
 			<div id="quizSelectPage3" data-role="popup" data-corner="false" data-theme="none">
 				<div class="quiz-select-container">
 					<div class="info-wrapper">
-						<h2>SELECT WHICH QUIZ YOU WANT TO RETAKE?</h2>
+						<h2>SELECT WHICH QUIZ YOU WANT TO RETAKE.</h2>
 						<h3>You will loose your previous points if you retake a quiz</h3>
 						<form class="question-container">
 							<ul data-role="none">
@@ -378,7 +376,7 @@
 									<label for="structure"><img src="img/quiz-select-icon/home-icon.png"> <span>STRUCTURE</span></label></li>
 								<li data-role="none">
 									<input id="rental-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="rental-quiz-page" data-role="none"/>
-									<label for="rental-quiz-page"><img src="img/quiz-select-icon/doller-icon.png"> <span>RENTAL, CONDOS & CO-OPS</span></label></li>
+									<label for="rental-quiz-page"><img src="img/quiz-select-icon/doller-icon.png"> <span>RENTALS, CONDOS & CO-OPS</span></label></li>
 								<li data-role="none"><input id="belongings-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="belongings-quiz-page" data-role="none"/><label for="belongings-quiz-page"><img src="img/quiz-select-icon/bag-icon.png"> <span>BELONGINGS</span></label></li>
 								<li data-role="none"><input id="liability-quiz-page" data-bind="checked: $root.usrans1" type="radio" class="kyc-radio" name="quiz" value="liability-quiz-page" data-role="none"/><label for="liability-quiz-page"><img src="img/quiz-select-icon/liability-icon.png"> <span>LIABILITY</span></label></li>
 							</ul>
@@ -401,7 +399,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="landing-page.html" data-ajax="false" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="fade">Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="fade">Help</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Help</a></li>
 					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Info</a></li>
 				</ul>
 			</div>
@@ -410,7 +408,7 @@
 
 	<!-- Help Section -->
 	<section id="helpPage" data-role="page" data-theme="a">
-		<header data-role="header" id="hnav" data-position="fixed">
+		<header data-role="header" id="hnav" data-transition="slide" data-position="fixed">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</header><!-- /header -->
 		<article data-role="content" class="help-container">
@@ -485,8 +483,8 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide">Return To Quiz</a></li>
-					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Info</a></li>
+					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -496,7 +494,7 @@
 	<!-- Info Page -->
 	<div data-role="page" id="infoPage" data-theme="a">
 
-		<div data-role="header" data-id="hnav" data-position="fixed">
+		<div data-role="header" data-id="hnav"  data-position="fixed" data-transition="slide">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
@@ -546,8 +544,8 @@
 		<div data-id="fool" data-position="fixed" data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
+					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
 					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" >Info</a></li>
 				</ul>
 			</div>
@@ -555,9 +553,9 @@
 	</div>
 
 	<!-- Terms Page -->
-	<div data-role="page" id="termsPage" data-theme="a" data-position="fixed">
+	<div data-role="page" id="termsPage" data-theme="a">
 
-		<div data-role="header" data-id="hnav" data-position="fixed" data-update-page-padding="false">
+		<div data-role="header" data-id="hnav" data-position="fixed" data-transition="slide">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
@@ -673,9 +671,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Return To Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade">Info</a></li>
+					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide">Info</a></li>
 				</ul>
 			</div>
 		</div>
