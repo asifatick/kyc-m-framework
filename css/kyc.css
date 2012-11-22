@@ -334,6 +334,10 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
 #infoScreenPage .info-wrapper h2.info-wrapper-title, #structureInfoPage .info-wrapper h2.info-wrapper-title,#rentalInfoPage .info-wrapper h2.info-wrapper-title,#liabilityInfoPage .info-wrapper h2.info-wrapper-title, #belongingsInfoPage .info-wrapper h2.info-wrapper-title{ color: #5f7131; font-size: 1.3em; }
 #infoScreenPage .info-wrapper-content{ height: 250px;
     max-height: 250px; }
+#structureInfoPage .ui-content, #rentalInfoPage .ui-content, #liabilityInfoPage .ui-content, #belongingsInfoPage .ui-content{
+    min-height:360px;
+    max-height:100%;
+}
 
 /* info Wrapper */
 
@@ -379,8 +383,11 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
     -webkit-overflow-scrolling: touch;
     scrollbars:visible;
     webkit-transform: translate3d(0,0,0);  
-    box-shadow: inset 0 -2px 3px 0px rgba(0, 0, 0, 0.3);
-padding: 0.5em;  
+    box-shadow: inset 0 -2px 3px 0px rgba(0, 0, 0, 0.1);
+    padding: 0.5em;
+    scrollbar-face-color:#d55447;
+    scrollbar-track-color:rgba(216, 121, 110, 0.1);
+    scrollbar:none;
 }
 
 .info-wrapper-content::-webkit-scrollbar {
@@ -605,7 +612,7 @@ h4.qa-notification-title{ font-size: 1.6em;
 .button-row .grid_6{ text-align: center; }
 
 .qa-content-wrapper{ overflow-y:auto; -webkit-overflow-scrolling:touch; padding-top:56px; margin: 0; }
-#qCAContent{ min-height: 220px; max-height: 260px; overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch;  }
+#qCAContent{ min-height: 220px; max-height: 260px; overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch;-webkit-appearance:none;  }
 
 .continue-btn img{ width:10px; }
 
