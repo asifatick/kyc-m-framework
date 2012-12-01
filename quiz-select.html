@@ -47,21 +47,66 @@
 
 			<div id="quizSelectOptions" class="quiz-select-container">
 				<ul data-role="none">
-					<li data-role="none"><a href="structure-quiz-page.html" data-transition="slidefade"  data-role="none"><img src="img/quiz-select-icon/home-icon.png"> <span>STRUCTURE</span></a></li>
-					<li data-role="none"><a href="rental-quiz-page.html" data-transition="slidefade"  data-role="none"><img class="rental" src="img/quiz-select-icon/doller-icon.png"> <span>RENTALS, CONDOS & CO-OPS</span></a></li>
-					<li data-role="none"><a href="belongings-quiz-page.html" data-transition="slidefade"  data-role="none"><img src="img/quiz-select-icon/bag-icon.png"> <span>BELONGINGS</span></a></li>
-					<li data-role="none"><a href="liability-quiz-page.html" data-transition="slidefade"  data-role="none"><img src="img/quiz-select-icon/liability-icon.png"> <span>LIABILITY</span></a></li>
+					<li data-role="none"><a href="#structureInfoPop" data-transition="slidedown" data-rel="popup" data-position-to="window"  data-role="none"><img src="img/quiz-select-icon/home-icon.png"> <span>STRUCTURE</span></a></li>
+					<li data-role="none"><a href="#rentalInfoPop" data-transition="slidedown" data-rel="popup" data-position-to="window"  data-role="none"><img class="rental" src="img/quiz-select-icon/doller-icon.png"> <span>RENTALS, CONDOS &amp; CO-OPS</span></a></li>
+					<li data-role="none"><a href="#belongingsInfoPop" data-transition="slidedown" data-rel="popup" data-position-to="window"  data-role="none"><img src="img/quiz-select-icon/bag-icon.png"> <span>BELONGINGS</span></a></li>
+					<li data-role="none"><a href="#liabilityInfoPop" data-transition="slidedown" data-rel="popup" data-position-to="window" data-role="none"><img src="img/quiz-select-icon/liability-icon.png"> <span>LIABILITY</span></a></li>
 				</ul>
 			</div>
-
-		</div>
+            
+            <!-- Structure Quiz Welcome Pop -->
+            
+                <div id="structureInfoPop" data-role="popup" data-corner="false" data-theme="none" class="info-wrapper">
+                    <h2 class="info-wrapper-title">Structure: Know Your House (and How to Cover It)</h2>
+                    <div class="info-wrapper-content">
+                        <h4>In the event of a total loss, do you have enough coverage to rebuild your home in its present location?</h4>
+                        <p>Walls alone do not make your house a “home.” But that doesn’t mean you cannot put a price on protecting the place where you and your family live and create cherished memories. Properly insuring the structure of your home—the actual building, its systems and related structures—is the extremely important. So, naturally, protecting it against damage or total loss should be one of your.</p>
+                    </div>
+                    
+                    <a href="quiz-page-structure.html" class="kyc-btn continue-btn" data-transition="slide" data-ajax="false" data-role="none" id="a">TAKE QUIZ <img src="img/continue-arrow.png"></a>
+                </div>
+            
+                <!-- Rentals Quiz Welcome Pop -->
+            
+                <div id="rentalInfoPop" data-role="popup" data-corner="false" data-theme="none" class="info-wrapper">
+                    <h2 class="info-wrapper-title">RENTALS, CONDOS and CO-OPS</h2>
+                    <h3 class="info-wrapper-sub-title">Safe at Home: Insuring Rentals, Condos and Co-ops</h3>
+                    <div class="info-wrapper-content">
+                        <p><b>Rentals, condos and co-ops; all have their own special appeal—and all present unique challenges when it comes to purchasing insurance.</b> Are you responsible for insuring the structure of your home, or only your belongings? And will you still be covered for liability, or if you are displaced from your home due to a disaster? This quiz will help you build and test your knowledge about your home, and the type and amount of insurance that best covers the special needs of your household. </p>
+                        
+                    </div>
+                    <a href="quiz-page-rental.html" class="kyc-btn continue-btn" data-transition="slide" data-ajax="false" data-role="none">TAKE QUIZ <img src="img/continue-arrow.png"></a>
+                </div>
+            
+                <!-- Liability Info Pop -->
+            <div id="liabilityInfoPop" data-role="popup" data-corner="false" data-theme="none" class="info-wrapper">
+				<h2 class="info-wrapper-title">Liability: The Best Defense…</h2>
+				<div class="info-wrapper-content">
+					<h4>Fire, earthquake, burglary… these are hazards we can prepare for</h4>
+					<p>But what if a visitor or somebody who works for you is accidently injured in your home or a member of your household damages a neighbor’s property. How will you pay for that? The liability coverage in your homeowners policy is designed to cover these potentially staggering costs. This includes expenses associated with your legal defense and possible court awards. The only certain thing in life is uncertainty. This quiz will help you build and test your knowledge about liability insurance because, well, accidents can happen...</p>
+				</div>
+				<a href="quiz-page-liability.html" data-ajax="false" class="kyc-btn continue-btn" data-transition="slide" data-role="none">TAKE QUIZ <img src="img/continue-arrow.png"></a>
+			</div>
+            
+            <!-- Belongings Info Pop -->
+                <div id="belongingsInfoPop" data-role="popup" data-corner="false" data-theme="none" class="info-wrapper">
+                    <h2 class="info-wrapper-title">Your Personal Possessions: What Matters Most Is Inside</h2>
+                    <div class="info-wrapper-content">
+					<h4>Are you prepared to replace possessions that are lost or damaged, or stolen? </h4>
+					<p>You can rebuild a house after a catastrophe. You can upgrade home security systems after a burglary. But what about replacing the things that make a home unique and special? Do you know what it will take to restore the lifestyle and comfort you worked so hard to build?</p>
+					<p>Your homeowners policy can take care of this by covering the cost of replacing lost possessions, from furnishings and appliances to clothing, jewelry and other cherished items. This quiz is designed help you build and test your knowledge about getting the right coverage for the contents of your home in the event of a loss.</p>
+				</div>
+                    <a href="quiz-page-belongings.html" class="kyc-btn continue-btn" data-transition="slide" data-ajax="false" data-role="none">TAKE QUIZ <img src="img/continue-arrow.png"></a>
+                </div>
+            </div>
+		
 
 		<div data-role="footer" data-id="fool">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#quizSelectPage" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Take A Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade">Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade">Info</a></li>
+					<li><a href="#quizSelectPage" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide">Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide">Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -143,9 +188,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#quizSelectPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slidefade">Take A Quiz</a></li>
-					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade">Help</a></li>
-					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slidefade" >Info</a></li>
+					<li><a href="#quizSelectPage" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide">Return To Quiz</a></li>
+					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -168,8 +213,8 @@
 					<div class="info-tabs-container">
 							<div data-role="navbar">
 								<ul>
-									<li><a href="#info-nav" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
-									<li><a href="#termsPage" data-transition="none" data-role="none">TERMS & CONDITIONS</a></li>
+									<li><a href="#info-nav" data-transition="none" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
+									<li><a href="#termsPage" data-transition="none" data-role="none">TERMS &amp; CONDITIONS</a></li>
 								</ul>
 							</div><!-- /navbar tabs -->
 						</div>
@@ -193,7 +238,7 @@
 								<br /><br />
 								About IBHS<br />
 								<a href="http://www.disastersafety.org">www.disastersafety.org</a><br />
-								The mission of the Insurance Institute for Business & Home Safety (IBHS) is to conduct objective, scientific research to identify and promote effective actions that strengthen homes, businesses, and communities against natural disasters and other causes of loss.<br /><br />
+								The mission of the Insurance Institute for Business &amp; Home Safety (IBHS) is to conduct objective, scientific research to identify and promote effective actions that strengthen homes, businesses, and communities against natural disasters and other causes of loss.<br /><br />
 								    </div>
 								</div>
 							</div>
@@ -206,9 +251,9 @@
 		<div data-id="fool" data-position="fixed" data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#quizSelectPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Take A Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" >Info</a></li>
+					<li><a href="#quizSelectPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" >Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -230,7 +275,7 @@
 							<div data-role="navbar">
 								<ul>
 									<li><a href="#infoPage" data-transition="none" data-role="none">ABOUT I.I.I</a></li>
-									<li><a href="#termsPage" class="ui-btn-active ui-state-persist" data-role="none">TERMS & CONDITIONS</a></li>
+									<li><a href="#termsPage" class="ui-btn-active ui-state-persist" data-transition="none" data-role="none">TERMS &amp; CONDITIONS</a></li>
 								</ul>
 							</div><!-- /navbar tabs -->
 						</div>
@@ -239,7 +284,7 @@
 
 						<div class="container_12">
 							<div class="grid_12">
-								<h3>TERMS & CONDITIONS</h3>
+								<h3>TERMS &amp; CONDITIONS</h3>
 								THIS IS A BINDING CONTRACT. BY INDICATING "ACCEPT", YOU FULLY AGREE TO ALL OF ITS TERMS AND CONDITIONS, AND BECOME PERMITTED TO USE AND DOWNLOAD ON YOUR IPHONE, IPAD OR OTHER APPLE DEVICE THE KNOW YOUR PLAN™ APPLICATION (THE "APPLICATION").  IF YOU DO NOT FULLY AGREE, YOU MUST NOT INSTALL ACCESS, DOWNLOAD OR USE THE APPLICATION.
 							<br /><br />
 							<br /><br />
@@ -332,9 +377,9 @@
 		<div data-role="footer" data-id="fool" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#quizSelectPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slidefade" >Take A Quiz</a></li>
-					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slidefade" >Help</a></li>
-					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slidefade" >Info</a></li>
+					<li><a href="#quizSelectPage" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" >Info</a></li>
 				</ul>
 			</div>
 		</div>

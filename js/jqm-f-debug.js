@@ -95,7 +95,7 @@
 		orientationChangeEnabled: true,
 
 		buttonMarkup: {
-			hoverDelay: 20
+			hoverDelay: 100
 		},
 
 		// TODO might be useful upstream in jquery itself ?

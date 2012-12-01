@@ -4,7 +4,7 @@ $(document).bind('mobileinit', function () {
     $.mobile.pushStateEnabled= false;
     $.mobile.zoom.enabled = false;
     $.mobile.ignoreContentEnabled= true;
-    $.mobile.buttonMarkup.hoverDelay = 20; //defaults 200
+    $.mobile.buttonMarkup.hoverDelay = 100; //defaults 200
     $.mobile.defaultDialogTransition = 'none';
     $.mobile.defaultPageTransition = 'slide';
     $.support.touchOverflow = true;
@@ -18,4 +18,6 @@ $(document).bind('mobileinit', function () {
 $(document).on('pageinit', function(){
     $('[data-position=fixed]').fixedtoolbar({ tapToggle:false });
     $('[data-role=header]').fixedtoolbar({ transition: "slide" });
+    $("#infoScreenPage [data-role=header]").fixedtoolbar({ updatePagePadding: false });
+              // $(".info-tabs-container").fixedtoolbar().show();
 });

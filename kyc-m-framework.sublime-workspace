@@ -523,87 +523,15 @@
 			"file": "quiz-select.html",
 			"settings":
 			{
-				"buffer_size": 26961,
+				"buffer_size": 31857,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "quiz-page-structure.html",
+			"file": "js/jqm.slidemenu.js",
 			"settings":
 			{
-				"buffer_size": 45195,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "quiz-page-rental.html",
-			"settings":
-			{
-				"buffer_size": 45055,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "quiz-page-liability.html",
-			"settings":
-			{
-				"buffer_size": 44897,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "quiz-page-belongings.html",
-			"settings":
-			{
-				"buffer_size": 44937,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "result-page.html",
-			"settings":
-			{
-				"buffer_size": 34703,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/jq-plugins.js",
-			"settings":
-			{
-				"buffer_size": 5974,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/kyc-script.js",
-			"settings":
-			{
-				"buffer_size": 822,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "info-screen.html",
-			"settings":
-			{
-				"buffer_size": 3669,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/jqm.globals.js",
-			"settings":
-			{
-				"buffer_size": 843,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/iscroll.js",
-			"settings":
-			{
-				"buffer_size": 33929,
+				"buffer_size": 3950,
 				"line_ending": "Windows"
 			}
 		},
@@ -611,7 +539,7 @@
 			"file": "css/kyc.css",
 			"settings":
 			{
-				"buffer_size": 35089,
+				"buffer_size": 35904,
 				"line_ending": "Windows"
 			}
 		}
@@ -669,24 +597,25 @@
 	"file_history":
 	[
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-structure.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-rental.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-liability.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-belongings.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/result-page.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jq-plugins.js",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/kyc-script.js",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/info-screen.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.globals.js",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/iscroll.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/structure-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/liability-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/belongings-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/retake-quiz-page.html",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/result-page.html",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/info-screen.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/landing-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/script.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/rental-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/jqm.slidemenu.css",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.slidemenu.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/kyc-script.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/font/font.css",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.globals.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jq-plugins.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-rental.html",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-liability.html",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-belongings.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-select.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/kyc.css",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/scriptbak.js",
@@ -698,7 +627,6 @@
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/themes/kyc-theme.min.css",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/jquery.mobile.iscrollview.css",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jquery.mobile.iscrollview-closure-min.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/iscroll.js",
 		"/Users/evanshajed/Downloads/kyc-m-framework 2/css/kyc.css",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/knockout-2.2.0.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/retakescript.js",
@@ -1006,7 +934,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1014,279 +942,7 @@
 					"file": "quiz-select.html",
 					"settings":
 					{
-						"buffer_size": 26961,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6271,
-								6271
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 152.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "quiz-page-structure.html",
-					"settings":
-					{
-						"buffer_size": 45195,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								45186,
-								21403
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 7958.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "quiz-page-rental.html",
-					"settings":
-					{
-						"buffer_size": 45055,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9841,
-								9841
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4082.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "quiz-page-liability.html",
-					"settings":
-					{
-						"buffer_size": 44897,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16922,
-								16922
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6048.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "quiz-page-belongings.html",
-					"settings":
-					{
-						"buffer_size": 44937,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2736,
-								2736
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 125.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "result-page.html",
-					"settings":
-					{
-						"buffer_size": 34703,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4586,
-								4586
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "js/jq-plugins.js",
-					"settings":
-					{
-						"buffer_size": 5974,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3026,
-								5974
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 19499.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "js/kyc-script.js",
-					"settings":
-					{
-						"buffer_size": 822,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								802,
-								802
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "info-screen.html",
-					"settings":
-					{
-						"buffer_size": 3669,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2040,
-								2040
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 515.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "js/jqm.globals.js",
-					"settings":
-					{
-						"buffer_size": 843,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								839,
-								839
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "js/iscroll.js",
-					"settings":
-					{
-						"buffer_size": 33929,
+						"buffer_size": 31857,
 						"regions":
 						{
 						},
@@ -1299,11 +955,37 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 87.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/jqm.slidemenu.js",
+					"settings":
+					{
+						"buffer_size": 3950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1887,
+								1887
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 446.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1315,19 +997,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 11,
+					"buffer": 2,
 					"file": "css/kyc.css",
 					"settings":
 					{
-						"buffer_size": 35089,
+						"buffer_size": 35904,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								19428,
-								19428
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1338,7 +1020,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7690.0,
+						"translation.y": 8490.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -18,8 +18,10 @@
 	<!--JQM SlideMenu-->
 	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
 	<link rel="stylesheet" href="css/kyc.css">
-
-
+       <style>
+           
+           #infoScreenPage .info-wrapper{ display:none; }
+       </style>
 	<script src="js/jquery.min.js"></script>
 	<script src-"js/jq-plugins.js"></script>
 	<script src-"js/iscroll.js"></script>
@@ -29,14 +31,12 @@
 	<script src="js/jqm.globals.js"></script>
 	<script>
 		$(document).ready(function(){
-			$("#infoScreenPage").fadeIn("fast");
-			
- });
-		window.addEventListener('load', function() {
-                document.getElementById('infoScreenPage').addEventListener('touchmove', function(e) {
-                    e.preventDefaultScroll();
-                }, false);
-            }, false);
+            $('[data-role=header]').fixedtoolbar({ updatePagePadding: false });
+                          });
+            $( '#infoScreenPage' ).live( 'pageinit',function(event){
+                                        $('#infoScreenPage .info-wrapper').show("normal").fadeIn();
+            });
+        
 	</script>
 	<script src="js/jqm-f-debug.js"></script>
 	<script src="js/jqm.slidemenu.js"></script>
@@ -45,13 +45,6 @@
 	<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
 
 	<script type="text/javascript" src="js/scriptbak.js"  ></script>
-
-	<script type="text/javascript">
-	//function getScoreID()
-	// {
-	//	return "structure.score";
-	// }
-	</script>
 	<script src="js/script.js"></script>
 
 	<!-- KYC UI custom scripts -->
@@ -59,16 +52,16 @@
 
 </head>
 <body>
-	<div data-role="page" id="infoScreenPage" data-theme="a" data-update-page-padding="false">
+	<div data-role="page" id="infoScreenPage" data-theme="a">
 
-		<div data-role="header" data-position="fixed" data-update-page-padding="false">
+		<div data-role="header" data-position="fixed">
 			<h1 class="logo-title">Know Your Coverage</h1>
 		</div>
 
 		<div data-role="content">
 			<div class="info-wrapper">
 				<h2 class="info-wrapper-title dark-green-text">HOME INSURANCE: AN IMPORTANT PIECE OF "PEACE OF MIND"</h2>
-				<div id="scrollBar" class="info-wrapper-content">
+				<div class="info-wrapper-content">
 					<p>What makes a house a home is more than just four walls and a roof. But what if your home and belongings were damaged or destroyed by a fire, flood, earthquake, or other catastrophe? Could you rebuild the setting for your most cherished memories, safeguard your family and possessions, and be secure in the knowledge that, even in the event of total loss, there would be a way for your family to return? That—and more—is what property insurance does. Being properly covered makes it easier for you focus on work, family, friends and hobbies without having to worry about the “what-ifs” in life. </p>
 
 					<p> Fortunately, getting the peace of mind that comes with insurance isn’t rocket science; it’s about knowing your stuff, knowing the risks involved and understanding your priorities. Following are some quick quizzes to educate you about protecting your family’s home and its contents before you contact an Insurance Professional to create a coverage plan that best fits your needs and budget.</p>
