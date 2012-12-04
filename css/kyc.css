@@ -207,6 +207,8 @@ section{
     -webkit-overflow-scrolling:touch;
 }
 
+.ui-popup-container{ z-index:99999 }
+
 /* Button Styles */
 .ui-btn-text{ text-transform: uppercase; font-weight:normal;}
 a.kyc-btn,a.kyc-btn:hover,a.kyc-btn:link,a.kyc-btn:active,a.kyc-btn:focus{
@@ -331,7 +333,7 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
 #structureInfoPage .kyc-btn, #belongingsInfoPage .kyc-btn, #liabilityInfoPage .kyc-btn, #rentalInfoPage .kyc-btn, #tellMeMore .kyc-btn { margin:0.3em auto; }
 
 #infoScreenPage .info-wrapper, #structureInfoPage .info-wrapper, #rentalInfoPage .info-wrapper, #liabilityInfoPage .info-wrapper, #belongingsInfoPage .info-wrapper, #structureInfoPop, #rentalInfoPop, #belongingsInfoPop, #liabilityInfoPop {  -webkit-box-shadow: 0px 0px 20px 20px rgba(111,111,111,0.3); }
-#infoScreenPage .info-wrapper h2.info-wrapper-title, #structureInfoPage .info-wrapper h2.info-wrapper-title,#rentalInfoPage .info-wrapper h2.info-wrapper-title,#liabilityInfoPage .info-wrapper h2.info-wrapper-title, #belongingsInfoPage .info-wrapper h2.info-wrapper-title{ color: #5f7131; font-size: 1.3em; }
+#infoScreenPage .info-wrapper h2.info-wrapper-title, #structureInfoPage .info-wrapper h2.info-wrapper-title,#rentalInfoPage .info-wrapper h2.info-wrapper-title,#liabilityInfoPage .info-wrapper h2.info-wrapper-title, #belongingsInfoPage .info-wrapper h2.info-wrapper-title{ color: #E65B4D; font-size: 1.3em; }
 #infoScreenPage .info-wrapper-content{ min-height: 250px;
     max-height: 100%; }
 #structureInfoPage .ui-content, #rentalInfoPage .ui-content, #liabilityInfoPage .ui-content, #belongingsInfoPage .ui-content{

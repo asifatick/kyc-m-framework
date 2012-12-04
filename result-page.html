@@ -17,7 +17,11 @@
 	
 		<link rel="stylesheet" href="css/font/font.css" />
 		<link rel="stylesheet" href="css/kyc.css">
-	
+            <style>
+                #resultPage [data-role="content"]{
+                    display:none;
+                }
+                </style>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.animate-enhanced.min.js"></script>
@@ -25,11 +29,9 @@
 		<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
 		<script src="js/jqm.globals.js"></script>
 		<script>
-            /*
-		$(document).ready(function(){
-			$("#resultPage").fadeIn("50");
-			});
-             */
+            $( '#resultPage' ).live( 'pageinit',function(event){
+                                        $('#resultPage [data-role=content]').show("normal").fadeIn();
+                                        });
 		</script>
 		<script src="js/jquery.mobile.min.js"></script>
 
@@ -52,27 +54,29 @@
 				<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconshadow="false" data-shadow="false"><span class="smenu">MENU</span></a>
 				<h1 class="logo-title">Know Your Coverage</h1>
 			</div>
+            
+            <div id="slidemenu">
+                <h3>MENU</h3>
+                <ul>
+                    <li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
+                    <li><a href="structure-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
+                    <li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS &amp; CO-OPS</a></li>
+                    <li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
+                    <li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+                    <li class="jump-bar"><span class="down-triangle-icon"></span> MORE</li>
+                    <li><a data-ajax="false" href="result-page.html" data-transition="slide" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
+                    <li><a  href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE A QUIZ</a></li>
+                </ul>
+            </div>
 
 			<div data-role="content">
-				<div id="slidemenu">
-			<h3>MENU</h3>
-			<ul>
-				<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
-				<li><a href="structure-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
-				<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS &amp; CO-OPS</a></li>
-				<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
-				<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
-				<li class="jump-bar"><span class="down-triangle-icon"></span> MORE</li>
-				<li><a data-ajax="false" href="result-page.html" data-transition="slide" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
-				<li><a  href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE A QUIZ</a></li>
-			</ul>
-		</div>
 				<!-- Top Score Navigation Container -->
 				<div class="container_12 result-header">
 					<div class="grid_12">
 						<h4>YOUR FINAL RESULTS</h4>
 					</div>
 				</div>
+                
 
 				<div id="resultContent" class="result-container">
 

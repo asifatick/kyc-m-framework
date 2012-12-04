@@ -30,9 +30,7 @@
 	<script>
         $( '#landingPage' ).live( 'pageinit',function(event){
             $('#landingPage').show(300, function(){
-                $('#landingPage .ui-content').show(600, function(){
-                                                   $(this).slideDown();
-                });
+                                   $('#landingPage .ui-content').show("normal").fadeIn();
             });
         });
         
