@@ -523,7 +523,7 @@
 			"file": "quiz-select.html",
 			"settings":
 			{
-				"buffer_size": 31857,
+				"buffer_size": 31863,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "js/jqm.slidemenu.js",
 			"settings":
 			{
-				"buffer_size": 3950,
+				"buffer_size": 4978,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "css/kyc.css",
 			"settings":
 			{
-				"buffer_size": 35904,
+				"buffer_size": 35942,
 				"line_ending": "Windows"
 			}
 		}
@@ -942,7 +942,7 @@
 					"file": "quiz-select.html",
 					"settings":
 					{
-						"buffer_size": 31857,
+						"buffer_size": 31863,
 						"regions":
 						{
 						},
@@ -969,23 +969,25 @@
 					"file": "js/jqm.slidemenu.js",
 					"settings":
 					{
-						"buffer_size": 3950,
+						"buffer_size": 4978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1887,
-								1887
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 446.0,
+						"translation.x": 61.0,
+						"translation.y": 358.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -993,7 +995,6 @@
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1001,7 +1002,7 @@
 					"file": "css/kyc.css",
 					"settings":
 					{
-						"buffer_size": 35904,
+						"buffer_size": 35942,
 						"regions":
 						{
 						},
@@ -1020,7 +1021,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8490.0,
+						"translation.y": 8550.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

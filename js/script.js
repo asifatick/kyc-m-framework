@@ -64,7 +64,7 @@
 				{
 					if (self.answerCount() <= Math.round((curquestionList.length *50)/100) ) {
 						self.badge("c-level");
-	     				self.badgeText("You missed a few. Why not go back and review the questions about "+self.getCatName()+ " that you answered incorrectly. For more information, be sure to talk to your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");
+	     				self.badgeText("Why not go back and review the questions about "+self.getCatName()+ " that you answered incorrectly. For more information, be sure to talk to your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");
 	     				self.badgeTextHead("You missed a few.");
 							return "c-level";
 					}
@@ -72,7 +72,7 @@
 					{
 
 						self.badge("b-level");
-	     				self.badgeText("Good work, but you may want to review the questions about "+self.getCatName()+ " that you answered incorrectly. For more information, be sure to talk to your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");
+	     				self.badgeText("But you may want to review the questions about "+self.getCatName()+ " that you answered incorrectly. For more information, be sure to talk to your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");
 	     				self.badgeTextHead("Good Work,");	
 							return "b-level";
 
@@ -80,7 +80,7 @@
 					else	
 					{
 						self.badge("a-level");
-	     				self.badgeText("Outstanding! For even more information, be sure to contact your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");	
+	     				self.badgeText("For even more information, be sure to contact your Insurance Professional for advice on creating an insurance strategy that best fits your needs and budget.");	
 	     				self.badgeTextHead ("Outstanding!");
 						return "a-level";
 					};

@@ -18,8 +18,8 @@ $(document).on("pageinit", function(e){
                               e.preventDefault();
                               });
                /*$(document).on("click", ".slidemenu ul li > a", function(e) {
-                              slidemenu(sm, false);
-                              });*/
+                slidemenu(sm, false);
+                });*/
                
                
                
@@ -34,6 +34,13 @@ $(document).on("pageinit", function(e){
                             sm.css('width', '240px');
                             sm.height(viewport().height);
                             $(":jqmData(role='page')").css('left', '240px');
+                            $("#liabilityInfoPage").css('left','0px');
+                            $("#structureInfoPage").css('left','0px');
+                            $("#belongingsInfoPage").css('left','0px');
+                            $("#rentalInfoPage").css('left','0px');
+                            $("#infoPage").css('left','0px');
+                            $("#termsPage").css('left','0px');
+                            $("#helpPage").css('left','0px');
                             }
                             });
                
@@ -52,15 +59,16 @@ function slidemenu(sm, only_close) {
 	if (!sm.data('slideopen') && !only_close) {
 		sm.show().animate({width: '240px', avoidTransforms: false, useTranslate3d: true}, 'fast');
         $('.ui-page-active').each(function(index) {
-                               $(this).css('left','240px');
-                               });
+                $(this).css('left','240px');
+                $(".score-container").css('left','240px');
+                                  });
 		//$(".ui-page-active").css('left', '240px');
 		sm.data('slideopen', true);
 		$('[data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
         $('.ui-header .ui-btn-text').each(function(index) {
-                               $(this).text("BACK");
-                               $(this).text();
-                               });
+                                          $(this).text("BACK");
+                                          $(this).text();
+                                          });
         
         // $(".smenu").text("BACK");
 		if ($(".ui-page-active .ui-content :jqmData(role='header')").data('position') == 'fixed') {
@@ -73,14 +81,26 @@ function slidemenu(sm, only_close) {
         $('.ui-page-active').each(function(index) {
                                   $(this).css('left','0px');
                                   $(".ui-body-a").css('left','0px');
+                                  $(".score-container").css('left','0px');
                                   });
 		$(".ui-page-active").css('left', '0px');
+        $(".score-container").css('left','0px');
 		$('[data-role=header]').find('span.ui-icon').removeClass('ui-icon-smico-back');
-		
+        $('#infoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
+		$('#termsPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
+        
         $('.ui-header .ui-btn-text').each(function(index) {
-                               $(this).text("MENU");
-                               $(this).text();
-                               });
+                                          $(this).text("MENU");
+                                          $(this).text();
+                                          });
+        $('#infoPage .ui-header .ui-btn-text').each(function(index) {
+                                          $(this).text("BACK");
+                                          $(this).text();
+                                          });
+        $('#termsPage .ui-header .ui-btn-text').each(function(index) {
+                                          $(this).text("BACK");
+                                          $(this).text();
+                                          });
         // $(".smenu").text("MENU");
 		sm.data('slideopen', false);
 		$(".ui-page-active .ui-content :jqmData(slidemenu)").css('margin-left', '0px');
