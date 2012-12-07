@@ -88,6 +88,10 @@ function slidemenu(sm, only_close) {
 		$('[data-role=header]').find('span.ui-icon').removeClass('ui-icon-smico-back');
         $('#infoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
 		$('#termsPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
+        $('#structureInfoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
+        $('#rentalInfoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
+        $('#liabilityInfoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
+        $('#belongingsInfoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
         
         $('.ui-header .ui-btn-text').each(function(index) {
                                           $(this).text("MENU");
@@ -101,6 +105,22 @@ function slidemenu(sm, only_close) {
                                           $(this).text("BACK");
                                           $(this).text();
                                           });
+        $('#structureInfoPage .ui-header .ui-btn-text').each(function(index) {
+                                                     $(this).text("BACK");
+                                                     $(this).text();
+                                                     });
+        $('#rentalInfoPage .ui-header .ui-btn-text').each(function(index) {
+                                                     $(this).text("BACK");
+                                                     $(this).text();
+                                                     });
+        $('#liabilityInfoPage .ui-header .ui-btn-text').each(function(index) {
+                                                     $(this).text("BACK");
+                                                     $(this).text();
+                                                     });
+        $('#belongingsInfoPage .ui-header .ui-btn-text').each(function(index) {
+                                                     $(this).text("BACK");
+                                                     $(this).text();
+                                                     });
         // $(".smenu").text("MENU");
 		sm.data('slideopen', false);
 		$(".ui-page-active .ui-content :jqmData(slidemenu)").css('margin-left', '0px');
