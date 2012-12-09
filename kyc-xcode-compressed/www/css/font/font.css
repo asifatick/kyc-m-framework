@@ -3,22 +3,22 @@
 
 
 @font-face {
+
+    font-weight: normal;
+    font-style: normal;
     font-family: 'dincond-boldbold';
     src: url('ff_din_condensed_bold-webfont.ttf') format('truetype');
 
-    font-weight: normal;
-    font-style: normal;
-
 }
 
 
 
 
 @font-face {
+    font-weight: normal;
+    font-style: normal;
     font-family: 'dincond-lightregular';
     src: url('ff_din_condensed_light-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 
 }
 
@@ -26,10 +26,10 @@
 
 
 @font-face {
+    font-weight: normal;
+    font-style: normal;
     font-family: 'dincond-mediumregular';
     src: url('ff_din_condensed_medium-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 
 }
 
@@ -37,22 +37,18 @@
 
 
 @font-face {
+    font-weight: normal;
+    font-style: normal;
     font-family: 'dincond-regularregular';
     src: url('ff_din_condensed_regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 
 }
 
 @font-face {
+    font-weight: normal;
+    font-style: normal;
     font-family: 'dincond-blackalternateregular';
-    src: url('ff_din_condensed_black_alternate-webfont.eot');
-    src: url('ff_din_condensed_black_alternate-webfont.eot?#iefix') format('embedded-opentype'),
-    url('ff_din_condensed_black_alternate-webfont.woff') format('woff'),
-    url('ff_din_condensed_black_alternate-webfont.ttf') format('truetype'),
-    url('ff_din_condensed_black_alternate-webfont.svg#dincond-blackalternateregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    src: url('ff_din_condensed_black_alternate-webfont.ttf') format('truetype');
     
 }
 
@@ -60,14 +56,11 @@
 
 
 @font-face {
+    font-weight: normal;
+    font-style: normal;
     font-family: 'dincond-blackregular';
-    src: url('ff_din_condensed_black-webfont.eot');
-    src: url('ff_din_condensed_black-webfont.eot?#iefix') format('embedded-opentype'),
-    url('ff_din_condensed_black-webfont.woff') format('woff'),
-    url('ff_din_condensed_black-webfont.ttf') format('truetype'),
-    url('ff_din_condensed_black-webfont.svg#dincond-blackregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    src: 
+    url('ff_din_condensed_black-webfont.ttf') format('truetype');
     
 }
 
@@ -75,25 +68,17 @@
 
 
 @font-face {
+    font-weight: normal;
+    font-style: normal;
     font-family: 'dincond-regularalternateRg';
-    src: url('ff_din_condensed_regular_alternate-webfont.eot');
-    src: url('ff_din_condensed_regular_alternate-webfont.eot?#iefix') format('embedded-opentype'),
-    url('ff_din_condensed_regular_alternate-webfont.woff') format('woff'),
-    url('ff_din_condensed_regular_alternate-webfont.ttf') format('truetype'),
-    url('ff_din_condensed_regular_alternate-webfont.svg#dincond-regularalternateRg') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    src: url('ff_din_condensed_regular_alternate-webfont.ttf') format('truetype');
     
 }
 
 @font-face {
-    font-family: 'dincond-boldalternatebold';
-    src: url('ff_din_condensed_bold_alternate-webfont.eot');
-    src: url('ff_din_condensed_bold_alternate-webfont.eot?#iefix') format('embedded-opentype'),
-    url('ff_din_condensed_bold_alternate-webfont.woff') format('woff'),
-    url('ff_din_condensed_bold_alternate-webfont.ttf') format('truetype'),
-    url('ff_din_condensed_bold_alternate-webfont.svg#dincond-boldalternatebold') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-family: 'dincond-boldalternatebold';
+    src: url('ff_din_condensed_bold_alternate-webfont.ttf') format('truetype');
     
 }

@@ -2,28 +2,28 @@
 	position: fixed;
 	top: 0px;
 	left: -1px;
-	width: 0px;
-	height: 100%;
-	background-color: #fefff1;
-	-webkit-box-shadow: inset -1px 0px 10px 1px rgba(000,000,000,0.3);
+    z-index:99;
 	display: none;
-	margin-top:45px;
 	overflow-x:hidden;
 	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-    z-index:99;
+	margin-top:45px;
+	width: 0px;
+	height: 100%;
     border-right:1px solid rgba(230,91,77,0.7);
+	background-color: #fefff1;
+	-webkit-box-shadow: inset -1px 0px 10px 1px rgba(000,000,000,0.3);
+	-webkit-overflow-scrolling: touch;
     
 }
 
 .slidemenu h3{
-	font-size:1.5em;
-	color: #f6f6e9;	
-	text-shadow: none;
 	margin:0;
 	padding:0.5em 0;
-	text-align: center;
 	background:#bcbb47;
+	color: #f6f6e9;
+	text-align: center;	
+	text-shadow: none;
+	font-size:1.5em;
 }
 
 .slidemenu ul {
@@ -33,31 +33,31 @@
 }
 
 .slidemenu ul li {
-	list-style-type: none;
 	margin: 0px 0;
+	list-style-type: none;
 }
 
-.slidemenu li.jump-bar{ 
+.slidemenu li.jump-bar{
+	padding:0.2em 0.6em 0.2em 2em; 
 	background: #e65b4d;
-	font-family: 'dincond-boldalternatebold', serif;
-	font-size: 12px;
-	color: #fefff1;
-	padding:0.2em 0.6em 0.2em 2em;
-	text-shadow:none;
     box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+	color: #fefff1;
+	text-shadow:none;
+	font-size: 12px;
+	font-family: 'dincond-boldalternatebold', serif;
  }
 
  .slidemenu li.jump-bar img{ width:11px; height: 6px; }
 
 .slidemenu ul li a:link, .slidemenu ul li a:visited {
-	border-bottom: 1px #5f7231 solid;
-	color: #5f7231;
-	font-size: 18px;
-	text-decoration: none;
-	width: 235px;
 	display: block;
 	padding: 10px 0px 10px 5px;
+	width: 235px;
+	border-bottom: 1px #5f7231 solid;
+	color: #5f7231;
+	text-decoration: none;
 	text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+	font-size: 18px;
     font-family: 'dincond-boldalternatebold', serif;
 }
 
@@ -73,29 +73,29 @@
 }
 		
 .ui-icon-smico {
-	background-color:#cbca70;
-	background:rgba(0,0,0,-1) url("../img/kyc-menu-icon.png") !important;
+	top:-1px;
+	margin-top:-1px;
 	width:25px;
 	height: 22px;
-	border-radius: 0;
-	margin-top:-1px;
-	top:-1px;
 	border:0;
+	border-radius: 0;
+	background:rgba(0,0,0,-1) url("../img/kyc-menu-icon.png") !important;
+	background-color:#cbca70;
     background-size: 20px 22px;
 }
 .ui-btn-down-a .ui-btn-inner .ui-icon-smico-back,
-.ui-icon-smico-back{ 
-	background-color:#f6f6e9;
+.ui-icon-smico-back{ top:0;
 	width:18px; height: 20px;
-	background:rgba(0,0,0,-1) url("../img/back.png") !important;
-    border-radius: 0; top:0;
 	border:0;
+    border-radius: 0;
+	background:rgba(0,0,0,-1) url("../img/back.png") !important; 
+	background-color:#f6f6e9;
     background-size:20px;
  }
 
 .slidemenu_btn .ui-icon-shadow {
-	-moz-box-shadow: 0 0px 0 rgba(255,255,255,0);
 	-webkit-box-shadow: 0 0px 0 rgba(255,255,255,0);
+	-moz-box-shadow: 0 0px 0 rgba(255,255,255,0);
 	box-shadow: 0 0px 0 rgba(255,255,255,0);
 }
 
@@ -104,10 +104,10 @@
 }
 .slidemenu_btn .ui-icon {
 	width: 20px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
 	border:0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
 }
 
 .slidemenu_btn .ui-icon, .ui-icon-searchfield::after {
