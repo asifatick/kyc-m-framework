@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<title>Know Your Coverage</title>
+
+	<!--Include JQM and JQ-->
+	<link rel="stylesheet" href="css/themes/kyc-theme.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
+	<link rel="stylesheet" href="css/font/font.css" />
+	<!--JQM SlideMenu-->
+	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
+	<link rel="stylesheet" href="css/kyc.css">
+        
+        <style>
+            [data-role="content"]{
+                left:0;
+            }
+        </style>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.animate-enhanced.min.js"></script>
+
+	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
+	<script src="js/jqm.globals.js"></script>
+	<script src="js/jqm-f-debug.js"></script>
+	<script src="js/jqm.slidemenu.js"></script>
+	<script src-"js/jq-plugins.js"></script>
+
+
+	<!-- KYC UI custom scripts -->
+	<script src="js/kyc-script.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="rentalInfoPage" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" class="back-menu" data-rel="back" data-icon="smico-back" data-iconshadow="false" data-shadow="false" data-corners="false">BACK</a>
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</div>
+
+		<div data-role="content">
+			<div class="info-wrapper">
+				<h2 class="info-wrapper-title">Safe at Home: Insuring Rentals, Condos and Co-ops</h2>
+				<!-- <h3 class="info-wrapper-sub-title">Safe at Home: Insuring Rentals, Condos and Co-ops</h3> -->
+				<div class="info-wrapper-content">
+					<p><b>Rentals, condos and co-ops; all have their own special appeal—and all present unique challenges when it comes to purchasing insurance.</b> Are you responsible for insuring the structure of your home, or only your belongings? And will you still be covered for liability, or if you are displaced from your home due to a disaster? This quiz will help you build and test your knowledge about your home, and the type and amount of insurance that best covers the special needs of your household. </p>
+					
+				</div>
+				<a href="quiz-page-rental.html" class="kyc-btn continue-btn" data-transition="slide" data-ajax="false" data-role="none">TAKE QUIZ <img src="img/continue-arrow.png"></a>
+			</div>
+		</div>
+
+
+		<div data-role="footer" data-id="fool" id="foo" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="quiz-page-rental.html" data-ajax="false" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		<!-- Help Section -->
+	<section id="helpPage" data-role="page" data-theme="a">
+		<header data-role="header" id="hnav" data-position="fixed">
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</header><!-- /header -->
+		<article data-role="content" class="help-container">
+			<h2 class="help-content-title">HELP</h2>
+			<div class="off-white-background">
+					<h3>BEGIN A QUIZ</h3>
+					<div class="help-container-back">
+						<div class="container_12">
+							<div class="grid_4">
+								<img class="size-32" src="img/help-icons/select-icon.png">
+							</div>
+							<div class="grid_8">
+								<h4>SELECT AN ANSWER</h4>
+								<p>Tap check box to select your answer</p>
+							</div>
+						</div>
+
+						<div class="container_12">
+							<div class="grid_4">
+								<img src="img/help-icons/submit-btn.png">
+							</div>
+							<div class="grid_8">
+								<h4>SUBMIT BUTTON</h4>
+								<p> Gives you additional info about specific question</p>
+							</div>
+						</div>
+
+						<div class="container_12">
+							<div class="grid_4">
+								<img src="img/help-icons/tell-more-btn.png">
+							</div>
+							<div class="grid_8">
+								<h4>TELL ME MORE</h4>
+								<p> Gives you additional info about specific question</p>
+							</div>
+						</div>
+
+						<div class="container_12">
+							<div class="grid_4">
+							<img src="img/footer-return-icon.png">
+						</div>
+						<div class="grid_8">
+							<h4>RETURN TO QUIZ</h4>
+							<p>Return to quiz takes you back to quiz section</p>
+						</div>
+						</div>
+						
+						<div class="container_12">
+							<div class="grid_4">
+							<img src="img/footer-info-icon.png">
+						</div>
+						<div class="grid_8">
+							<h4>INFO ICON</h4>
+							<p>Select "INFO" icon to learn more about III</p>
+						</div>
+						</div>
+						
+						<div class="container_12">
+							<div class="grid_4">
+								<img src="img/kyc-menu-icon.png">
+							</div>
+							<div class="grid_8">
+								<h4>MENU ICON</h4>
+								<p>Hit "MENU" to jump to quizes.</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+		</article><!-- /content -->
+		<div data-role="footer" data-id="fool" id="foo" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="quiz-page-rental" data-ajax="false" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide">Return To Quiz</a></li>
+					<li><a href="#helpPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide">Help</a></li>
+					<li><a href="#infoPage" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="slide" >Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</section><!-- /page -->
+
+	
+	<!-- Info Page -->
+	<div data-role="page" id="infoPage" data-theme="a">
+
+		<div data-role="header" data-id="hnav" data-position="fixed">
+            <a href="#" class="back-menu" data-rel="back" data-icon="smico-back" data-corners="false">BACK</a>
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</div>
+
+		<div data-role="content" class="info-container">
+			
+			<h2 class="help-content-title">INFO</h2>
+			<div class="tabbed-container">
+
+					<div class="info-tabs-container">
+							<div data-role="navbar">
+								<ul>
+									<li><a href="#info-nav" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
+									<li><a href="#termsPage" data-role="none">TERMS &amp; CONDITIONS</a></li>
+								</ul>
+							</div><!-- /navbar tabs -->
+						</div>
+
+
+					<div id="info-nav" class="off-white-background">
+						<div class="container_12">
+							<div class="grid_12">
+								<h3>ABOUT I.I.I</h3>
+							<div id="iii_wrapper">
+									<div id="iii_content_wrapper">
+								       
+								        Visit us at: <a href="http://www.iii.org" target="_blank" rel="external">www.iii.org</a><br /><br />
+								        The mission of the Insurance Information Institute (I.I.I.) is to improve public understanding of insurance—what it does and how it works.
+								<br /><br />
+								For more than 50 years, the I.I.I. has provided definitive insurance information. Today, are recognized by the media, governments, regulatory organizations, universities and the public as a primary source of information, analysis and referral concerning insurance.
+								<br /><br />
+								Each year, the I.I.I. works on more than 3,700 news stories and handles more than 6,000 requests for information.
+								<br /><br />
+								In addition to direct contact with the media, individuals and organizations, the I.I.I. publishes a host of helpful pamphlets and books ranging in subjects from <i>9 Ways to Lower Your Auto Insurance Costs</i> to the <i>I.I.I. Insurance Fact Book</i>. We are an industry supported organization but do not lobby (see below for a list of our member companies). Our central function is to provide accurate and timely information on insurance subjects. Questions concerning I.I.I. membership should be emailed to <a href="mailto:members@iii.org" target="_blank" rel="external">members@iii.org.</a>
+								<br /><br />
+								About IBHS<br />
+								<a href="http://www.disastersafety.org" target="_blank" rel="external">www.disastersafety.org</a><br />
+								The mission of the Insurance Institute for Business &amp; Home Safety (IBHS) is to conduct objective, scientific research to identify and promote effective actions that strengthen homes, businesses, and communities against natural disasters and other causes of loss.<br /><br />
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+
+		<div data-id="fool" data-position="fixed" data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="quiz-page-rental" data-ajax="false" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-state-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" >Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Terms Page -->
+	<div data-role="page" id="termsPage" data-theme="a">
+
+		<div data-role="header" data-id="hnav" data-position="fixed">
+            <a href="#" class="back-menu" data-rel="back" data-icon="smico-back" data-corners="false">BACK</a>
+			<h1 class="logo-title">Know Your Coverage</h1>
+		</div>
+
+		<div data-role="content" class="info-container">
+			
+			<h2 class="help-content-title">INFO</h2>
+			<div class="tabbed-container">
+
+					<div class="info-tabs-container">
+							<div data-role="navbar">
+								<ul>
+									<li><a href="#infoPage" data-transition="none" data-prefetch data-role="none">ABOUT I.I.I</a></li>
+									<li><a href="#termsPage" class="ui-btn-active ui-state-persist" data-role="none">TERMS &amp; CONDITIONS</a></li>
+								</ul>
+							</div><!-- /navbar tabs -->
+						</div>
+
+					<div id="terms-nav" class="off-white-background">
+
+						<div class="container_12">
+							<div class="grid_12">
+								<h3>TERMS &amp; CONDITIONS</h3>
+								THIS IS A BINDING CONTRACT. BY INDICATING "ACCEPT", YOU FULLY AGREE TO ALL OF ITS TERMS AND CONDITIONS, AND BECOME PERMITTED TO USE AND DOWNLOAD ON YOUR IPHONE, IPAD OR OTHER APPLE DEVICE THE KNOW YOUR PLAN™ APPLICATION (THE "APPLICATION").  IF YOU DO NOT FULLY AGREE, YOU MUST NOT INSTALL ACCESS, DOWNLOAD OR USE THE APPLICATION.
+							<br /><br />
+							<br /><br />
+							YOU REPRESENT AND WARRANT THAT YOU ARE AT LEAST EIGHTEEN (18) YEARS OLD.  IF YOU ARE NOT AT LEAST EIGHTEEN, YOU CANNOT USE OR ACCESS THE APPLICATION.
+							<br /><br />
+							<b>1.	DEFINITIONS.</b> The following definitions shall apply to this Agreement.
+							<br /><br />
+							1.1	<u>"Licensee Content"</u> means all data entered into the Application by Licensee.
+							<br /><br />
+							1.2	<u>"Party"</u> means III or Licensee individually, and "Parties" means both III and Licensee.
+							<br /><br />
+							<b>2.	USE OF APPLICATION AND THE PARTIES' CONTENT</b>
+							<br /><br />
+							2.1	<u>License Grant.</u> Subject to the terms and conditions of this Agreement, III grants Licensee a non-exclusive, limited, non-transferable license to use and download on your iPhone, iPad or other Apple device the Application and enter the Content in the Application solely for Licensee's personal use.  Except as set forth herein, no other use, access, copying, display or distribution, in any form, of the Application, in whole or in part, by Licensee is permitted.
+							<br /><br />
+							2.2	<u>Withdrawal of Application.</u>  III has the right in its sole discretion to cease allowing use of the Application at any time, in which event upon receipt of email notice from III, Licensee shall promptly delete the Application from all devices and cease using the Application.
+							<br /><br />
+							2.3	<u>Limitations and Restrictions.</u>  Licensee shall not download, re-engineer, reverse engineer, reverse translate, decompile, reverse assemble, disassemble or in any manner decode or attempt to derive source code from the Application for any purpose whatsoever. 
+							<br /><br />
+							2.4	<u>Ownership and Responsibility for Licensee Content.</u> Licensee acknowledges that Licensee is solely responsible for the Licensee Content (including, without limitation, its accuracy, quality, legality, and reliability) and Licensee's use of the Application.  Licensee is the sole owner of the Licensee Content and III has no ownership rights with respect to the Licensee Content.
+							<br /><br />
+							<b>3.	TAXES</b>
+							<br /><br />
+							3.1	<u>Taxes.</u>  Licensee will pay to III or to the relevant taxing authority, as appropriate, any applicable sales, use, goods and services, value added or other taxes payable with respect to Licensee's use of the Application.
+							<br /><br />  
+							<b>4.	DISCLAIMERS; LIMITATION OF LIABILITY</b>
+							<br /><br />
+							4.1	<u>Disclaimers; Limitation of Liability.</u> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL III, OR ANY OF ITS AFFILIATES, OFFICERS, DIRECTORS, OR EMPLOYEES BE LIABLE TO LICENSEE OR TO ANY THIRD PARTY FOR (I) ANY SPECIAL, CONSEQUENTIAL, INCIDENTAL, OR INDIRECT DAMAGES, (II) FOR ANY DAMAGES WITH RESPECT TO THE ACCURACY OR DELETION OF ANY DATA OR SUBSCRIBER CONTENT ENTERED, OR STORED ON OR IN THE APPLICATION OR (III) FOR THE SUFFICIENCY OR COMPLETENESS OF ANY DATA OR SUBSCRIBER CONTENT ENTERED OR STORED ON OR IN THE APPLICATION, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY ARISING OUT OF THIS AGREEMENT OR THE APPLICATION, WHETHER OR NOT ADVISED OF THE POSSIBLITY OF SUCH DAMAGES, AND NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY.  LICENSEE ACKNOWLEDGES AND AGREES THAT THERE IS NO GUARANTEE THE LICENSEE CONTENT ENTERED INTO OR STORED ON THE APPLICATION WILL BE SECURE.  TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL III HAVE ANY LIABILITY OF ANY KIND WITH RESPECT TO THE DELETION OF ANY OR ALL OF LICENSEE CONTENT OR ACCESS TO THE LICENSEE CONTENT.  LICENSEE AGREES THAT LICENSEE IS SOLELY RESPONSIBLE FOR MAINTAINING COPIES OF ALL DATA AND SUBSCRIBER CONTENT, ENTERED OR STORED IN OR ON THE APPLICATION.  TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL III'S AGGREGATE LIABILITY UNDER ANY AND ALL LEGAL THEORIES WITH RESPECT TO THIS AGREEMENT, THE APPLICATION, OR THE LICENSEE CONTENT BE IN EXCESS OF ONE DOLLAR ($1.00).
+							<br /><br />
+							4.2	<u>DISCLAIMERS.</u>  
+							<br /><br />
+							4.2.1	III DOES NOT MAKE ANY REPRESENTATIONS OR WARRANTIES AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE APPLICATION OR ACCURACY OR RELIABILITY OF THE APPLICATION OR THE ABILITY TO ACCESS THE APPLICATION.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW III SPECIFICALLY DISCLAIMS ANY WARRANTIES, CONDITIONS, GUARANTEES OR REPRESENTATIONS AS TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR OTHER WARRANTIES, WHETHER EXPRESS OR IMPLIED IN LAW OR IN FACT, ORAL OR IN WRITING.  THE APPLICATION AND THE RESULTS OBTAINED FROM USE OF THE APPLICATION ARE PROVIDED ON AN "AS IS" BASIS.  
+							<br /><br />
+							4.2.2	TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL III BE LIABLE FOR ANY DAMAGES SUFFERED OR INCURRED BY LICENSEE OR ANY THIRD PARTIES ARISING OUT OF ANY FAULTS, INTERRUPTIONS, DELAYS, INACCURACIES, ERRORS, DELETIONS OR OMISSIONS IN CONNECTION WITH THE LICENSEE CONTENT OR THE APPLICATION.  III IS NOT RESPONSIBLE OR LIABLE FOR THE DELETION, CORRECTION, DESTRUCTION, DAMAGE, LOSS OF OR FAILURE TO STORE ANY AND ALL LICENSEE CONTENT.  LICENSEE ACKNOWLEDGES AND AGREES THAT LICENSEE IS RESPONSIBLE FOR MAINTAINING COPIES OF THE LICENSEE CONTENT.
+							<br /><br />
+							<b>5.	INDEMNIFICATION</b>
+							<br /><br />
+							5.1	<u>Indemnification by Licensee.</u>  Licensee shall indemnify and hold harmless III, Web Host, and their affiliates and their directors, officers and employees with respect to any claim, demand, cause of action, liabilities, damages, awards, settlements, losses, and expenses (including, without limitation, reasonable attorneys' fees and costs of investigation) arising out of any claim relating to or arising out of Licensee's use of the Application or the Licensee Content, including, without limitation, any claims by Licensee's insurance companies that provide insurance coverage to Licensee, other than any third party claims that the Application infringes a third party's patent, copyright, trademark, trade secret or other intellectual property rights.  Licensee shall not settle any such claim without a full release of III from all liability.
+							<br /><br /> 
+							<b>6.	OWNERSHIP</b>
+							<br /><br />
+							6.1	<u>Ownership.</u>  III shall own all right, title and interest, including all related intellectual property rights, in and to the Application and any suggestions, ideas, enhancement requests, feedback, recommendations or other information provided by Licensee relating to the Application.  This Agreement does not convey to Licensee any rights of ownership in or related to the Application.  III's name, logo, and the product names associated with the Application are trademarks of III or third parties.  III owns all proprietary rights, including, without limitation, patent, copyright, trade secret and trademark rights to the Application and any modifications, enhancements and derivatives to the Application.  Licensee acknowledges that Licensee is granted only a limited right of use of the Application, which right of use is not coupled with an interest and is revocable in accordance with the terms of this Agreement.  Licensee agrees not to assert any ownership interest in the Application or any software use in connection with producing or providing the Application.  Licensee agrees that the Application embodies valuable, confidential and trade secret information of III.
+							<br /><br />
+							<b>7.	GENERAL</b>
+							<br /><br />
+							7.1	<u>Governing Law.</u>  This Agreement and all claims arising out of or relating to this Agreement, the Licensee Content or the Application, including without limitation tort claims, shall be interpreted, construed and enforced in all respects in accordance with the United States federal laws with respect to intellectual property rights and with respect to all other claims with the laws of the State of New York, except for its conflict of laws principles.  The parties agree that any action or proceeding arising out of or in connection with this Agreement, the Licensee Content or the Application shall be brought exclusively in the federal and state courts located in the State of New York, in the Borough of Manhattan, in New York City in the State of New York and the Parties waive any right to claim inconvenient forum and the Licensee waives any and all rights to claim immunity.  The parties waive any and all rights to a jury trial.
+							<br /><br />
+							7.2	<u>Notices.</u>  Notices will be deemed effective hereunder if in writing, delivered in person, or by facsimile, certified or registered mail, or by FedEx or similar private mail service, and addressed to III at its above address and to Licensee at the email address that Licensee uses when Licensee clicks acceptance (or to such successor addresses as the Parties may identify by providing notice in accordance with this Section).  Licensee can also contact III with respect to questions and complaints about the Application by emailing [fill in email address].
+							<br /><br />
+							7.3	<u>Assignments.</u>  This Agreement shall be binding upon and inure to the benefit of the Parties and their affiliates, successors and assigns.  Neither Party may assign this Agreement or its rights and obligations under this Agreement, except in connection with a merger, acquisition or sale of substantially all of the assets of a Party.
+							<br /><br />
+							7.4	<u>Independent Contractors.</u>  The Parties to this Agreement are independent contractors.  Neither Party is an agent, representative or partner of the other Party.  Neither Party shall have any right, power or authority to enter into any agreement for, or on behalf of, or incur any obligation or liability of, or to otherwise bind, the other Party.  This Agreement shall not be interpreted or construed to create an association, agency, joint venture or partnership between the Parties or to impose any liability attributable to such a relationship upon either Party. 
+							<br /><br />
+							7.5	<u>Force Majeure.</u>  If any Party shall be delayed, interrupted or prevented from the performance of any obligation hereunder by reason of an act of God, fire, flood, war, public disaster, strike or labor dispute, natural disasters or other event beyond a party's reasonable control, such party shall not be liable to the other for damages arising from such event and the time for performance of such obligation shall be extended for a period equal to the duration of the contingency that occasioned the delay, interruption or prevention.  
+							<br /><br />
+							7.6	<u>Amendments, Waivers, Entire Agreement.</u>  Any waiver of this Agreement by III must be in writing and executed by III to be effective.  The failure of III at any time or times to require full performance of any provision hereof will in no manner affect the right of III at a later time to enforce the same.  This Agreement constitutes the entire agreement between the Parties with respect to this Agreement and the Application and supersede all prior understandings between the parties, written or oral, with respect to the subject matter of this Agreement.
+							<br /><br />
+							7.7	<u>Construction; Headings.</u>  In the event that any provision of this Agreement conflicts with the law under which this Agreement is to be construed or if any such provision is held invalid by a court with jurisdiction over the Parties to this Agreement, such provision shall be deemed to be restated to reflect as nearly as possible the original intentions of the Parties in accordance with applicable law, and the remainder of this Agreement shall remain in full force and effect.  Headings of paragraphs and sections in this Agreement are for convenience only and should not be given any interpretative effect.
+							<br /><br />
+							7.8	<u>Survival.</u>  The provisions of Sections 1, 2.3, 2.4, 3, 4, 5, 6, 7 and 8 of this Agreement shall survive the termination and expiration of this Agreement.
+							<br /><br />
+							7.9	<u>Injunctive Relief.</u>  In the event of a violation or threatened violation of III's intellectual property or proprietary rights with respect to any of the Application or the use of the Application in violation of this Agreement, III shall have the right, in addition to such other remedies as may be available pursuant to law or this Agreement, to injunctive or declaratory relief (including, temporary and preliminary relief) without the posting of any bond. Licensee acknowledges that legal remedies for such violation or threatened violation are inadequate.
+							<br /><br />
+							7.10	<u>Export Laws and Other Applicable Laws.</u>  Licensee agrees to use the Application in accordance with all applicable export and other laws, including, without limitation, United States export controls.  Licensee represents and warrants that (i) Licensee is not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country and (ii) Licensee is not listed on any U.S. Government list of prohibited or restricted parties.
+							<br /><br />
+							<b>8.	ADDITIONAL TERMS WITH RESPECT TO APPLE INC.</b>
+							<br /><br />
+							8.1	Licensee acknowledges and agrees as follows:
+							(i)	Apple, Inc. ("Apple") has no responsibility or liability with respect to the Application and the content thereof.  Apple's only obligation with respect to any failure of the Application to conform to any applicable warranty or any error with respect to Application is for Apple to refund the purchase price or license fee paid by Licensee for the Application (if any) to Licensee.  To the maximum extent permitted by law, Apple will have no other warranty obligation, whatsoever with respect to the Application and Apple shall have no liability with respect to any claims, losses, liabilities, damages, costs or expenses attributable to any failure of the Application to conform to any warranty.
+							<br /><br />
+							(ii)	Licensee has reviewed the Apple Store Terms of Service (including, without limitation, the Usage Rules) and agrees to be bound by and comply with such terms.
+							<br /><br />
+							(iii)	The Apple Device used to access the Application is owned or controlled by the Licensee.
+							<br /><br />
+							(iv)	Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the Application.
+							<br /><br />
+							(v)	Apple is not responsible for addressing any claims of Licensee or any third party relating to the Application or the Licensee's possession and/or use of the Application, including, but not limited to: (i) product liability claims; (ii) any claim that the Application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation.
+							<br /><br />
+							(vi)	In the event of any third party claim that the Application or the Licensee's possession or use of the Application infringes a third party's intellectual property rights, Apple and III have no responsibility or liability with respect to any such claim.
+							<br /><br />
+							(vii)	Apple and its subsidiaries and affiliates are third party beneficiaries of this Agreement and upon the Licensee's acceptance of this Agreement, Apple will have the right (and will be deemed to have accepted the right) to enforce this Agreement against the Licensee as a third party beneficiary thereof.
+							</div>
+						</div>
+					</div>
+
+				</div>
+		</div>
+
+
+		<div data-role="footer" data-id="fool" id="foo" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="quiz-page-rental" data-ajax="false" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>
+					<li><a href="#helpPage" data-role="button" data-icon="footer-help-icon" data-iconpos="top" data-transition="slide" >Help</a></li>
+					<li><a href="#infoPage" class="ui-btn-active ui-active-persist" data-role="button" data-icon="footer-info-icon" data-iconpos="top" data-transition="slide" >Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
