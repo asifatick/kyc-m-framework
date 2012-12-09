@@ -28,13 +28,13 @@
 .in {
     -webkit-animation-fill-mode: both;
     -webkit-animation-timing-function: ease-out;
-    -webkit-animation-duration: 350ms;
+    -webkit-animation-duration: 200ms;
 }
 
 .out {
     -webkit-animation-fill-mode: both;
     -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 225ms;
+    -webkit-animation-duration: 100ms;
 }
 
 /*
@@ -55,8 +55,8 @@ a{ -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none; }
 .ui-body-a, .ui-overlay-a{ border:0; overflow: auto; -webkit-overflow-scrolling:touch; }
 
 .ui-page{ -webkit-backface-visibility: hidden; }
-.ui-page-header-fixed{ padding-bottom: 51px; margin-top:0; padding-top:0; }
-.ui-page-footer-fixed{ padding-top: 51px; margin-bottom:0; padding-bottom:0 }
+.ui-page-header-fixed{ margin-top:0; padding-top:46px; }
+.ui-page-footer-fixed{ }
 /*!
  jQuery Mobile fixedtoolbar polyfill for blacklisted browsers that don't natively support position:fixed
  Author @scottjehl
@@ -112,6 +112,7 @@ body {
     -ms-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    margin:0;
 }
 
 /* Style header bar and footer bar with a 1px red border at top and bottom. This facilitates
@@ -122,14 +123,19 @@ body {
  later examine. (iPhone: Home+On/Off)
  */
 .ui-body-a .ui-link:visited{ color:#5F7131; }
+
+.ui-bar-a{ border:0; }
 .ui-header.ui-bar-a{
     border-top:1px solid #f7f7ea;
     border-bottom: 1px solid #EFEFE3;
+    border-right:0;
+    border-left:0;
 }
 
 .ui-footer.ui-bar-a{
     border-top:1px solid #EFEFE3;
-    border-bottom: 0px;
+    border-right:0;
+    border-left:0;
 }
 
 
@@ -272,7 +278,6 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
 .ui-header-fixed { }
 
 .ui-header{
-    border: 0;
     background: #EFEFE3;
     background: #EFEFE3 url('../img/header-background.png') left bottom;
     color: #656363;
@@ -289,7 +294,7 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
     max-height:44px;
 }
 
-.ui-footer{ border:0; box-shadow: 0 -1px 5px rgba(111,111,111,0.4); z-index:999999;  }
+.ui-footer{ box-shadow: 0 -1px 5px rgba(111,111,111,0.4); z-index:999999;  }
 
 /* Slide Menu Styles */
 .ui-header > .ui-btn, .ui-footer > .ui-btn{ border:none; background:none; box-shadow: none; border-right:1px solid #CCC; }
@@ -612,6 +617,8 @@ form.question-form{ margin-bottom: 1em; }
     background: #fffff6 url('../img/qselect-icon.png') no-repeat left top;
     color: #E35041;
     border: 1px solid #E35041;
+    background-size:22px;
+    background-position: -1px -1px;
 }
 .question-container .kyc-radio:active, .question-container .kyc-radio:checked:active, .question-form .kyc-radio:active, .question-form .kyc-radio:checked:active{
     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
@@ -699,7 +706,10 @@ h4.qa-notification-title{
 
 /* Result Page */
 #resultPage .ui-content{ padding:0 0 0 0; min-height: 360px;  }
-.result-header h4{ font-family: 'dincond-mediumregular', serif; font-size: 1.4em; font-weight: normal; text-align: center; margin:0.2em 0; }
+.result-header{
+    background:#efefe3;
+}
+.result-header h4{ font-family: 'dincond-boldalternatebold', serif; font-size: 1.4em; font-weight: normal; text-align: center; margin:0.2em 0 0.1em 0; text-shadow:0px 2px 1px rgba(95,113,49,0.3); }
 .result-container .grid_5{ background: #5f7231; }
 .result-container .grid_4{ background:#7d8c57; }
 .result-container .grid_3{ background: #5f7131; text-align: center; text-shadow:none; color:#BCBB47; }
@@ -713,36 +723,40 @@ a.score-text-link{ text-decoration: none; }
     display: block;
     vertical-align: middle; }
 
-#structureResult h4, #rentalResult h4, #belongingsResult h4, #liabilityResult h4{ font-size: 1.2em; color: #f6f6e9; font-weight: normal; margin:0.3em 0; padding:0 0.5em; text-shadow:none; }
+#structureResult h4, #rentalResult h4, #belongingsResult h4, #liabilityResult h4{ font-size: 1.2em; color: #f6f6e9; font-weight: normal; margin:1em 0 0.1em 0; padding:0 0.5em; text-shadow:none; line-height:16px; }
 
 #structureResult .grid_12, #rentalResult .grid_12, #belongingsResult .grid_12, #liabilityResult .grid_12{ background:#bcbb47; border-top:1px solid #5f7131; border-bottom:1px solid #5f7131; }
 #structureResult .grid_12 h4, #rentalResult .grid_12 h4, #belongingsResult .grid_12 h4, #liabilityResult .grid_12 h4{ margin:0.3em 0; padding:0 0.5em; }
 #structureResult .grid_12 span.score-text, #rentalResult .grid_12 span.score-text, #belongingsResult .grid_12 span.score-text, #liabilityResult .grid_12 span.score-text{ color:#5F7231; }
 
-.result-container span.score-text{ color: #bcbb47; font-size: 1em; font-family: 'dincond-lightregular', serif; padding:0 0.5em; text-shadow:none; }
+.result-container span.score-text{ color: #bcbb47; font-size: 1em; font-family: 'dincond-mediumregular', serif; padding:0 0 0 0.5em; text-shadow:none; }
 .result-container span.score{ color: #f6f6e9; text-shadow:none; padding:0 0.1em; }
-.result-container span.result-number{ font-size: 1.2em; }
-.result-container span.result-correct{ text-align: center; font-size: 0.8em; display: block; text-align:center; vertical-align: middle; }
-.result-container span.badge-image{ padding-top:5px; }
+.result-container span.result-number{ font-size: 24px; }
+.result-container span.result-correct{ font-size: 13px; display: block; text-align:center; vertical-align: middle; }
+.result-container span.badge-image{}
 .result-container span.a-level{
     background:url('../img/badges-icons/level-a-icon.png') no-repeat center center; background-size: 75%;
     display: block;
     width: 100%;
-    height: 70px;
-    text-indent: -9999px; }
+    height: 75px;
+    text-indent: -9999px;
+    background-position: 15px 5px;
+}
 .result-container span.b-level{
     background:url('../img/badges-icons/level-b-icon.png') no-repeat center center; background-size: 75%;
     display: block;
     width: 100%;
-    height: 70px;
+    height: 75px;
     text-indent: -9999px;
+    background-position: 15px 5px;
 }
 .result-container span.c-level{
     background:url('../img/badges-icons/level-c-icon.png') no-repeat center center; background-size: 75%;
     display: block;
     width: 100%;
-    height: 70px;
+    height: 75px;
     text-indent: -9999px;
+    background-position:15px 5px;
 }
 
 #totalResults .grid_6{ text-align: center; font-size: 1.2em; padding-top: 5px; }

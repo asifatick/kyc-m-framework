@@ -305,10 +305,10 @@
 		<h3>MENU</h3>
 		<ul>
 			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> JUMP TO</li>
-			<li><a href="structure-quiz-page.html" data-transition="slide"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
-			<li><a href="rental-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS &amp; CO-OPS</a></li>
-			<li><a href="belongings-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
-			<li><a href="liability-quiz-page.html" data-transition="slide" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+			<li><a href="structure-quiz-page.html" data-transition="slidedown"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
+			<li><a href="rental-quiz-page.html" data-transition="slidedown" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS &amp; CO-OPS</a></li>
+			<li><a href="belongings-quiz-page.html" data-transition="slidedown" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
+			<li><a href="liability-quiz-page.html" data-transition="slidedown" ><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
 			<li class="jump-bar"><img src="img/menu-icon/smico-down-arrow.png"> MORE</li>
 			<li><a data-ajax="false" href="result-page.html" data-transition="slide" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
 			<li><a data-bind="attr: {href:$root.retNAme}" href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE A QUIZ</a></li>
@@ -389,7 +389,7 @@
 			<!--#Retake Popup -->
 		</div>
 
-		<div data-role="footer" data-id="fool" data-position="fixed">
+		<div data-role="footer" data-id="fool" id="foo" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="quiz-page-structure.html" data-ajax="false" class="ui-state-persist" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-iconshadow="false" data-shadow="false" data-transition="fade">Return To Quiz</a></li>
@@ -473,7 +473,7 @@
 					</div>
 				</div>
 		</article><!-- /content -->
-		<div data-role="footer" data-id="fool" data-position="fixed">
+		<div data-role="footer" data-id="fool" id="foo" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconshadow="false" data-shadow="false" data-iconpos="top" data-transition="slide">Return To Quiz</a></li>
@@ -502,7 +502,7 @@
 							<div data-role="navbar">
 								<ul>
 									<li><a href="#info-nav" class="ui-btn-active ui-state-persist" data-role="none">ABOUT I.I.I</a></li>
-									<li><a href="#termsPage" data-transition="none" data-role="none">TERMS &amp; CONDITIONS</a></li>
+									<li><a href="#termsPage" data-prefetch data-transition="none" data-role="none">TERMS &amp; CONDITIONS</a></li>
 								</ul>
 							</div><!-- /navbar tabs -->
 						</div>
@@ -563,7 +563,7 @@
 					<div class="info-tabs-container">
 							<div data-role="navbar">
 								<ul>
-									<li><a href="#infoPage" data-transition="none" data-role="none">ABOUT I.I.I</a></li>
+									<li><a href="#infoPage" data-transition="none" data-prefetch data-role="none">ABOUT I.I.I</a></li>
 									<li><a href="#termsPage" class="ui-btn-active ui-state-persist" data-role="none">TERMS &amp; CONDITIONS</a></li>
 								</ul>
 							</div><!-- /navbar tabs -->
@@ -664,7 +664,7 @@
 		</div>
 
 
-		<div data-role="footer" data-id="fool" data-position="fixed">
+		<div data-role="footer" data-id="fool" id="foo" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#structureQuizPage" data-direction="reverse" data-role="button" data-icon="footer-return-icon" data-iconpos="top" data-transition="slide" >Return To Quiz</a></li>

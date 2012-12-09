@@ -17,7 +17,7 @@ $(document).bind('mobileinit', function () {
 
 $(document).on('pageinit', function(){
     $('[data-position=fixed]').fixedtoolbar({ tapToggle:false });
-    $('[data-role=header]').fixedtoolbar({ transition: "slide" });
-    $("#infoScreenPage [data-role=header]").fixedtoolbar({ updatePagePadding: false });
+   // $('[data-role=header]').fixedtoolbar({ transition: "slide" });
+   // $("#infoScreenPage [data-role=header]").fixedtoolbar({ updatePagePadding: false });
               // $(".info-tabs-container").fixedtoolbar().show();
 });

@@ -33,7 +33,7 @@ function viewModel()
     self.getURL = function()
     {
         $.mobile.changePage( self.usrans1 +".html", {
-                            transition: "slidefade",
+                            transition: "slide",
                             allowSamePageTransition  : true,
                             
                             });
@@ -120,7 +120,7 @@ function viewModel()
             self.onQuestionPage(3);
             
             $.mobile.changePage( $("#badgesPage"), {
-                                transition: "slidefade",
+                                transition: "slide",
                                 allowSamePageTransition  : true,
                                 
                                 });
@@ -130,7 +130,7 @@ function viewModel()
             if (self.onQuestionPage() == 0) {
                 quetionIndex++;
                 $.mobile.changePage(  $("#structureQuizPage"), {
-                                    transition: "slidefade",
+                                    transition: "slide",
                                     allowSamePageTransition  : true,
                                     
                                     });
@@ -145,7 +145,7 @@ function viewModel()
             else
             {
                 $.mobile.changePage( $("#structureQuizPage"), {
-                                    transition: "slidefade",
+                                    transition: "slide",
                                     allowSamePageTransition  : true,
                                     
                                     });
@@ -185,9 +185,8 @@ function viewModel()
         self.answerCount(self.tempscore);
         self.classname("ans"+self.usrans);
         $.mobile.changePage( $("#correctPage"), {
-                            transition: "slidefade",
-                            allowSamePageTransition  : true,
-                            
+                            transition: "slide",
+                            //allowSamePageTransition  : true,
                             });
         
         
