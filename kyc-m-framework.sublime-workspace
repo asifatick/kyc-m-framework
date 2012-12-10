@@ -520,26 +520,74 @@
 	"buffers":
 	[
 		{
-			"file": "quiz-select.html",
+			"file": "kyc-xcode-compressed/www/js/jqm-f-debug.js",
 			"settings":
 			{
-				"buffer_size": 31863,
+				"buffer_size": 112054,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/js/jqm.slidemenu.js",
+			"settings":
+			{
+				"buffer_size": 4190,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "js/jqm.slidemenu.js",
+			"file": "kyc-xcode-compressed/www/js/jqm.globals.js",
 			"settings":
 			{
-				"buffer_size": 4978,
+				"buffer_size": 1002,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/kyc.css",
+			"file": "kyc-xcode-compressed/www/js/knockout-2.2.0.js",
 			"settings":
 			{
-				"buffer_size": 35942,
+				"buffer_size": 40871,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/js/kyc-script.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/js/resultscript.js",
+			"settings":
+			{
+				"buffer_size": 3990,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/css/kyc.css",
+			"settings":
+			{
+				"buffer_size": 28520,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/css/themes/kyc-theme.css",
+			"settings":
+			{
+				"buffer_size": 11571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/css/jqm.slidemenu.css",
+			"settings":
+			{
+				"buffer_size": 2129,
 				"line_ending": "Windows"
 			}
 		}
@@ -596,6 +644,9 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/kyc.css",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-select.html",
+		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.slidemenu.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-structure.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-rental.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-page-liability.html",
@@ -614,10 +665,7 @@
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/script.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/rental-quiz-page.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/jqm.slidemenu.css",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.slidemenu.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/font/font.css",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-select.html",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/kyc.css",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/scriptbak.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/resultscript.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/base-qa-structure.html",
@@ -934,29 +982,56 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "quiz-select.html",
+					"file": "kyc-xcode-compressed/www/js/jqm-f-debug.js",
 					"settings":
 					{
-						"buffer_size": 31863,
+						"buffer_size": 112054,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								112054,
+								112054
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 2383.0,
+						"translation.y": 2639.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "kyc-xcode-compressed/www/js/jqm.slidemenu.js",
+					"settings":
+					{
+						"buffer_size": 4190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4190,
+								4190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -965,11 +1040,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "js/jqm.slidemenu.js",
+					"buffer": 2,
+					"file": "kyc-xcode-compressed/www/js/jqm.globals.js",
 					"settings":
 					{
-						"buffer_size": 4978,
+						"buffer_size": 1002,
 						"regions":
 						{
 						},
@@ -986,23 +1061,18 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 61.0,
-						"translation.y": 358.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"sheets":
-			[
+				},
 				{
-					"buffer": 2,
-					"file": "css/kyc.css",
+					"buffer": 3,
+					"file": "kyc-xcode-compressed/www/js/knockout-2.2.0.js",
 					"settings":
 					{
-						"buffer_size": 35942,
+						"buffer_size": 40871,
 						"regions":
 						{
 						},
@@ -1015,13 +1085,151 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 8550.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "kyc-xcode-compressed/www/js/kyc-script.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "kyc-xcode-compressed/www/js/resultscript.js",
+					"settings":
+					{
+						"buffer_size": 3990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								533,
+								533
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "kyc-xcode-compressed/www/css/kyc.css",
+					"settings":
+					{
+						"buffer_size": 28520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "kyc-xcode-compressed/www/css/themes/kyc-theme.css",
+					"settings":
+					{
+						"buffer_size": 11571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11571,
+								11571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 80649.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "kyc-xcode-compressed/www/css/jqm.slidemenu.css",
+					"settings":
+					{
+						"buffer_size": 2129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2129,
+								2129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 14310.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1057,7 +1265,7 @@
 		"cols":
 		[
 			0.0,
-			0.56499435241,
+			0.300125264572,
 			1.0
 		],
 		"rows":
@@ -1112,6 +1320,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 195.0,
+	"side_bar_width": 452.0,
 	"status_bar_visible": true
 }
