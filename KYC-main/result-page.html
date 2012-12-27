@@ -14,7 +14,7 @@
 		<!--Include JQM and JQ-->
 		<link rel="stylesheet" href="css/themes/kyc-theme.min.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
-	
+
 		<link rel="stylesheet" href="css/font/font.css" />
 		<link rel="stylesheet" href="css/kyc.css">
             <style>
@@ -25,7 +25,7 @@
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.animate-enhanced.min.js"></script>
-		
+
 		<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
 		<script src="js/jqm.globals.js"></script>
 		<script>
@@ -38,12 +38,12 @@
 		<!--JQM SlideMenu-->
 		<link rel="stylesheet" href="css/jqm.slidemenu.css" />
 		<script src="js/jqm.slidemenu.js"></script>
-	
+
 
 		<script type="text/javascript" src="js/jsonselect.min.js"></script>
 		<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
 
-		
+
 		<script type="text/javascript" src="js/resultscript.js"  ></script>
 	</head>
 	<body>
@@ -54,7 +54,7 @@
 				<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconshadow="false" data-shadow="false"><span class="smenu">MENU</span></a>
 				<h1 class="logo-title">Know Your Coverage</h1>
 			</div>
-            
+
             <div id="slidemenu">
                 <h3>MENU</h3>
                 <ul>
@@ -62,7 +62,7 @@
                     <li><a href="quiz-page-structure.html" data-transition="slide" data-ajax="false" data-role="none"><img src="img/menu-icon/smico-structure.png">STRUCTURE</a></li>
                     <li><a href="quiz-page-rental.html" data-transition="slide" data-ajax="false" data-role="none" ><img src="img/menu-icon/smico-rental.png">RENTALS, CONDOS &amp; CO-OPS</a></li>
                     <li><a href="quiz-page-belongings.html" data-transition="slide" data-ajax="false" data-role="none" ><img src="img/menu-icon/smico-belongings.png">BELONGINGS</a></li>
-                    <li><a href="quiz-page-liability.html" data-transition="slide" data-ajax="none" data-role="none"><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
+                    <li><a href="quiz-page-liability.html" data-transition="slide" data-ajax="false" data-role="none"><img src="img/menu-icon/smico-liability.png">LIABILITY</a></li>
                     <li class="jump-bar"><span class="down-triangle-icon"></span> MORE</li>
                     <li><a href="#resultPage" data-transition="slide" data-ajax="false" ><img src="img/menu-icon/smico-result.png">MY RESULTS</a></li>
                     <li><a  href="#quizSelectPage" data-rel="popup" data-transition="pop" data-position-to="window" data-role="none"><img src="img/menu-icon/smico-reload.png">RETAKE A QUIZ</a></li>
@@ -76,7 +76,7 @@
 						<h4>YOUR FINAL RESULTS</h4>
 					</div>
 				</div>
-                
+
 
 				<div id="resultContent" class="result-container">
 
@@ -92,8 +92,9 @@
 						</div>
 
 						<div class="grid_3">
+							<div style= "bgcolor:black" class="result-progress" data-bind="style: { width: getWidth(structureAnswerCount,sQCount) }"></div>
 							<span class="category-result-container">
-								<span class="result-number white-text" data-bind="text: structureAnswerCount">5</span> / <span class="result-number white-text" data-bind="text:sQCount">11</span>
+								<span class="result-number white-text" data-bind="text: structureAnswerCount">5</span> / <span class="result-number light-green-text" data-bind="text:sQCount">11</span>
 								<span class="result-correct white-text">CORRECT</span>
 							</span>
 						</div>
@@ -106,7 +107,7 @@
 						</div>
 					</div>
 					<!-- Rental Result -->
-					<div id="belongingsResult" class="container_12" data-bind="visible :RenterCss()">
+					<div id="rentalResult" class="container_12" data-bind="visible :RenterCss()">
 						<div class="grid_5">
 							<h4>RENTALS, CONDOS &amp; CO-OPS</h4>
 							<span class="score-text">YOUR SCORE: </span><span class="score" data-bind="text: RenterScore">0</span>
@@ -117,8 +118,9 @@
 						</div>
 
 						<div class="grid_3">
+							<div style= "bgcolor:black" class="result-progress" data-bind="style: { width: getWidth(RenterAnswerCount,rQCount) }"></div>
 							<span class="category-result-container">
-								<span class="result-number white-text" data-bind="text: RenterAnswerCount">5</span> / <span class="result-number white-text" data-bind="text:rQCount">8</span>
+								<span class="result-number white-text" data-bind="text: RenterAnswerCount">5</span> / <span class="result-number light-green-text" data-bind="text:rQCount">8</span>
 								<span class="result-correct white-text">CORRECT</span>
 							</span>
 						</div>
@@ -143,8 +145,10 @@
 						</div>
 
 						<div class="grid_3">
+							<div style= "bgcolor:black" class="result-progress" data-bind="style: { width: getWidth(belongingAnswerCount,bQCount) }"></div>
 							<span class="category-result-container">
-								<span class="result-number white-text" data-bind="text: belongingAnswerCount">5</span> / <span class="result-number white-text" data-bind="text:bQCount">6</span>
+
+								<span class="result-number white-text" data-bind="text: belongingAnswerCount">5</span> / <span class="result-number light-green-text" data-bind="text:bQCount">6</span>
 								<span class="result-correct white-text">CORRECT</span>
 							</span>
 						</div>
@@ -170,8 +174,9 @@
 						</div>
 
 						<div class="grid_3">
+							<div style= "bgcolor:black" class="result-progress" data-bind="style: { width: getWidth(liabilityAnswerCount,lQCount) }"></div>
                             <span class="category-result-container">
-                                <span class="result-number white-text" data-bind="text: liabilityAnswerCount">5</span> / <span class="result-number white-text" data-bind="text:lQCount">6</span>
+                                <span class="result-number white-text" data-bind="text: liabilityAnswerCount">5</span> / <span class="result-number light-green-text" data-bind="text:lQCount">6</span>
                                 <span class="result-correct white-text">CORRECT</span>
                             </span>
 						</div>
@@ -207,9 +212,9 @@
 					</ul>
 				</div>
 			</div>
-            
+
             <!-- Retake Quiz Wrapper of Question Select -->
-            
+
             <div id="quizSelectPage" data-role="popup" data-corner="false" data-theme="none">
                 <div class="quiz-select-container">
                     <div class="info-wrapper">
@@ -293,7 +298,7 @@
 							<p>Return to quiz takes you back to quiz section</p>
 						</div>
 						</div>
-						
+
 						<div class="container_12">
 							<div class="grid_4">
 							<img src="img/footer-info-icon.png">
@@ -303,7 +308,7 @@
 							<p>Select "INFO" icon to learn more about III</p>
 						</div>
 						</div>
-						
+
 						<div class="container_12">
 							<div class="grid_4">
 								<img src="img/kyc-menu-icon.png">
@@ -313,12 +318,12 @@
 								<p>Hit "MENU" to jump to quizes.</p>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
 
-			
+
 			<div data-role="footer" data-id="fool" id="foo" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
@@ -335,12 +340,11 @@
 		<div data-role="page" id="infoPage" data-theme="a">
 
 			<div data-role="header" data-position="fixed">
-                <a href="#" class="back-menu" data-rel="back" data-icon="smico-back" data-corners="false">BACK</a>
 				<h1 class="logo-title">Know Your Coverage</h1>
 			</div>
 
 			<div data-role="content" class="info-container">
-				
+
 				<h2 class="help-content-title">INFO</h2>
 				<div class="tabbed-container">
 
@@ -360,7 +364,7 @@
 								<h3>ABOUT I.I.I</h3>
 							<div id="iii_wrapper">
 									<div id="iii_content_wrapper">
-								       
+
 								        Visit us at: <a rel="external" data-ajax="false" href="http://www.iii.org" data-role="none">www.iii.org</a><br/><br />
 								        The mission of the Insurance Information Institute (I.I.I.) is to improve public understanding of insurance—what it does and how it works.
 								<br /><br />
@@ -397,12 +401,11 @@
 		<div data-role="page" id="termsPage" data-theme="a">
 
 			<div data-role="header" data-position="fixed">
-                <a href="#" class="back-menu" data-rel="back" data-icon="smico-back" data-corners="false">BACK</a>
 				<h1 class="logo-title">Know Your Coverage</h1>
 			</div>
 
 			<div data-role="content" class="info-container">
-				
+
 				<h2 class="help-content-title">INFO</h2>
 				<div class="tabbed-container">
 
@@ -437,28 +440,28 @@
 							<br /><br />
 							2.2	<u>Withdrawal of Application.</u>  III has the right in its sole discretion to cease allowing use of the Application at any time, in which event upon receipt of email notice from III, Licensee shall promptly delete the Application from all devices and cease using the Application.
 							<br /><br />
-							2.3	<u>Limitations and Restrictions.</u>  Licensee shall not download, re-engineer, reverse engineer, reverse translate, decompile, reverse assemble, disassemble or in any manner decode or attempt to derive source code from the Application for any purpose whatsoever. 
+							2.3	<u>Limitations and Restrictions.</u>  Licensee shall not download, re-engineer, reverse engineer, reverse translate, decompile, reverse assemble, disassemble or in any manner decode or attempt to derive source code from the Application for any purpose whatsoever.
 							<br /><br />
 							2.4	<u>Ownership and Responsibility for Licensee Content.</u> Licensee acknowledges that Licensee is solely responsible for the Licensee Content (including, without limitation, its accuracy, quality, legality, and reliability) and Licensee's use of the Application.  Licensee is the sole owner of the Licensee Content and III has no ownership rights with respect to the Licensee Content.
 							<br /><br />
 							<b>3.	TAXES</b>
 							<br /><br />
 							3.1	<u>Taxes.</u>  Licensee will pay to III or to the relevant taxing authority, as appropriate, any applicable sales, use, goods and services, value added or other taxes payable with respect to Licensee's use of the Application.
-							<br /><br />  
+							<br /><br />
 							<b>4.	DISCLAIMERS; LIMITATION OF LIABILITY</b>
 							<br /><br />
 							4.1	<u>Disclaimers; Limitation of Liability.</u> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL III, OR ANY OF ITS AFFILIATES, OFFICERS, DIRECTORS, OR EMPLOYEES BE LIABLE TO LICENSEE OR TO ANY THIRD PARTY FOR (I) ANY SPECIAL, CONSEQUENTIAL, INCIDENTAL, OR INDIRECT DAMAGES, (II) FOR ANY DAMAGES WITH RESPECT TO THE ACCURACY OR DELETION OF ANY DATA OR SUBSCRIBER CONTENT ENTERED, OR STORED ON OR IN THE APPLICATION OR (III) FOR THE SUFFICIENCY OR COMPLETENESS OF ANY DATA OR SUBSCRIBER CONTENT ENTERED OR STORED ON OR IN THE APPLICATION, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY ARISING OUT OF THIS AGREEMENT OR THE APPLICATION, WHETHER OR NOT ADVISED OF THE POSSIBLITY OF SUCH DAMAGES, AND NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY.  LICENSEE ACKNOWLEDGES AND AGREES THAT THERE IS NO GUARANTEE THE LICENSEE CONTENT ENTERED INTO OR STORED ON THE APPLICATION WILL BE SECURE.  TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL III HAVE ANY LIABILITY OF ANY KIND WITH RESPECT TO THE DELETION OF ANY OR ALL OF LICENSEE CONTENT OR ACCESS TO THE LICENSEE CONTENT.  LICENSEE AGREES THAT LICENSEE IS SOLELY RESPONSIBLE FOR MAINTAINING COPIES OF ALL DATA AND SUBSCRIBER CONTENT, ENTERED OR STORED IN OR ON THE APPLICATION.  TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL III'S AGGREGATE LIABILITY UNDER ANY AND ALL LEGAL THEORIES WITH RESPECT TO THIS AGREEMENT, THE APPLICATION, OR THE LICENSEE CONTENT BE IN EXCESS OF ONE DOLLAR ($1.00).
 							<br /><br />
-							4.2	<u>DISCLAIMERS.</u>  
+							4.2	<u>DISCLAIMERS.</u>
 							<br /><br />
-							4.2.1	III DOES NOT MAKE ANY REPRESENTATIONS OR WARRANTIES AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE APPLICATION OR ACCURACY OR RELIABILITY OF THE APPLICATION OR THE ABILITY TO ACCESS THE APPLICATION.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW III SPECIFICALLY DISCLAIMS ANY WARRANTIES, CONDITIONS, GUARANTEES OR REPRESENTATIONS AS TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR OTHER WARRANTIES, WHETHER EXPRESS OR IMPLIED IN LAW OR IN FACT, ORAL OR IN WRITING.  THE APPLICATION AND THE RESULTS OBTAINED FROM USE OF THE APPLICATION ARE PROVIDED ON AN "AS IS" BASIS.  
+							4.2.1	III DOES NOT MAKE ANY REPRESENTATIONS OR WARRANTIES AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE APPLICATION OR ACCURACY OR RELIABILITY OF THE APPLICATION OR THE ABILITY TO ACCESS THE APPLICATION.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW III SPECIFICALLY DISCLAIMS ANY WARRANTIES, CONDITIONS, GUARANTEES OR REPRESENTATIONS AS TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR OTHER WARRANTIES, WHETHER EXPRESS OR IMPLIED IN LAW OR IN FACT, ORAL OR IN WRITING.  THE APPLICATION AND THE RESULTS OBTAINED FROM USE OF THE APPLICATION ARE PROVIDED ON AN "AS IS" BASIS.
 							<br /><br />
 							4.2.2	TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL III BE LIABLE FOR ANY DAMAGES SUFFERED OR INCURRED BY LICENSEE OR ANY THIRD PARTIES ARISING OUT OF ANY FAULTS, INTERRUPTIONS, DELAYS, INACCURACIES, ERRORS, DELETIONS OR OMISSIONS IN CONNECTION WITH THE LICENSEE CONTENT OR THE APPLICATION.  III IS NOT RESPONSIBLE OR LIABLE FOR THE DELETION, CORRECTION, DESTRUCTION, DAMAGE, LOSS OF OR FAILURE TO STORE ANY AND ALL LICENSEE CONTENT.  LICENSEE ACKNOWLEDGES AND AGREES THAT LICENSEE IS RESPONSIBLE FOR MAINTAINING COPIES OF THE LICENSEE CONTENT.
 							<br /><br />
 							<b>5.	INDEMNIFICATION</b>
 							<br /><br />
 							5.1	<u>Indemnification by Licensee.</u>  Licensee shall indemnify and hold harmless III, Web Host, and their affiliates and their directors, officers and employees with respect to any claim, demand, cause of action, liabilities, damages, awards, settlements, losses, and expenses (including, without limitation, reasonable attorneys' fees and costs of investigation) arising out of any claim relating to or arising out of Licensee's use of the Application or the Licensee Content, including, without limitation, any claims by Licensee's insurance companies that provide insurance coverage to Licensee, other than any third party claims that the Application infringes a third party's patent, copyright, trademark, trade secret or other intellectual property rights.  Licensee shall not settle any such claim without a full release of III from all liability.
-							<br /><br /> 
+							<br /><br />
 							<b>6.	OWNERSHIP</b>
 							<br /><br />
 							6.1	<u>Ownership.</u>  III shall own all right, title and interest, including all related intellectual property rights, in and to the Application and any suggestions, ideas, enhancement requests, feedback, recommendations or other information provided by Licensee relating to the Application.  This Agreement does not convey to Licensee any rights of ownership in or related to the Application.  III's name, logo, and the product names associated with the Application are trademarks of III or third parties.  III owns all proprietary rights, including, without limitation, patent, copyright, trade secret and trademark rights to the Application and any modifications, enhancements and derivatives to the Application.  Licensee acknowledges that Licensee is granted only a limited right of use of the Application, which right of use is not coupled with an interest and is revocable in accordance with the terms of this Agreement.  Licensee agrees not to assert any ownership interest in the Application or any software use in connection with producing or providing the Application.  Licensee agrees that the Application embodies valuable, confidential and trade secret information of III.
@@ -471,9 +474,9 @@
 							<br /><br />
 							7.3	<u>Assignments.</u>  This Agreement shall be binding upon and inure to the benefit of the Parties and their affiliates, successors and assigns.  Neither Party may assign this Agreement or its rights and obligations under this Agreement, except in connection with a merger, acquisition or sale of substantially all of the assets of a Party.
 							<br /><br />
-							7.4	<u>Independent Contractors.</u>  The Parties to this Agreement are independent contractors.  Neither Party is an agent, representative or partner of the other Party.  Neither Party shall have any right, power or authority to enter into any agreement for, or on behalf of, or incur any obligation or liability of, or to otherwise bind, the other Party.  This Agreement shall not be interpreted or construed to create an association, agency, joint venture or partnership between the Parties or to impose any liability attributable to such a relationship upon either Party. 
+							7.4	<u>Independent Contractors.</u>  The Parties to this Agreement are independent contractors.  Neither Party is an agent, representative or partner of the other Party.  Neither Party shall have any right, power or authority to enter into any agreement for, or on behalf of, or incur any obligation or liability of, or to otherwise bind, the other Party.  This Agreement shall not be interpreted or construed to create an association, agency, joint venture or partnership between the Parties or to impose any liability attributable to such a relationship upon either Party.
 							<br /><br />
-							7.5	<u>Force Majeure.</u>  If any Party shall be delayed, interrupted or prevented from the performance of any obligation hereunder by reason of an act of God, fire, flood, war, public disaster, strike or labor dispute, natural disasters or other event beyond a party's reasonable control, such party shall not be liable to the other for damages arising from such event and the time for performance of such obligation shall be extended for a period equal to the duration of the contingency that occasioned the delay, interruption or prevention.  
+							7.5	<u>Force Majeure.</u>  If any Party shall be delayed, interrupted or prevented from the performance of any obligation hereunder by reason of an act of God, fire, flood, war, public disaster, strike or labor dispute, natural disasters or other event beyond a party's reasonable control, such party shall not be liable to the other for damages arising from such event and the time for performance of such obligation shall be extended for a period equal to the duration of the contingency that occasioned the delay, interruption or prevention.
 							<br /><br />
 							7.6	<u>Amendments, Waivers, Entire Agreement.</u>  Any waiver of this Agreement by III must be in writing and executed by III to be effective.  The failure of III at any time or times to require full performance of any provision hereof will in no manner affect the right of III at a later time to enforce the same.  This Agreement constitutes the entire agreement between the Parties with respect to this Agreement and the Application and supersede all prior understandings between the parties, written or oral, with respect to the subject matter of this Agreement.
 							<br /><br />
