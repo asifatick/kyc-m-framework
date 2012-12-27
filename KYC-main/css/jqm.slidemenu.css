@@ -13,15 +13,15 @@
 	-webkit-overflow-scrolling: touch;
     z-index:99;
     border-right:1px solid rgba(230,91,77,0.7);
-
+    
 }
 
 .slidemenu h3{
-	font-size:32px;
-	color: #f6f6e9;
+	font-size:1.5em;
+	color: #f6f6e9;	
 	text-shadow: none;
 	margin:0;
-	padding:14px 0;
+	padding:0.5em 0;
 	text-align: center;
 	background:#bcbb47;
 }
@@ -37,7 +37,7 @@
 	margin: 0px 0;
 }
 
-.slidemenu li.jump-bar{
+.slidemenu li.jump-bar{ 
 	background: #e65b4d;
 	font-family: 'dincond-boldalternatebold', serif;
 	font-size: 12px;
@@ -47,7 +47,7 @@
     box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
  }
 
-.slidemenu li.jump-bar img{ width:11px; height: 6px; margin-right:1px; }
+ .slidemenu li.jump-bar img{ width:11px; height: 6px; }
 
 .slidemenu ul li a:link, .slidemenu ul li a:visited {
 	border-bottom: 1px #5f7231 solid;
@@ -56,26 +56,22 @@
 	text-decoration: none;
 	width: 235px;
 	display: block;
-	padding: 12px 0px 12px 15px;
-	text-shadow: none;
+	padding: 10px 0px 10px 5px;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
     font-family: 'dincond-boldalternatebold', serif;
-    font-weight: normal;
 }
 
 .slidemenu ul li:last-child a:link, .slidemenu ul li:last-child a:visited{ border-bottom: none; }
 
-.slidemenu ul li img{ width:15px; height: 13px; }
+.slidemenu ul li img{ width:20px; height: 18px; }
 .slidemenu ul li img {
-	margin-right:10px;
+	margin-right:8px;
 }
 
 .slidemenu ul li a:hover, .slidemenu ul li a:active {
 	background-color: none;
-    font-weight:normal;
-    color: #5f7231;
-    text-decoration: none;
 }
-
+		
 .ui-icon-smico {
 	background-color:#cbca70;
 	background:rgba(0,0,0,-1) url("../img/kyc-menu-icon.png") !important;
@@ -88,7 +84,7 @@
     background-size: 20px 22px;
 }
 .ui-btn-down-a .ui-btn-inner .ui-icon-smico-back,
-.ui-icon-smico-back{
+.ui-icon-smico-back{ 
 	background-color:#f6f6e9;
 	width:18px; height: 20px;
 	background:rgba(0,0,0,-1) url("../img/back.png") !important;

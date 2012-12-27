@@ -76,35 +76,35 @@ a{ -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none; }
 }
 
 body {
-
+    
     /* Disable Safari scrollbars, because jQuery Mobile annoyingly insists on setting the
      min-height of the page to 320px. It does this (unsuccessfully, in 1.0.1, but successfully
      in 1.1) in order to keep the Mobile Safari location bar from appearing during page
      transitions. But this causes a problem in desktop Safari if the height is <320px.
      If you resize to <320 in a desktop browser, you will see a scrollbar if you don't
      use this style.
-
+     
      I haven't put this in jquery.mobile.iscrollview.css, because it has to be applied
      to <body>, and so it will affect the entire site/app. It is an appropriate
      setting for any site/app meant to use a page size fixed at the browser window size.
      If your site/app mixes fixed-height pages with scrolling pages, you will need to
      work out another solution. */
-
+    
     /* optimizeSpeed is the default. Using optimizeLegibility here will typically DOUBLE
      rendering time! So, think twice about using optimizeLegibility */
     text-rendering: optimizeSpeed;
-
+    
     /* subpixel-antialiased is the default, but you might like to use antialiased for a thinner look
      in Safari. There is no speed penalty for this, nor a speed advantage for "none", which looks
      absolutely terrible... */
     -webkit-font-smoothing: subpixel-antialiased;
-
+    
     /* Shut off long touch on links for info. If this is set to "default", then a long touch
      on a link will display the URL in a popup. This is pretty darn annoying. */
     -webkit-touch-callout: none;
     overflow: auto;
     -webkit-overflow-scrolling:touch;
-
+    
     /* Shut off content selection, because it's really annoying when dragging
      You might like to do this only for scroller content, though, or enable it for certain
      text you want the user to be able to cut-and-paste */
@@ -144,7 +144,7 @@ body {
 /* Demonstrate how to make headers/footer a different height for different orientations
  or screen sizes. This also demonstrates that the widget now (once again) measures the
  headers/footers on every resize.
-
+ 
  Unfortunately, the state of detecting mobile orientation on mobile devices is a mess.
  Mobile Safari doesn't support orientation media query, while iPad doesn't. There are
  various hacks involving max-width, max-height, max-device-width, etc. Fortunately, for
@@ -168,31 +168,31 @@ body {
 
 /* Force list items to be cached on WebKit
  See: cubiq.org/you-shall-not-flicker
-
+ 
  If this is NOT used, then scrolling long lists might exhibit a "flicker" when scrolling
  toward the bottom of the list, as well as exhibit slow and jerky until the first
  time the user has reached the bottom of the list.
-
+ 
  If this IS used, then the browser may be forced to cache the content in advance, resulting
  in smoother scrolling, but with the side-effect of increasing initial rendering time.
-
+ 
  This can more than DOUBLE initial rendering time if you are not careful with the selector. The
  recommended CSS at the above link is NOT optimal.
-
+ 
  You need to apply this judiciously. For example, if you know your scroller content consists
  of list items, use "li" not "*' to select. * as the right-most component of a select is
  horribly expensive. A small additional performance gain can be made by selecting
  iscroll-content instead of iscroll-scroller. You might get a
  glitch on a pull-up if you have one, but it's a small price to pay for doubling speed.
-
+ 
  It is important NOT to apply this to .iscroll-scroller itself. This will result in a huge
  performance loss. The second rule below gives performance on iOS devices very close to not
  using this at all.
-
+ 
  I use an @media tag to disable, because it is a safe way of disabling CSS that might contain
  comments. As well, you might like to enable this only for certain devices, which often
  can be detected using media queries.
-
+ 
  */
 
 body{ margin:0; padding:0; }
@@ -206,7 +206,7 @@ body,.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-b
 .dark-green-text{ color: #5f7131; }
 
 .ui-page-active{
-
+    
 }
 
 section{
@@ -229,7 +229,7 @@ a.kyc-btn,a.kyc-btn:hover,a.kyc-btn:link,a.kyc-btn:active,a.kyc-btn:focus{
     font-size: 16px;
     min-width: 0.75em;
     overflow: hidden;
-    padding: 0.4em 15px;
+    padding: 0.6em 20px;
     text-shadow: none;
     text-decoration: none;
     background-image: -webkit-gradient(linear,left top,left bottom,from( white ),to( #F4F4F4 ));
@@ -239,7 +239,7 @@ a.kyc-btn,a.kyc-btn:hover,a.kyc-btn:link,a.kyc-btn:active,a.kyc-btn:focus{
     background-image: -o-linear-gradient( white,#F4F4F4 );
     background-image: linear-gradient( white,#F4F4F4 );
     box-shadow:1px 1px 0px 1px rgba(230,92,78,0.5);
-
+    
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
@@ -265,7 +265,7 @@ a.kyc-btn1{ border: 1px solid #E65B4D;
     background-image: -ms-linear-gradient( white,#F4F4F4 );
     background-image: -o-linear-gradient( white,#F4F4F4 );
     background-image: linear-gradient( white,#F4F4F4 );
-
+    
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
@@ -300,9 +300,7 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
 /* Slide Menu Styles */
 .ui-header > .ui-btn, .ui-footer > .ui-btn{ border:none; background:none; box-shadow: none; border-right:1px solid #CCC; }
 
-.ui-header > .ui-btn{ font-size: 1.3em; color:#5f7131; }
-.ui-footer .ui-navbar li .ui-btn-active .ui-btn-text{ color:#FFF }
-
+.ui-header > .ui-btn, .ui-footer > .ui-btn .ut-btn-text{ font-size: 1.3em; color:#5f7131; }
 .ui-header > .ui-btn{ height: 44px; width:75px; }
 .ui-header .ui-btn-inner{ font-size: 14px; padding-left:20px;  }
 .ui-header > .ui-btn > .ui-btn-inner > .ui-btn-text { font-size: 1.4em; display: inline-block; margin-top:3px; font-family: 'dincond-regularregular', serif; }
@@ -332,10 +330,10 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
     left:48%;
 }
 
-.ui-footer .ui-navbar li .ui-btn-up-a, .ui-footer .ui-navbar li .ui-btn-hover-a{ border-color: transparent; border:0; font-family: 'dincond-regularregular', serif; color:#5f7231; }
+.ui-footer .ui-navbar li .ui-btn-up-a, .ui-footer .ui-navbar li .ui-btn-hover-a{ border-color: transparent; border:0; font-family: 'dincond-regularregular', serif; }
 
 .ui-footer .ui-navbar li .ui-btn-icon-top .ui-btn-inner{ padding-top:24px; padding-bottom:3px; }
-.ui-footer .ui-navbar li .ui-btn-inner .ui-btn-text{ top:4px; font-size:12px; }
+.ui-footer .ui-navbar li .ui-btn-inner .ui-btn-text{ top:4px; }
 
 .ui-icon-shadow{ box-shadow: 0;
     -webkit-box-shadow:0;
@@ -359,11 +357,6 @@ h1.logo-title{ background:url('../img/kyc-logo.png') no-repeat 50%; background-s
 }
 #infoScreenPage .ui-content{
     padding:70px 15px 15px 15px;
-}
-
-.scroll-fix{
-    position: fixed;
-    width: 320px;
 }
 
 /* info Wrapper */
@@ -557,14 +550,14 @@ h2.quiz-select-content-title{ font-weight:normal; }
 
 .structure-padding-fix{ }
 
-.score-container h4{ color: #f6f6e9; text-shadow:none; font-size: 20px; font-family: 'dincond-boldalternatebold', serif; font-weight: 400; margin:0; padding: 0.3em 0.5em 0em 0.5em; line-height:18px }
-.score-container span.score-text{ color: #bcbb47; text-shadow:none; padding:0em 0em 0em 0.6em; font-family: 'dincond-mediumregular', seirf; font-size:15px }
-.score-container span.score{ color:#f6f6e9; text-shadow:none; font-family: 'dincond-mediumregular', seirf; font-size: 15px; }
-.score-counter-container{ display: block; border-left:1px dotted #bcbb47; text-align: center; text-shadow:none; height:48px; font-size:27px; }
-.score-nav-counter{ display: block; color:#bcbb47; font-family: 'dincond-mediumregular'; margin-bottom: 0em; }
-.ans-count{ color:#f6f6e9; font-size: 27px  }
-.question-count{ color:#bcbb47; font-size:27px; }
-.correct{ color: #f6f6e9; font-size:10px; display:block; margin-top: -1px; }
+.score-container h4{ color: #f6f6e9; text-shadow:none; font-size: 1.3em; font-weight: 400; margin:0; padding: 0.2em 0.5em 0em 0.5em; }
+.score-container span.score-text{ color: #bcbb47; text-shadow:none; padding:0em 0em 0em 0.6em; }
+.score-container span.score{ color:#f6f6e9; text-shadow:none; }
+.score-counter-container{ display: block; border-left:1px solid #bcbb47; text-align: center; text-shadow:none; height:48px; }
+.score-nav-counter{ display: block; color:#bcbb47; font-size: 1.5em; margin-bottom: 0em }
+.ans-count{ color:#f6f6e9;  }
+.question-count{ color:#bcbb47; }
+.correct{ color: #f6f6e9; font-size:0.8em; }
 .ans-count, .question-count, .correct{ text-shadow: none; }
 
 .question-title{ background:#f6f6e9; color: #656363; text-shadow: 0 1px 1px rgba(175,234,201,0.4); text-align: center; padding:0.5em 1em; box-shadow: 0 1px 1px rgba(111,111,111,0.3); border-bottom:1px solid #9d9d94; }
@@ -574,9 +567,9 @@ form.question-form{ margin-bottom: 1em; }
 .ans-1{}
 .ans1{ }
 
-.ans-1 .qa-icon, .ans1 .qa-icon{ display: block; width:30px; height: 30px; margin:0.2em auto; }
-.ans-1 .qa-icon{ background: url('../img/answer-icons/ans-wrong.png') no-repeat right top; background-size: 30px; }
-.ans1 .qa-icon{ background: url('../img/answer-icons/ans-correct.png') no-repeat right top; background-size: 30px; }
+.ans-1 .qa-icon, .ans1 .qa-icon{ display: block; width:35px; height: 35px; margin:0.2em auto; }
+.ans-1 .qa-icon{ background: url('../img/answer-icons/ans-wrong.png') no-repeat right top; background-size: 35px; }
+.ans1 .qa-icon{ background: url('../img/answer-icons/ans-correct.png') no-repeat right top; background-size: 35px; }
 
 .question-container{
     min-height:300px;
@@ -645,32 +638,26 @@ form.question-form{ margin-bottom: 1em; }
 
 .qa-notification-title{ text-align: center; border-bottom: 1px solid #5f7231; }
 h4.qa-notification-title{
-    font-size: 27px;
-    margin: 0.2em 0.4em 0.6em 0.4em;
+    font-size: 1.6em;
+    margin: 0.1em 0.3em;
     font-weight: normal;
-    font-family: 'dincond-mediumregular', serif;
 }
-#correctPage{ background:#efefe3; }
 .ans-1 .qa-notification-title{ color: #E65B4D; border-bottom: 1px solid #E65B4D; }
 .ans1 .qa-notification-title{ color:#5f7131; border-bottom: 1px solid #5f7131; }
 
-.qa, .qa-next-line, .qa-third-line{ text-align: center; padding:0.2em 0; font-family: Helvetica, arial; }
-.qa{ font-size: 16px; }
-
-.qa-next-line{ font-weight: bold; font-family: Helvetica; font-size:14px; padding:0 0.6em; }
-.qa-third-line { font-weight: 400px; color:#5d5d5d; font-family: helvetica,arial, serif; padding:0 0.6em; text-transform: none; font-size: 13px; }
+.qa, .qa-next-line, .qa-third-line{ text-align: center; padding:0.2em 0; }
+.qa-next-line{ font-weight: bold; font-family: Helvetica; font-size:13px; padding:0 0.5em; }
+.qa-third-line { font-weight: 400px; color:#5d5d5d; font-family: helvetica, arial, serif; padding:0 0.5em; text-transform: none; font-size: 0.8em; }
 .ans1 .qa, .ans1 .qa-next-line, .ans1 .explain-header{ color:#5f7231; }
-.explain-header{ font-family: 'dincond-mediumregular', serif;font-size: 19px; }
 .ans1 .qa-third-line,.ans-1 .qa-third-line{ color:#5d5d5d; }
 .ans-1 .qa, .ans-1 .qa-next-line, .ans-1 .explain-header{ color: #e65b4d }
 
-#correctPage a.tell-more-btn{ margin-right:-30px }
-#correctPage kyc.btn.continue-btn{ margin-left:-30px }
+#correctPage a.tell-more-btn{ margin:0 auto; }
 .button-row{ overflow: hidden; margin:0.5em 0 0.3em; }
 .button-row .grid_6{ text-align: center; }
 
 .qa-content-wrapper{ overflow-y:auto; -webkit-overflow-scrolling:touch; padding-top:45px; margin: 0; }
-#qCAContent{ min-height: 250px; max-height: 260px; overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch;-webkit-appearance:none;  }
+#qCAContent{ min-height: 220px; max-height: 260px; overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch;-webkit-appearance:none;  }
 
 .continue-btn img{ width:10px; }
 
@@ -724,7 +711,7 @@ h4.qa-notification-title{
 .result-header{
     background:#efefe3;
 }
-.result-header h4{ font-family: 'dincond-mediumregular', serif; font-size: 26px; color:#5f7231;  font-weight: normal; text-align: center; margin:0.2em 0 0.1em 0; text-shadow:0px 2px 1px rgba(95,113,49,0.2); }
+.result-header h4{ font-family: 'dincond-boldalternatebold', serif; font-size: 1.4em; font-weight: normal; text-align: center; margin:0.2em 0 0.1em 0; text-shadow:0px 2px 1px rgba(95,113,49,0.3); }
 .result-container .grid_5{ background: #5f7231; }
 .result-container .grid_4{ background:#7d8c57; }
 .result-container .grid_3{ background: #5f7131; text-align: center; text-shadow:none; color:#BCBB47; }
@@ -732,32 +719,22 @@ h4.qa-notification-title{
 a.score-text-link{ text-decoration: none; }
 
 
-.result-container .grid_5, .result-container .grid_4, .result-container .grid_3{ min-height: 80px; border-top:1px solid rgba(255,255,255,0.5); }
+.result-container .grid_5, .result-container .grid_4, .result-container .grid_3{ min-height: 75px; border-top:1px solid rgba(255,255,255,0.5); }
 
 .result-container .grid_3 span.category-result-container{ padding: 10px 0;
     display: block;
-    vertical-align: middle;
-    position: relative;
-    z-index: 999;
-     }
+    vertical-align: middle; }
 
-#structureResult, #rentalResult, #belongingsResult, #liabilityResult {
-    background: #5f7131;
-}
+#structureResult h4, #rentalResult h4, #belongingsResult h4, #liabilityResult h4{ font-size: 1.2em; color: #f6f6e9; font-weight: normal; margin:1em 0 0.1em 0; padding:0 0.5em; text-shadow:none; line-height:16px; }
 
-#structureResult h4, #rentalResult h4, #belongingsResult h4, #liabilityResult h4{ font-size: 20px; font-family: 'dincond-boldalternatebold', serif; color: #f6f6e9; font-weight: normal; margin:1em 0 0.1em 0; padding:0 0.5em; text-shadow:none; line-height:16px; }
-#rentalResult h4{
-    margin: 0.5em 0 0.1em 0;
-}
+#structureResult .grid_12, #rentalResult .grid_12, #belongingsResult .grid_12, #liabilityResult .grid_12{ background:#bcbb47; border-top:1px solid #5f7131; border-bottom:1px solid #5f7131; }
+#structureResult .grid_12 h4, #rentalResult .grid_12 h4, #belongingsResult .grid_12 h4, #liabilityResult .grid_12 h4{ margin:0.3em 0; padding:0 0.5em; }
+#structureResult .grid_12 span.score-text, #rentalResult .grid_12 span.score-text, #belongingsResult .grid_12 span.score-text, #liabilityResult .grid_12 span.score-text{ color:#5F7231; }
 
-#structureResult .grid_12, #rentalResult .grid_12, #belongingsResult .grid_12, #liabilityResult .grid_12{ background:#bcbb47; border-top:1px solid #5f7131 }
-#structureResult .grid_12 h4, #rentalResult .grid_12 h4, #belongingsResult .grid_12 h4, #liabilityResult .grid_12 h4{ margin:0.5em 0 0.1em 0; padding:0 0.5em; font-size: 20px; font-family: 'dincond-boldalternatebold', serif; }
-#structureResult .grid_12 span.score-text, #rentalResult .grid_12 span.score-text, #belongingsResult .grid_12 span.score-text, #liabilityResult .grid_12 span.score-text{ color:#5F7231; font-family: 'dincond-mediumregular', serif; padding:0 0 0 0.6em; }
-
-.result-container span.score-text{ color: #bcbb47; font-size: 15px; font-family: 'dincond-mediumregular', serif; padding:0 0 0 0.6em; text-shadow:none; }
-.result-container span.score{ color: #f6f6e9; text-shadow:none; padding:0 0.1em; font-family: 'dincond-mediumregular', serif; font-size: 15px; }
-.result-container span.result-number{ font-size: 27px; }
-.result-container span.result-correct{ font-size: 10.5px; display: block; text-align:center; vertical-align: middle; }
+.result-container span.score-text{ color: #bcbb47; font-size: 1em; font-family: 'dincond-mediumregular', serif; padding:0 0 0 0.5em; text-shadow:none; }
+.result-container span.score{ color: #f6f6e9; text-shadow:none; padding:0 0.1em; }
+.result-container span.result-number{ font-size: 24px; }
+.result-container span.result-correct{ font-size: 13px; display: block; text-align:center; vertical-align: middle; }
 .result-container span.badge-image{}
 .result-container span.a-level{
     background:url('../img/badges-icons/level-a-icon.png') no-repeat center center; background-size: 75%;
@@ -779,22 +756,12 @@ a.score-text-link{ text-decoration: none; }
     background:url('../img/badges-icons/level-c-icon.png') no-repeat center center; background-size: 75%;
     display: block;
     width: 100%;
-    height: 80px;
+    height: 75px;
     text-indent: -9999px;
     background-position:15px 5px;
 }
 
-#totalResults .grid_6{ text-align: center; font-family: 'dincond-mediumregular', serif; font-size: 20px; padding-top: 5px; }
-
-
-.result-progress{
-    background:#414F21;
-    float: left;
-    height: 80px;
-    z-index: 1;
-    position: absolute;
-}
-
+#totalResults .grid_6{ text-align: center; font-size: 1.2em; padding-top: 5px; }
 
 
 /* Retake Quiz */
@@ -822,6 +789,6 @@ a.score-text-link{ text-decoration: none; }
     text-align: left;
     line-height: 1em;
     color: #D95649;
-    font-family:'dincond-boldalternatebold',serif;
+    font-family:'dincond-boldalternatebold',serif;  
 
 }

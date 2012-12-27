@@ -1,17 +1,17 @@
 $(document).on("pageinit", function(e){
-
+               
                $("#"+ $(e.target).attr('id') +" :jqmData(slidemenu)").addClass('slidemenu_btn');
                var sm = $($("#"+ $(e.target).attr('id') +" :jqmData(slidemenu)").data('slidemenu'));
                sm.addClass('slidemenu');
-
+               
                $(document).on("click",".ui-page-active", function(e){
                               if (sm.data('slideopen')) {
                               $(".ui-page-active :jqmData(role='header')").removeClass('ui-fixed-hidden');
                               }
                               });
-
-
-
+               
+               
+               
                $(document).on("click", ".ui-page-active :jqmData(slidemenu)", function(e) {
                               slidemenu(sm, sm.data('slideopen'));
                               e.stopImmediatePropagation();
@@ -20,13 +20,13 @@ $(document).on("pageinit", function(e){
                /*$(document).on("click", ".slidemenu ul li > a", function(e) {
                 slidemenu(sm, false);
                 });*/
-
-
-
+               
+               
+               
                $(document).on("click", "a:not(:jqmData(slidemenu)):not(.slidemenu ul li:last-child a, .ui-popup-container .kyc-btn)", function(e) {
                               slidemenu(sm, true);
                               });
-
+               
                $(window).on('resize', function(e){
                             if (sm.data('slideopen')) {
                             console.log('sd');
@@ -43,7 +43,7 @@ $(document).on("pageinit", function(e){
                             $("#helpPage").css('left','0px');
                             }
                             });
-
+               
                $(window).scroll(function() {
                                 if (sm.data('slideopen')) {
                                 //sm.css('top', getPageScroll()[1] + 'px');
@@ -51,7 +51,7 @@ $(document).on("pageinit", function(e){
                                 });
                $('[data-role=footer]').fixedtoolbar({updatePagePadding: true});
                $('[data-role=header]').fixedtoolbar({ updatePagePadding: true });
-
+               
                });
 
 function slidemenu(sm, only_close) {
@@ -60,10 +60,8 @@ function slidemenu(sm, only_close) {
 		sm.show().animate({width: '240px', avoidTransforms: false, useTranslate3d: true}, 'fast');
         $('.ui-page-active').each(function(index) {
                                   $(this).css('left','240px');
-                                  $('.ui-content').addClass('scroll-fix');
                                   $(".score-container").css('left','240px');
                                   });
-
 		//$(".ui-page-active").css('left', '240px');
 		sm.data('slideopen', true);
 		$('[data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
@@ -71,8 +69,7 @@ function slidemenu(sm, only_close) {
                                           $(this).text("BACK");
                                           $(this).text();
                                           });
-
-
+        
         // $(".smenu").text("BACK");
 		if ($(".ui-page-active .ui-content :jqmData(role='header')").data('position') == 'fixed') {
 			$(".ui-page-active .ui-content :jqmData(slidemenu)").css('margin-left', '0px');
@@ -83,7 +80,6 @@ function slidemenu(sm, only_close) {
 		sm.animate({width: '0px', avoidTransforms: false, useTranslate3d: true}, 'fast', function(){sm.hide()});
         $('.ui-page-active').each(function(index) {
                                   $(this).css('left','0px');
-                                  $('.ui-content').removeClass('scroll-fix');
                                   $(".ui-body-a").css('left','0px');
                                   $(".score-container").css('left','0px');
                                   });
@@ -96,7 +92,7 @@ function slidemenu(sm, only_close) {
         $('#rentalInfoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
         $('#liabilityInfoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
         $('#belongingsInfoPage [data-role=header]').find('span.ui-icon').addClass('ui-icon-smico-back');
-
+        
         $('.ui-header .ui-btn-text').each(function(index) {
                                           $(this).text("MENU");
                                           $(this).text();

@@ -7,7 +7,7 @@ self.getURL = function()
 						$.mobile.changePage( self.usrans1 +".html", {
 						transition: "slidefade",
 						allowSamePageTransition  : true,
-
+						
 					});
 				}
 
@@ -15,7 +15,7 @@ self.getURL = function()
 
 	self.structureScore =ko.observable(localStorage.getItem("kyc.structure.score"));
 	self.structureAnswerCount= ko.observable(localStorage.getItem("kyc.structure.AC"));
-
+	
 	self.sQCount = 11;
 	self.structureCss = ko.computed(function(){
 			if(self.structureScore() == null)
@@ -44,30 +44,28 @@ self.getURL = function()
 		else
 			return true;
 	});
-self.getWidth = function (count, qc){
-		return Math.round((count()/qc)*25) +'%';
-	};
+
 	self.getclass =  function(count,qc)
 				{
 					if (count() <= Math.floor(qc *.5) ) {
 						// self.badge("C-LEVEL");
-	     // 				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");
+	     // 				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");	
 	     // 				self.badgeTextHead("You missed a few.");
 							return "c-level";
 					}
 					else if (count() <= Math.floor(qc *.75) )
 					{
-
+							 	
 						// self.badge("B-LEVEL");
 	     // 				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");
-	     // 				self.badgeTextHead("Good Work,");
+	     // 				self.badgeTextHead("Good Work,");	
 							return "b-level";
-
+					
 					}
-					else
+					else	
 					{
 						// self.badge("A-LEVEL");
-	     // 				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");
+	     // 				self.badgeText("Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto");	
 	     // 				self.badgeTextHead ("Outstanding!");
 						return "a-level";
 					};
@@ -94,7 +92,7 @@ return (isNaN(parseInt(self.structureAnswerCount()))?0:parseInt(self.structureAn
     self.totalQCount= ko.computed(function() {
         return  parseInt(self.sQCount) +  parseInt(self.rQCount) +  parseInt(self.bQCount) +  parseInt(self.lQCount)   ;
     });
-
+	 
 	//self.questionCount = curquestionList.length;
 	self.classname = ko.observable("ans1");
 	self.ansHead = ko.observable("");
@@ -104,10 +102,10 @@ return (isNaN(parseInt(self.structureAnswerCount()))?0:parseInt(self.structureAn
 }
 
 $(document).on( 'pageinit', '#resultPage' ,function() {
-
+	
 	ko.applyBindings(new resultModel());
-
+		
 		//alert(ko.observable(localStorage.getItem("kyc.renter.score"))());
 
-
+        
     });

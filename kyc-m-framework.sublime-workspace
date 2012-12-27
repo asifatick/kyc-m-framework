@@ -520,34 +520,74 @@
 	"buffers":
 	[
 		{
-			"file": "KYC-main/js/resultscript.js",
+			"file": "kyc-xcode-compressed/www/js/jqm-f-debug.js",
 			"settings":
 			{
-				"buffer_size": 4036,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "KYC-main/css/kyc.css",
-			"settings":
-			{
-				"buffer_size": 38286,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "KYC-main/result-page.html",
-			"settings":
-			{
-				"buffer_size": 36965,
+				"buffer_size": 112054,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "KYC-main/css/jqm.slidemenu.css",
+			"file": "kyc-xcode-compressed/www/js/jqm.slidemenu.js",
 			"settings":
 			{
-				"buffer_size": 2440,
+				"buffer_size": 4190,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/js/jqm.globals.js",
+			"settings":
+			{
+				"buffer_size": 1002,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/js/knockout-2.2.0.js",
+			"settings":
+			{
+				"buffer_size": 40871,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/js/kyc-script.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/js/resultscript.js",
+			"settings":
+			{
+				"buffer_size": 3990,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/css/kyc.css",
+			"settings":
+			{
+				"buffer_size": 28520,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/css/themes/kyc-theme.css",
+			"settings":
+			{
+				"buffer_size": 11571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kyc-xcode-compressed/www/css/jqm.slidemenu.css",
+			"settings":
+			{
+				"buffer_size": 2129,
 				"line_ending": "Windows"
 			}
 		}
@@ -604,15 +644,6 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/css/jqm.slidemenu.css",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/css/themes/kyc-theme.css",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/css/kyc.css",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/js/jqm-f-debug.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/js/jqm.slidemenu.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/js/jqm.globals.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/js/knockout-2.2.0.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/js/kyc-script.js",
-		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/kyc-xcode-compressed/www/js/resultscript.js",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/css/kyc.css",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/quiz-select.html",
 		"/Applications/MAMP/htdocs/know-your-coverage/kyc-m-framework/js/jqm.slidemenu.js",
@@ -731,7 +762,16 @@
 		"/Users/evanshajed/ProjectResources/work/Custom Templates/BuzzApp/HTML/index.html",
 		"/Applications/MAMP/htdocs/AllRed/WordPress/wp-content/themes/Rush/sidebar-footer.php",
 		"/private/var/folders/6m/b0qktx3d737f2wxv4ydbs2rm0000gn/T/fz3temp-1/index.php",
-		"/Applications/MAMP/htdocs/AllRed/WordPress/wp-content/themes/Rush/js/plugins.js"
+		"/Applications/MAMP/htdocs/AllRed/WordPress/wp-content/themes/Rush/js/plugins.js",
+		"/Applications/MAMP/htdocs/AllRed/WordPress/wp-content/themes/Rush/single.php",
+		"/Users/evanshajed/ProjectResources/work/Custom Templates/BuzzApp/HTML/js/libs/mailcheck/LICENSE",
+		"/Users/evanshajed/ProjectResources/work/Custom Templates/BuzzApp/HTML/js/libs/mailcheck/README.md",
+		"/Users/evanshajed/Downloads/initializr-verekia-3.0/css/style.css",
+		"/Applications/MAMP/htdocs/AllRed/Assets/index.html",
+		"/Applications/MAMP/htdocs/AllRed/WordPress/wp-content/themes/AllRed/css/style.css",
+		"/Users/evanshajed/ProjectResources/work/John/Admin Panel/adminHTML/js/plugins.js",
+		"/Users/evanshajed/ProjectResources/Themes/CSS HTML/red/index.html",
+		"/Users/evanshajed/ProjectResources/work/digital marketing agency/DMWebsite/HTML/index.html"
 	],
 	"find":
 	{
@@ -946,18 +986,153 @@
 			[
 				{
 					"buffer": 0,
-					"file": "KYC-main/js/resultscript.js",
+					"file": "kyc-xcode-compressed/www/js/jqm-f-debug.js",
 					"settings":
 					{
-						"buffer_size": 4036,
+						"buffer_size": 112054,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1243,
-								1243
+								112054,
+								112054
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 2383.0,
+						"translation.y": 2639.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "kyc-xcode-compressed/www/js/jqm.slidemenu.js",
+					"settings":
+					{
+						"buffer_size": 4190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4190,
+								4190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "kyc-xcode-compressed/www/js/jqm.globals.js",
+					"settings":
+					{
+						"buffer_size": 1002,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "kyc-xcode-compressed/www/js/knockout-2.2.0.js",
+					"settings":
+					{
+						"buffer_size": 40871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "kyc-xcode-compressed/www/js/kyc-script.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "kyc-xcode-compressed/www/js/resultscript.js",
+					"settings":
+					{
+						"buffer_size": 3990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								533,
+								533
 							]
 						],
 						"settings":
@@ -966,36 +1141,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 649.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "KYC-main/css/kyc.css",
-					"settings":
-					{
-						"buffer_size": 38286,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19319,
-								19319
-							]
-						],
-						"settings":
-						{
-							"auto_indent": true,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7129.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1003,50 +1149,51 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "KYC-main/result-page.html",
+					"buffer": 6,
+					"file": "kyc-xcode-compressed/www/css/kyc.css",
 					"settings":
 					{
-						"buffer_size": 36965,
+						"buffer_size": 28520,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2274,
-								2274
+								75,
+								75
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1118.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "KYC-main/css/jqm.slidemenu.css",
+					"buffer": 7,
+					"file": "kyc-xcode-compressed/www/css/themes/kyc-theme.css",
 					"settings":
 					{
-						"buffer_size": 2440,
+						"buffer_size": 11571,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								372,
-								372
+								11571,
+								11571
 							]
 						],
 						"settings":
@@ -1054,8 +1201,35 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 22.0,
+						"translation.x": 80649.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "kyc-xcode-compressed/www/css/jqm.slidemenu.css",
+					"settings":
+					{
+						"buffer_size": 2129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2129,
+								2129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 14310.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1091,7 +1265,7 @@
 		"cols":
 		[
 			0.0,
-			0.490349076519,
+			0.300125264572,
 			1.0
 		],
 		"rows":
@@ -1146,6 +1320,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 233.0,
+	"side_bar_width": 452.0,
 	"status_bar_visible": true
 }
